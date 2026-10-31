@@ -29,4 +29,10 @@ Serve `dist/` with any static web server. Both `/` and `/sl/` are generated. A r
 
 Portraits and film stills retain photographer credits in the interface and `dist/assets/asset-credits.json`. The two official film trailers are correctly labelled; neither is presented as a personal acting reel. Casting enquiries use Tine’s existing professional Filmmakers profile. Height, playing age, personal email and representation have not been invented.
 
-The current private review deployment is hosted through Sites. Its deployment identity is retained in `.openai/hosting.json`; this GitHub repository holds the portable source. Publishing and audience changes use the hosting workflow separately.
+## Netlify deployment
+
+Production: https://tine-ugrin.netlify.app/
+
+Netlify builds the `main` branch with the command in `netlify.toml` and publishes `dist/`. The build regenerates both language pages and checks local asset references before publishing. No dependencies or environment variables are required. Local Netlify state in `.netlify/` is ignored by Git.
+
+The earlier private Sites review identity is retained in `.openai/hosting.json`. Only `dist/` is published on Netlify.
