@@ -1,7 +1,32 @@
-# Tine Ugrin — Actor
+# Tine Ugrin — The Character Study
 
-Source for Tine Ugrin’s bilingual actor portfolio.
+An English/Slovenian portfolio for actor Tine Ugrin. The experience moves from the person to his characters, through a screening room, and back to a photographic contact sheet. A compact Casting file brings professional resources together.
 
-The site is built with static HTML, CSS and JavaScript. Published assets live in `dist/`; editable English/Slovenian copy lives in `copy.json` and reusable sections in `components/`.
+## Structure
 
-Regenerate the Slovenian page with `python3 scripts/localize.py`. Run `python3 scripts/check-site.py` for source and asset checks. All portrait and film material retains its original author credits.
+- `src/index.html`: editable page layout.
+- `components/`: character study, portrait contact sheet and casting file, with their bilingual copy.
+- `copy.json`: shared page and film-viewer copy.
+- `dist/`: deployable static site, bundled fonts, portraits and film stills.
+- `scripts/`: dependency-free build and source checks.
+
+## Build and check
+
+Requires Python 3 and Node.js. No package installation is needed.
+
+```sh
+python3 scripts/build.py
+python3 scripts/check-site.py
+node --check dist/assets/site.js
+node --check dist/assets/character-study.js
+node --check dist/assets/portrait-contact-sheet.js
+node --check dist/assets/casting-file.js
+```
+
+Serve `dist/` with any static web server. Both `/` and `/sl/` are generated. A role can be linked with `?role=gepack#work`, `?role=breathe#work` or `?role=legend#work`. Links select a character silently; video requires a deliberate viewing action.
+
+## Content and attribution
+
+Portraits and film stills retain photographer credits in the interface and `dist/assets/asset-credits.json`. The two official film trailers are correctly labelled; neither is presented as a personal acting reel. Casting enquiries use Tine’s existing professional Filmmakers profile. Height, playing age, personal email and representation have not been invented.
+
+The current private review deployment is hosted through Sites. Its deployment identity is retained in `.openai/hosting.json`; this GitHub repository holds the portable source. Publishing and audience changes use the hosting workflow separately.

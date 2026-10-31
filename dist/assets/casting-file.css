@@ -1,0 +1,70 @@
+#casting-file-dialog{--cf-paper:#f4f3ef;--cf-ink:#101615;--cf-blue:#1d41f5;--cf-line:#c9ccc5;--cf-muted:#5d635e;width:760px;max-width:calc(100vw - 32px);max-height:92svh;padding:0;overflow:auto;background:var(--cf-paper);color:var(--cf-ink);border:0;scrollbar-gutter:stable;font-family:var(--body,'DM Sans',Arial,sans-serif);isolation:isolate}
+#casting-file-dialog *{box-sizing:border-box}
+#casting-file-dialog::backdrop{background:#070c0bda;backdrop-filter:blur(8px)}
+#casting-file-dialog .cf-header{position:sticky;top:0;z-index:2;display:flex;align-items:center;justify-content:space-between;gap:24px;padding:24px 28px 23px;border-bottom:1px solid var(--cf-line);background:var(--cf-paper)}
+#casting-file-dialog .cf-kicker{margin:0 0 9px;font-size:11px;font-weight:500;line-height:1.5;letter-spacing:.09em;text-transform:uppercase}
+#casting-file-dialog h2{margin:0;font-family:var(--display,'Arial Narrow',Arial,sans-serif);font-size:49px;font-weight:600;line-height:.95;letter-spacing:-.02em}
+#casting-file-dialog .cf-close{display:flex;align-items:center;justify-content:center;flex:none;min-width:44px;min-height:44px;border:1px solid var(--cf-line);padding:0;background:transparent;color:var(--cf-ink);font:400 28px/1 Arial,sans-serif;cursor:pointer}
+#casting-file-dialog .cf-close:hover{background:var(--cf-ink);border-color:var(--cf-ink);color:var(--cf-paper)}
+#casting-file-dialog .cf-sheet{display:grid;grid-template-columns:minmax(0,.88fr) minmax(0,1fr);align-items:start;gap:29px;padding:27px 28px}
+#casting-file-dialog .cf-portrait-column{min-width:0}
+#casting-file-dialog .cf-selected-portrait{margin:0}
+#casting-file-dialog .cf-image-stage{aspect-ratio:1550/2160;background:var(--cf-ink);overflow:hidden}
+#casting-file-dialog .cf-image-stage img{display:block;width:100%;height:100%;object-fit:contain}
+#casting-file-dialog figcaption{margin:10px 0 0;color:var(--cf-muted);font-size:11px;line-height:1.5}
+#casting-file-dialog .cf-portrait-options{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px;margin-top:16px}
+#casting-file-dialog .cf-portrait-option{display:block;width:100%;min-height:55px;height:66px;margin:0;border:2px solid transparent;padding:0;background:var(--cf-ink);cursor:pointer}
+#casting-file-dialog .cf-portrait-option img{display:block;width:100%;height:100%;object-fit:cover;object-position:50% 27%}
+#casting-file-dialog .cf-portrait-option[aria-pressed=true]{border-color:var(--cf-blue);outline:1px solid var(--cf-blue);outline-offset:2px}
+#casting-file-dialog .cf-download{display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:48px;width:100%;margin-top:20px;padding:12px 14px;background:var(--cf-blue);color:#fff;text-align:left;text-decoration:none;font-size:12px;font-weight:500;line-height:1.5}
+#casting-file-dialog .cf-download>span:last-child{font-size:21px;line-height:1}
+#casting-file-dialog .cf-download:hover{background:#1233df}
+#casting-file-dialog .cf-download-note{margin:8px 0 0;color:var(--cf-muted);font-size:11px;line-height:1.5}
+#casting-file-dialog .cf-information{min-width:0}
+#casting-file-dialog .cf-introduction{margin:0 0 24px;font-size:16px;font-weight:400;line-height:1.55}
+#casting-file-dialog .cf-facts{margin:0;padding:0;font-size:13px;line-height:1.7}
+#casting-file-dialog .cf-facts>div{padding:18px 0;border-top:1px solid var(--cf-line)}
+#casting-file-dialog .cf-facts dt,#casting-file-dialog h3{margin:0 0 9px;font-size:12px;font-weight:500;line-height:1.6}
+#casting-file-dialog .cf-facts dt{color:var(--cf-muted)}
+#casting-file-dialog .cf-facts dd{margin:0}
+#casting-file-dialog .cf-credits{margin:0;padding:18px 0 0;border:0;border-top:1px solid var(--cf-line)}
+#casting-file-dialog .cf-credits ul{margin:0;padding:0;list-style:none}
+#casting-file-dialog .cf-credits li{padding:10px 0}
+#casting-file-dialog .cf-project-title{display:block;font-size:14px;font-weight:500;line-height:1.5}
+#casting-file-dialog .cf-project-detail{display:block;margin-top:3px;color:var(--cf-muted);font-size:12px;line-height:1.55}
+#casting-file-dialog .cf-professional-contact{margin-top:18px;padding-top:18px;border-top:1px solid var(--cf-line)}
+#casting-file-dialog .cf-professional-contact p{margin:0 0 9px;color:var(--cf-muted);font-size:12px;line-height:1.65}
+#casting-file-dialog .cf-profile-link{display:flex;align-items:center;justify-content:space-between;gap:15px;min-height:44px;padding:8px 0;border-bottom:1px solid var(--cf-ink);color:var(--cf-ink);text-decoration:none;font-size:12px;font-weight:500;line-height:1.55}
+#casting-file-dialog .cf-profile-link>span:last-child{font-size:20px;line-height:1}
+#casting-file-dialog .cf-actions{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin:0;padding:17px 28px 20px;border-top:1px solid var(--cf-line);background:var(--cf-paper)}
+#casting-file-dialog .cf-resource-action{display:flex;align-items:center;justify-content:space-between;gap:14px;min-height:44px;width:100%;margin:0;padding:9px 0;border:0;background:transparent;color:var(--cf-ink);font-family:inherit;font-size:12px;font-weight:500;line-height:1.5;text-align:left;text-decoration:none;cursor:pointer}
+#casting-file-dialog .cf-resource-action>span:last-child{font-size:20px;line-height:1}
+#casting-file-dialog .cf-resource-action:hover,#casting-file-dialog .cf-profile-link:hover{color:var(--cf-blue)}
+#casting-file-dialog .cf-sr-only{position:absolute;width:1px;height:1px;margin:-1px;padding:0;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+#casting-file-dialog :is(a,button):focus-visible{outline:3px solid var(--cf-blue);outline-offset:5px}
+@media(max-width:660px){
+  #casting-file-dialog{width:calc(100vw - 24px);max-width:calc(100vw - 24px);max-height:calc(100svh - 24px);scrollbar-gutter:auto}
+  #casting-file-dialog .cf-header{position:sticky;top:0;z-index:2;gap:16px;padding:20px;border-bottom-color:var(--cf-line)}
+  #casting-file-dialog h2{font-size:43px}
+  #casting-file-dialog .cf-kicker{font-size:11px;margin-bottom:7px}
+  #casting-file-dialog .cf-sheet{grid-template-columns:1fr;gap:26px;padding:22px 20px}
+  #casting-file-dialog .cf-portrait-column{display:grid;grid-template-columns:minmax(0,.85fr) minmax(0,1fr);gap:14px 16px;align-items:start}
+  #casting-file-dialog .cf-selected-portrait{grid-column:1;grid-row:1}
+  #casting-file-dialog figcaption{font-size:11px;margin-top:8px}
+  #casting-file-dialog .cf-portrait-options{grid-column:2;grid-row:1;grid-template-columns:repeat(2,minmax(0,1fr));gap:9px;margin:0}
+  #casting-file-dialog .cf-portrait-option{height:64px;min-height:44px}
+  #casting-file-dialog .cf-download{grid-column:1 / -1;margin:0;min-height:48px;font-size:13px}
+  #casting-file-dialog .cf-download-note{grid-column:1 / -1;margin:-6px 0 0;font-size:11px}
+  #casting-file-dialog .cf-introduction{font-size:16px;margin-bottom:18px}
+  #casting-file-dialog .cf-facts{font-size:13px}
+  #casting-file-dialog .cf-facts dt,#casting-file-dialog h3{font-size:12px}
+  #casting-file-dialog .cf-project-title{font-size:14px}
+  #casting-file-dialog .cf-project-detail{font-size:12px}
+  #casting-file-dialog .cf-credits li{padding:9px 0}
+  #casting-file-dialog .cf-professional-contact p{font-size:13px}
+  #casting-file-dialog .cf-profile-link{font-size:13px;min-height:48px}
+  #casting-file-dialog .cf-actions{grid-template-columns:1fr;gap:4px;padding:13px 20px 18px}
+  #casting-file-dialog .cf-resource-action{font-size:13px;min-height:46px}
+}
+@media(prefers-reduced-motion:reduce){#casting-file-dialog *{scroll-behavior:auto!important}}
+@media print{#casting-file-dialog{display:none!important}}

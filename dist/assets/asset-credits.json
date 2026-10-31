@@ -1,0 +1,158 @@
+{
+  "portrait_recommendation": {
+    "hero": "portrait-4.jpg",
+    "about": "portrait-3.jpg",
+    "warm_alternative": "portrait-1.jpg",
+    "alternate_landscape_hero": "bsf-01.jpg"
+  },
+  "portraits": [
+    {
+      "url": "https://imgproxy.filmmakers.eu/caqwkor0I9q55Dyyf2wtuQ_jKJc6epu7L17VCZAgDeA/rt:fit/w:3840/h:2160/czM6Ly9maWxtbWFr/ZXJzLWV1LXdlc3Qt/MS9wcm9kdWN0aW9u/L2RjOGJkOThkLTZj/ODYtNDIzNS1hY2E5/LTE2Mzc5NDZmZDM2/OC5qcGc.jpg",
+      "credit": "© Arin Rapuš Jerman",
+      "file": "portrait-1.jpg",
+      "source_page": "https://www.filmmakers.eu/en/actors/tine-ugrin"
+    },
+    {
+      "url": "https://imgproxy.filmmakers.eu/XCT88JA9mzCvrAjNttqnJ9fLLTVGSwYRDmY6XuETdxo/rt:fit/w:3840/h:2160/czM6Ly9maWxtbWFr/ZXJzLWV1LXdlc3Qt/MS9wcm9kdWN0aW9u/LzQwYTEyZjkyLWNl/NDYtNDA4Ni05Njg2/LTAxODJiM2NiMmFm/Yy5qcGc.jpg",
+      "credit": "© Arin Rapuš Jerman",
+      "file": "portrait-2.jpg",
+      "source_page": "https://www.filmmakers.eu/en/actors/tine-ugrin"
+    },
+    {
+      "url": "https://imgproxy.filmmakers.eu/YlKdU4aGCVeKkPJ-fzuQmsEJGrVUA2itWjXYJROjmMg/rt:fit/w:3840/h:2160/czM6Ly9maWxtbWFr/ZXJzLWV1LXdlc3Qt/MS9wcm9kdWN0aW9u/LzQxYzE3NjYyLWM0/ZTQtNGFlNC1iMjVk/LWY3ZWYxZGI0OWFl/Ni5qcGc.jpg",
+      "credit": "© Jakob Kastelec",
+      "file": "portrait-3.jpg",
+      "source_page": "https://www.filmmakers.eu/en/actors/tine-ugrin"
+    },
+    {
+      "url": "https://imgproxy.filmmakers.eu/lh1z9osG3aNBMKT7t-7ZAJCYW_skt0g_Xuk3V46gRvk/rt:fit/w:3840/h:2160/czM6Ly9maWxtbWFr/ZXJzLWV1LXdlc3Qt/MS9wcm9kdWN0aW9u/LzhkNDQyYzkwLTAz/MzEtNGM5Zi04NmM0/LTczMzM1MGFkMDQ1/Zi5qcGc.jpg",
+      "credit": "© Jakob Katelec",
+      "file": "portrait-4.jpg",
+      "source_page": "https://www.filmmakers.eu/en/actors/tine-ugrin"
+    },
+    {
+      "url": "https://imgproxy.filmmakers.eu/_zuJ2JFgecxDH2ay5KMSSAYms6pvY4v3vjn-iKHpPdU/rt:fit/w:3840/h:2160/czM6Ly9maWxtbWFr/ZXJzLWV1LXdlc3Qt/MS9wcm9kdWN0aW9u/LzFkMTU3ZDljLTg5/OGQtNDIxYy05Mjc0/LWZlZGU4NmFkODhm/Zi5qcGc.jpg",
+      "credit": "© Arin Rapuš Jerman",
+      "file": "portrait-5.jpg",
+      "source_page": "https://www.filmmakers.eu/en/actors/tine-ugrin"
+    }
+  ],
+  "stills": [
+    {
+      "url": "https://bsf.si/media/publicity/image/44/thumbnails/442c5cd6d86fa805144c0c7bb090234b2e722990.jpeg.1920x1080_q95.jpg",
+      "caption": "Tine Ugrin v filmu Legenda o bejbi (2024). | Avtor/-ica: Teo Toth  | Vir: Leon Pučnik\n© Vse pravice pridržane. 2024 Teo Toth.\nObjavljeno z dovoljenjem Leon Pučnik.\n",
+      "file": "bsf-01.jpg",
+      "project": "Legenda o bejbi",
+      "year": 2024,
+      "role": "TV igralec",
+      "credit": "Teo Toth",
+      "size": "1920x1080",
+      "note": "Best recent cinematic landscape: Tine in white shirt, warm interior; strong alternate hero.",
+      "source_page": "https://bsf.si/sl/ime/tine-ugrin/"
+    },
+    {
+      "url": "https://bsf.si/media/publicity/image/d8/thumbnails/d8e78a2a3a613cfca4379b12aa57847df1f9836d.png.1920x1080_q95.png",
+      "caption": "Maks Dakskobler, Jan Gerl Korenč, Robert Kladnik, Tine Ugrin v filmu Gepack (2023). | Avtor/-ica: Matic Gabriel  | Vir: Slovenski filmski center - SFC\n© Vse pravice pridržane. 2023 Matic Gabriel.\nObjavljeno z dovoljenjem Slovenski filmski center - SFC.\n",
+      "file": "bsf-04.jpg",
+      "project": "Gepack",
+      "year": 2024,
+      "role": "Jon",
+      "credit": "Matic Gabriel",
+      "size": "1920x797",
+      "note": "Four friends in car, official 2.41:1 production still. Note file bytes are PNG despite .jpg filename.",
+      "source_page": "https://bsf.si/sl/ime/tine-ugrin/"
+    },
+    {
+      "url": "https://bsf.si/media/publicity/image/55/thumbnails/55ebce1ff2e3d5c34587dbdfe3c2be7d1580212a.jpeg.1920x1080_q95.jpg",
+      "caption": "Klara Kuk, Tine Ugrin, Matija Valant v filmu Ne pozabi dihati (2019). | Avtor/-ica: Željko Stevanić  | Vir: Slovenski filmski center - SFC\n© Vse pravice pridržane. 2019 Željko Stevanić.\nObjavljeno z dovoljenjem Slovenski filmski center - SFC.\n",
+      "file": "bsf-07.jpg",
+      "project": "Ne pozabi dihati / Don’t Forget to Breathe",
+      "year": 2019,
+      "role": "Peter",
+      "credit": "Željko Stevanić",
+      "size": "1620x1080",
+      "note": "Tine and Klara walking in a field; strongest clear performance still.",
+      "source_page": "https://bsf.si/sl/ime/tine-ugrin/"
+    },
+    {
+      "url": "https://bsf.si/media/publicity/image/32/thumbnails/32b98e0a1189fc059a9ddeb81e82052a977f2680.jpeg.1920x1080_q95.jpg",
+      "caption": "Tine Ugrin, Matija Valant v filmu Ne pozabi dihati (2019). | Avtor/-ica: Željko Stevanić  | Vir: Slovenski filmski center - SFC\n© Vse pravice pridržane. 2019 Željko Stevanić.\nObjavljeno z dovoljenjem Slovenski filmski center - SFC.\n",
+      "file": "bsf-09.jpg",
+      "project": "Ne pozabi dihati / Don’t Forget to Breathe",
+      "year": 2019,
+      "role": "Peter",
+      "credit": "Željko Stevanić",
+      "size": "1620x1080",
+      "note": "Warm character moment / hug beside car.",
+      "source_page": "https://bsf.si/sl/ime/tine-ugrin/"
+    },
+    {
+      "url": "https://bsf.si/media/publicity/image/e1/thumbnails/e19a7ef23f52fcbe0e38bbb375cc3d34b92e4867.jpeg.1920x1080_q95.jpg",
+      "caption": "Tine Ugrin, Matija Valant v filmu Ne pozabi dihati (2019). | Avtor/-ica: Željko Stevanić  | Vir: Slovenski filmski center - SFC\n© Vse pravice pridržane. 2019 Željko Stevanić.\nObjavljeno z dovoljenjem Slovenski filmski center - SFC.\n",
+      "file": "bsf-12.jpg",
+      "project": "Ne pozabi dihati / Don’t Forget to Breathe",
+      "year": 2019,
+      "role": "Peter",
+      "credit": "Željko Stevanić",
+      "size": "1620x1080",
+      "note": "Two brothers splashing in river, cinematic movement.",
+      "source_page": "https://bsf.si/sl/ime/tine-ugrin/"
+    },
+    {
+      "url": "https://bsf.si/media/publicity/image/94/thumbnails/9481ded5588faedac7e0568a0539d3829794f754.jpeg.1920x1080_q95.jpg",
+      "caption": "Tine Ugrin, Matija Valant v filmu Ne pozabi dihati (2019). | Avtor/-ica: Željko Stevanić  | Vir: Slovenski filmski center - SFC\n© Vse pravice pridržane. 2019 Željko Stevanić.\nObjavljeno z dovoljenjem Slovenski filmski center - SFC.\n",
+      "file": "bsf-16.jpg",
+      "project": "Ne pozabi dihati / Don’t Forget to Breathe",
+      "year": 2019,
+      "role": "Peter",
+      "credit": "Željko Stevanić",
+      "size": "1620x1080",
+      "note": "Quiet wide river shot of two brothers, landscape.",
+      "source_page": "https://bsf.si/sl/ime/tine-ugrin/"
+    },
+    {
+      "url": "https://bsf.si/media/publicity/image/49/thumbnails/496bdebb6520e264b9c11badd17131d38a327315.jpeg.1920x1080_q95.jpg",
+      "caption": "Tine Ugrin v filmu Portret Izgubljenim (2017). | Avtor/-ica: Izidor Čok  | Vir: Slovenski filmski center - SFC\n© Vse pravice pridržane. 2017 Izidor Čok.\nObjavljeno z dovoljenjem Slovenski filmski center - SFC.\n",
+      "file": "bsf-21.jpg",
+      "project": "Portret Izgubljenim",
+      "year": 2017,
+      "role": "Noa",
+      "credit": "Izidor Čok",
+      "size": "1920x1080",
+      "note": "Tine in side profile at sunset; atmospheric.",
+      "source_page": "https://bsf.si/sl/ime/tine-ugrin/"
+    },
+    {
+      "url": "https://bsf.si/media/publicity/image/e3/thumbnails/e33d20b7633c32e68ab34a60fb921b0ad48c2268.jpeg.1920x1080_q95.jpg",
+      "caption": "Jan Slapar, Tine Ugrin v filmu Ponavljaj za mano (2017). | Avtor/-ica: Jan Krevatin  | Vir: Muvit 6x60\n© Vse pravice pridržane. 2017 Jan Krevatin.\nObjavljeno z dovoljenjem Muvit 6x60.\n",
+      "file": "bsf-22.jpg",
+      "project": "Ponavljaj za mano",
+      "year": 2017,
+      "role": "",
+      "credit": "Jan Krevatin",
+      "size": "1920x1078",
+      "note": "Two men at table; Tine on left.",
+      "source_page": "https://bsf.si/sl/ime/tine-ugrin/"
+    }
+  ],
+  "videos": [
+    {
+      "project": "Gepack",
+      "label": "Official trailer",
+      "watch_url": "https://www.youtube.com/watch?v=iqsXFf8O_rw",
+      "embed_url": "https://www.youtube-nocookie.com/embed/iqsXFf8O_rw?rel=0",
+      "source": "Produkcija 3230 official YouTube channel",
+      "duration_seconds": 90,
+      "source_page": "https://www.gepack.si.inicial.si/"
+    },
+    {
+      "project": "Don’t Forget to Breathe",
+      "label": "Official trailer · English subtitles",
+      "watch_url": "https://vimeo.com/336166678",
+      "embed_url": "https://player.vimeo.com/video/336166678?dnt=1",
+      "source_page": "https://belafilm.si/seznam-filmi/ne-pozabi-dihati/",
+      "duration_seconds": 90
+    }
+  ],
+  "showreel_note": "No verified public personal acting showreel found. Do not label a film trailer as his acting showreel."
+}
