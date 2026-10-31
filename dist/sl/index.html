@@ -25,6 +25,8 @@
   <link rel="stylesheet" href="/assets/credits-rail.css">
   <link rel="stylesheet" href="/assets/screen-section.css">
   <link rel="stylesheet" href="/assets/casting-file.css">
+  <link rel="stylesheet" href="/assets/reference-style.css">
+  <link rel="preload" href="/assets/fonts/space-grotesk.ttf" as="font" type="font/ttf" crossorigin>
   
   <script defer src="/assets/copy.js"></script>
   <script defer src="/assets/site.js"></script>
@@ -37,15 +39,15 @@
 <body>
   <a class="skip-link" href="#main" data-i18n="skip">Preskoči na vsebino</a>
   <header class="site-header" id="site-header">
-    <a class="monogram" href="#home" aria-label="Tine Ugrin, home">TU<span>.</span></a>
-    <nav class="desktop-nav" aria-label="Glavni meni">
-      <a href="#about" data-i18n="navAbout">O meni</a><a href="#credits" data-i18n="navCredits">Vloge</a><a href="#screen" data-i18n="navScreen">Na platnu</a><a href="#portraits" data-i18n="navPortraits">Portreti</a>
-    </nav>
-    <div class="header-end"><button class="header-casting" data-open-casting type="button"><span data-i18n="forCasting">Za casting</span><span aria-hidden="true">↗</span></button><div class="language-switch" aria-label="Jezik"><a href="/" lang="en" class="lang-en">EN</a><span>/</span><a href="/sl/" lang="sl" class="lang-sl" aria-current="page">SL</a></div><button class="menu-toggle" id="menu-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu"><span></span><span></span></button></div>
-    <span class="reading-progress" aria-hidden="true"></span>
+    <a class="monogram" href="#home" aria-label="Tine Ugrin, home"><span class="brand-name">TINE UGRIN</span><span class="brand-role"> / <span data-i18n="brandActor">IGRALEC</span></span></a>
+    <div class="site-rail">
+      <nav class="desktop-nav" aria-label="Glavni meni"><a href="#about" data-i18n="navAbout">O meni</a><a href="#credits" data-i18n="navCredits">Vloge</a><a href="#screen" data-i18n="navScreen">Video</a><a href="#portraits" data-i18n="navPortraits">Galerija</a><a href="#contact" data-i18n="navContact">Kontakt</a></nav>
+      <nav class="rail-profiles" aria-label="Poslovni profili"><a href="https://www.filmmakers.eu/en/actors/tine-ugrin" target="_blank" rel="noopener noreferrer">Filmmakers</a><a href="https://www.imdb.com/name/nm5864569/" target="_blank" rel="noopener noreferrer">IMDb</a><a href="https://www.instagram.com/tine_ugrin/" target="_blank" rel="noopener noreferrer">Instagram</a><a href="/assets/tine-ugrin-credits-sl.pdf" data-language-pdf download data-i18n="railCreditsPdf">Izbrane vloge / PDF</a></nav>
+      <div class="header-end"><button class="header-casting" data-open-casting type="button"><span data-i18n="castingShort">Casting</span></button><div class="language-switch" aria-label="Jezik"><a href="/" lang="en" class="lang-en">EN</a><span>/</span><a href="/sl/" lang="sl" class="lang-sl" aria-current="page">SL</a></div><button class="menu-toggle" id="menu-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu"><span></span><span></span></button></div>
+    </div>
   </header>
   <div class="mobile-menu" id="mobile-menu" hidden>
-    <nav aria-label="Mobilni meni"><a href="#about" data-i18n="navAbout">O meni</a><a href="#credits" data-i18n="navCredits">Vloge</a><a href="#screen" data-i18n="navScreen">Na platnu</a><a href="#portraits" data-i18n="navPortraits">Portreti</a><a href="#contact" data-i18n="navContact">Kontakt</a></nav>
+    <nav aria-label="Mobilni meni"><a href="#about" data-i18n="navAbout">O meni</a><a href="#credits" data-i18n="navCredits">Vloge</a><a href="#screen" data-i18n="navScreen">Video</a><a href="#portraits" data-i18n="navPortraits">Galerija</a><a href="#contact" data-i18n="navContact">Kontakt</a></nav>
     <a class="menu-instagram" href="https://www.instagram.com/tine_ugrin/" target="_blank" rel="noopener noreferrer">Instagram / @tine_ugrin ↗</a>
   </div>
   <main id="main">
@@ -53,12 +55,12 @@
       <div class="hero-photo"><img src="/assets/hero.webp" alt="Portret Tineta Ugrina, fotograf Jakob Kastelec" width="1550" height="2160" fetchpriority="high"><div class="hero-shade"></div></div>
       <div class="hero-topline"><span class="micro"><span class="status-dot"></span><span data-i18n="slovenianActor">Slovenski igralec</span></span><span class="micro hero-disciplines" data-i18n="disciplines">Film / Televizija / Gledališče</span></div>
       <div class="hero-title-wrap"><h1 id="hero-title"><span>TINE</span> <span class="surname">UGRIN<span class="title-period">.</span></span></h1></div>
-      <div class="hero-bottom"><a class="explore-link" href="#about"><span data-i18n="explorePortfolio">Spoznajte Tineta</span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v16M5 13l7 7 7-7"/></svg></a><a class="hero-watch" href="#screen"><span class="watch-circle"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m9 5 11 7-11 7Z"/></svg></span><span><span class="watch-title" data-i18n="watchTrailers">Ogled napovednikov</span><span class="watch-subtitle" data-i18n="heroScreenNote">Izbor filmskih vlog</span></span><svg class="watch-arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 19 19 5M5 5h14v14"/></svg></a></div>
+      <div class="hero-bottom"><a class="explore-link" href="#about"><span data-i18n="explorePortfolio">O meni</span></a><a class="hero-watch" href="#screen"><span class="watch-title" data-i18n="watchTrailers">Ogled napovednikov</span></a><button class="hero-casting" data-open-casting type="button" data-i18n="forCasting">Za casting</button></div>
       <span class="hero-credit micro" data-i18n="heroPhotoCredit">Fotografija © Jakob Kastelec</span>
     </section>
 
     <section class="about-section section-pad" id="about" aria-labelledby="about-heading">
-      <div class="editorial-heading"><span class="micro">01 /</span><h2 id="about-heading" data-i18n="aboutTitle">O meni.</h2><span class="micro" data-i18n="thePerson">Za vlogami</span></div>
+      <div class="editorial-heading"><span class="micro">01 /</span><h2 id="about-heading" data-i18n="aboutTitle">O meni</h2><span class="micro" data-i18n="thePerson">Za vlogami</span></div>
       <div class="about-layout"><div class="about-copy"><p class="about-lead" data-i18n="aboutLead">Slovenski igralec.<br>Radovednost za različne svetove.</p><p class="about-bio" data-i18n="aboutBody">Tine je nastopil v filmu ceste Gepack, filmu Martina Turka Ne pozabi dihati in televizijski seriji Gospod profesor. Ustvarja tudi v kratkih filmih in gledališču.</p><dl class="about-facts"><div><dt data-i18n="languages">Jeziki</dt><dd data-i18n="spokenLanguages">Slovenščina · Angleščina<br>Italijanščina · Srbohrvaščina</dd></div></dl><div class="about-actions"><button class="text-action" data-open-casting type="button"><span data-i18n="headshotsCasting">Portreti in gradivo za casting</span><span aria-hidden="true">↗</span></button><a class="text-action subtle-action" href="https://www.filmmakers.eu/en/actors/tine-ugrin" target="_blank" rel="noopener noreferrer"><span data-i18n="fullProfile">Celoten profil</span><span aria-hidden="true">↗</span></a></div></div><figure class="about-image"><button type="button" data-portrait="smile" aria-label="Ogled nasmejanega portreta"><img src="/assets/about.webp" alt="Nasmejani Tine Ugrin, fotograf Jakob Kastelec" loading="lazy" width="1000" height="1370"><span class="image-expand" aria-hidden="true">↗</span></button><figcaption class="micro">Tine Ugrin / © Jakob Kastelec</figcaption></figure></div>
     </section>
 
@@ -67,7 +69,7 @@
       <div class="cr-print-identity"><h2>Tine Ugrin</h2><p data-i18n="crActorLine">Igralec / Film, televizija in gledališče</p><a href="https://www.filmmakers.eu/en/actors/tine-ugrin">filmmakers.eu/en/actors/tine-ugrin</a></div>
       <div class="cr-topline"><span data-i18n="crKicker">02 / Izbrane vloge</span><span data-i18n="crCollection">Sedem projektov</span></div>
       <div class="cr-heading-row">
-        <div><h2 id="credits-heading" data-i18n="crHeading">Vloge.</h2><p class="cr-intro" data-i18n="crIntro">Izbor filmskih in televizijskih vlog.</p></div>
+        <div><h2 id="credits-heading" data-i18n="crHeading">Vloge</h2><p class="cr-intro" data-i18n="crIntro">Izbor filmskih in televizijskih vlog.</p></div>
         <div class="cr-controls" aria-label="Browse credits" data-cr-label="crBrowse">
           <span class="cr-counter" id="cr-counter" aria-label="Project 1 of 7">01 / 07</span>
           <button class="cr-arrow" type="button" data-cr-previous aria-label="Previous credits" aria-controls="cr-track" disabled><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 12H4m7-7-7 7 7 7"/></svg></button>
@@ -155,7 +157,7 @@
 
     <section class="ss-section section-pad" id="screen" aria-labelledby="screen-heading" data-ss-selected="breathe">
       <div class="ss-topline"><span data-i18n="ssKicker">03 / Film</span><span data-i18n="ssCollection">Dva uradna napovednika</span></div>
-      <div class="ss-heading-row"><h2 id="screen-heading" data-i18n="ssHeading">Na platnu.</h2><p data-i18n="ssIntro">Pogled v dva različna svetova.</p></div>
+      <div class="ss-heading-row"><h2 id="screen-heading" data-i18n="ssHeading">Video</h2><p data-i18n="ssIntro">Pogled v dva različna svetova.</p></div>
       <figure class="ss-film" id="ss-stage" aria-labelledby="ss-active-title">
         <div class="ss-poster">
           <img class="ss-poster-image" data-ss-poster src="/assets/breathe.webp" alt="Tine Ugrin in Klara Kuk v filmu Ne pozabi dihati" width="1620" height="1080" loading="lazy" decoding="async">
@@ -179,7 +181,7 @@
     </section>
 
     <section class="portrait-strip section-pad" id="portraits" aria-labelledby="portraits-heading">
-      <div class="editorial-heading"><span class="micro">04 /</span><h2 id="portraits-heading" data-i18n="offScreen">Zunaj kadra.</h2><span class="micro" data-i18n="portraitLabel">Portreti</span></div>
+      <div class="editorial-heading"><span class="micro">04 /</span><h2 id="portraits-heading" data-i18n="offScreen">Galerija</h2><span class="micro" data-i18n="portraitLabel">Portreti</span></div>
       <div class="portrait-strip-grid">
         <figure><button type="button" data-portrait="warm" aria-label="Ogled Tinetovega portreta"><img src="/assets/portrait-warm.webp" alt="Tine Ugrin v zelenem puloverju, fotograf Arin Rapuš Jerman" loading="lazy" width="1000" height="1500"><span class="image-expand" aria-hidden="true">↗</span></button><figcaption><span>01</span><span>© Arin Rapuš Jerman</span></figcaption></figure>
         <figure><button type="button" data-portrait="dark" aria-label="Ogled portreta v temni obleki"><img src="/assets/hero.webp" alt="Tine Ugrin v temni obleki, fotograf Jakob Kastelec" loading="lazy" width="1550" height="2160"><span class="image-expand" aria-hidden="true">↗</span></button><figcaption><span>02</span><span>© Jakob Kastelec</span></figcaption></figure>
@@ -189,10 +191,10 @@
       <div class="instagram-line" id="instagram"><div><span class="micro" data-i18n="followAlong">Spremljajte me</span><p>Instagram / @tine_ugrin</p></div><a class="text-action" href="https://www.instagram.com/tine_ugrin/" target="_blank" rel="noopener noreferrer"><span data-i18n="visitInstagram">Obiščite Instagram</span><span aria-hidden="true">↗</span></a></div>
     </section>
   </main>
-  <footer class="site-footer section-pad" id="contact">
-    <div class="footer-contact"><div><span class="micro" data-i18n="contactDisciplines">Casting · Produkcije · Sodelovanja</span><p data-i18n="characterInMind">Imate v mislih lik?</p></div><button class="footer-casting" type="button" data-open-casting><span data-i18n="forCasting">Za casting</span><span aria-hidden="true">↗</span></button></div>
-    <nav class="profile-links" aria-label="Poslovni profili"><a href="https://www.filmmakers.eu/en/actors/tine-ugrin" target="_blank" rel="noopener noreferrer"><span>Filmmakers</span><span aria-hidden="true">↗</span></a><a href="https://www.imdb.com/name/nm5864569/" target="_blank" rel="noopener noreferrer"><span>IMDb</span><span aria-hidden="true">↗</span></a><a href="https://bsf.si/sl/ime/tine-ugrin/" target="_blank" rel="noopener noreferrer"><span data-i18n="filmography">Filmografija</span><span aria-hidden="true">↗</span></a></nav>
-    <div class="footer-bottom"><a class="footer-name" href="#home">TINE UGRIN<span>.</span></a><span class="micro">© <span id="year">2026</span> Tine Ugrin</span><button id="credits-open" type="button" data-i18n="imageCredits">Avtorji fotografij</button><a class="back-top micro" href="#home"><span data-i18n="backTop">Na vrh</span> ↑</a></div>
+  <footer class="site-footer section-pad" id="contact" aria-labelledby="contact-heading">
+    <div class="contact-copy"><h2 id="contact-heading" data-i18n="contactTitle">Kontakt</h2><p data-i18n="contactIntro">Za casting, produkcije in sodelovanja.</p><p data-i18n="professionalContactNote">Tinetov poslovni kontakt je objavljen na Filmmakers.</p><a class="contact-profile" href="https://www.filmmakers.eu/en/actors/tine-ugrin" target="_blank" rel="noopener noreferrer" data-i18n="contactVia">Kontakt prek Filmmakers</a><div class="contact-resources"><button class="footer-casting" type="button" data-open-casting data-i18n="openCastingFile">Odpri igralski profil</button><a href="/assets/tine-ugrin-credits-sl.pdf" data-language-pdf download data-i18n="railCreditsPdf">Izbrane vloge / PDF</a></div></div>
+    <nav class="profile-links" aria-label="Poslovni profili"><a href="https://www.filmmakers.eu/en/actors/tine-ugrin" target="_blank" rel="noopener noreferrer">Filmmakers</a><a href="https://www.imdb.com/name/nm5864569/" target="_blank" rel="noopener noreferrer">IMDb</a><a href="https://www.instagram.com/tine_ugrin/" target="_blank" rel="noopener noreferrer">Instagram</a><a href="https://bsf.si/sl/ime/tine-ugrin/" target="_blank" rel="noopener noreferrer" data-i18n="filmography">Filmografija</a></nav>
+    <div class="footer-bottom"><span class="micro">© <span id="year">2026</span> Tine Ugrin</span><button id="credits-open" type="button" data-i18n="imageCredits">Avtorji fotografij</button><a class="back-top micro" href="#home"><span data-i18n="backTop">Na vrh</span> ↑</a></div>
   </footer>
 
   <dialog id="casting-file-dialog" class="cf-dialog" aria-labelledby="cf-title" aria-describedby="cf-introduction">
