@@ -21,4 +21,14 @@ The existing build validation passes for all 12 pages: balanced markup, one prim
 - Legacy homepage section links continue to forward to their corresponding pages.
 - Credits retain semantic table markup, print styling and a PDF download.
 
-Production verification is recorded after publication.
+## Text and component refinement
+
+- Measured the reference's desktop typography and checked the rebuilt About layout: 28 px navigation/brand and 21 px body with 27.3 px line height.
+- Reviewed all 12 routes at English 320 px and Slovenian 390 px. Content width equals the available viewport width, including the scrollbar on longer pages.
+- Verified the new two-line mobile credit rows, 16 px resource links and readable attribution text.
+- Verified dialog inclusion: none on Home; photo credits on inner pages; portrait viewer only on Gallery; video player only on Video.
+- Tested the homepage menu with no footer present, menu open/close and background inert state, portrait navigation/download/author updates, focus restoration and body scroll unlock.
+- Verified Slovenian static labels, portrait alternatives, photo credits and trailer viewer labels.
+- Opened and closed the localized Vimeo trailer; closing removes the iframe. Video playback itself was verified in the preceding visual release.
+- Checked the mobile navigation fallback with scripts disabled.
+- Rendered both updated credits PDFs. Each is one A4 page with three link annotations and embedded Space Grotesk weights. Text remains within page bounds; no clipping or overlap was observed.

@@ -18,16 +18,16 @@ pages = {
 }
 descriptions = {
     'home': {
-        'en': 'Tine Ugrin. Slovenian actor working across film, television and theatre. Selected performances, portraits and casting information.',
-        'sl': 'Tine Ugrin. Slovenski filmski, televizijski in gledališki igralec. Izbrane vloge, portreti in igralski profil.',
+        'en': 'Tine Ugrin — Slovenian film, television and theatre actor. Portraits, trailers and casting information.',
+        'sl': 'Tine Ugrin — slovenski filmski, televizijski in gledališki igralec. Portreti, napovedniki in igralski profil.',
     },
     'about': {
-        'en': 'About Slovenian actor Tine Ugrin, his screen work, languages and professional casting profile.',
+        'en': 'Biography, languages and casting profile of Slovenian actor Tine Ugrin.',
         'sl': 'O slovenskem igralcu Tinetu Ugrinu, njegovih vlogah, jezikih in igralskem profilu.',
     },
     'credits': {
-        'en': 'Selected film and television credits for Tine Ugrin. Explore his roles and download screen credits as a PDF.',
-        'sl': 'Izbrane filmske in televizijske vloge Tineta Ugrina. Raziščite projekte in prenesite seznam vlog v PDF.',
+        'en': 'Selected film and television credits for Tine Ugrin. Download the PDF or browse his full filmography.',
+        'sl': 'Izbrane filmske in televizijske vloge Tineta Ugrina. Prenesite PDF ali si oglejte celotno filmografijo.',
     },
     'screen': {
         'en': 'Watch official trailers for Gepack and Don’t Forget to Breathe, featuring Tine Ugrin.',
@@ -38,8 +38,8 @@ descriptions = {
         'sl': 'Portreti igralca Tineta Ugrina za prenos. Fotografije Jakoba Kastelca in Arina Rapuša Jermana.',
     },
     'contact': {
-        'en': 'Contact Tine Ugrin for casting, productions and collaborations through his professional Filmmakers profile.',
-        'sl': 'Kontakt Tineta Ugrina za casting, produkcije in sodelovanja prek poslovnega profila Filmmakers.',
+        'en': 'Casting enquiries for Tine Ugrin via his Filmmakers profile.',
+        'sl': 'Kontakt Tineta Ugrina za casting in sodelovanja prek profila Filmmakers.',
     },
 }
 
@@ -51,17 +51,20 @@ def path_for(section, language):
 
 def main():
     source = (root / 'src/index.html').read_text()
-    for name in ('credits-rail', 'screen-section'):
+    components = {path.stem: path.read_text().strip() for path in (root / 'components').glob('*.html')}
+    for name in ('site-header', 'credits-rail', 'screen-section'):
         marker = '<!-- component:' + name + ' -->'
         assert source.count(marker) == 1, 'Missing or repeated component: ' + name
-        source = source.replace(marker, (root / 'components' / f'{name}.html').read_text().strip())
+        source = source.replace(marker, components[name])
     main_start = source.index('  <main id="main">')
     main_end = source.index('  </main>', main_start) + len('  </main>')
     sections = {}
     for match in re.finditer(r'<section\b[^>]*\bid="([^"]+)"[^>]*>.*?</section>', source[main_start:main_end], re.S):
         sections[match.group(1)] = match.group(0)
     assert sections.keys() == pages.keys(), sections.keys()
-    (dist / 'assets/copy.js').write_text('window.TINE_COPY = ' + json.dumps(copy, ensure_ascii=False, separators=(',', ':')) + ';\n')
+    runtime_keys = set(re.findall(r"\bt\('([^']+)'\)", (dist / 'assets/site.js').read_text()))
+    runtime_copy = {language: {key: copy[language][key] for key in sorted(runtime_keys)} for language in ('en', 'sl')}
+    (dist / 'assets/copy.js').write_text('window.TINE_COPY = ' + json.dumps(runtime_copy, ensure_ascii=False, separators=(',', ':')) + ';\n')
 
     for section, (slug, heading, names) in pages.items():
         body = sections[section]
@@ -72,9 +75,15 @@ def main():
         page = page.replace('<body>', f'<body class="page-{section}' + (' page-content' if section != 'home' else '') + f'" data-page="{section}">')
         if section != 'home':
             page = re.sub(r'  <link rel="preload" href="/assets/hero.webp"[^>]+>\n', '', page)
-        for component, destination in [('credits-rail', 'credits'), ('screen-section', 'screen')]:
-            if section != destination:
-                page = re.sub(r'  <(?:link[^>]+href|script[^>]+src)="/assets/' + component + r'\.(?:css|js)"[^>]*>(?:</script>)?\n', '', page)
+        for name, included in (
+            ('page-footer', section != 'home'),
+            ('photo-credits-dialog', section != 'home'),
+            ('film-dialog', section == 'screen'),
+            ('portrait-dialog', section == 'portraits'),
+        ):
+            marker = '<!-- component:' + name + ' -->'
+            assert page.count(marker) == 1, 'Missing or repeated component: ' + name
+            page = page.replace(marker, components[name] if included else '')
 
         for language in ('en', 'sl'):
             rendered = translate(page, language)
@@ -99,7 +108,7 @@ def main():
             rendered = re.sub(r'href="[^"]*" lang="sl" class="lang-sl"', f'href="{path_for(section,"sl")}" lang="sl" class="lang-sl"', rendered)
             output = dist / path.lstrip('/') / 'index.html'
             output.parent.mkdir(parents=True, exist_ok=True)
-            output.write_text(rendered)
+            output.write_text('\n'.join(line.rstrip() for line in rendered.splitlines()) + '\n')
 
     entries = []
     for section in pages:

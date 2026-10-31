@@ -4,7 +4,9 @@ A minimal English/Slovenian portfolio: a portrait homepage and separate About, G
 
 ## Source
 
-- `src/index.html`: shared header, page content and lightweight viewers.
+- `src/index.html`: page content and component slots.
+- `components/site-header.html` and `page-footer.html`: shared navigation and footer.
+- `components/*-dialog.html`: video, portrait and photo attribution viewers.
 - `components/credits-rail.html`: the compact credits table.
 - `components/screen-section.html`: two official trailer thumbnails.
 - `copy.json` and component copy: English and Slovenian text.
@@ -23,11 +25,15 @@ node --check dist/assets/site.js
 
 Python 3 and Node.js are sufficient; no dependency installation is required. Serve `dist/` for local review. `qa-*.html` files are excluded from version control and must be removed before packaging a manual deploy.
 
-Portraits open in a keyboard-accessible viewer with original JPEG downloads. Trailer links open a player only after a click; closing removes the iframe. With JavaScript unavailable, the trailer links lead directly to the original video. Credits support browser printing and PDF downloads.
+Portraits open in a keyboard-accessible viewer with original JPEG downloads. Trailer links open a player only after a click; closing removes the iframe. Each viewer is included only on its relevant page. With JavaScript unavailable, navigation remains visible and trailer links lead directly to the original video. Credits support browser printing and PDF downloads.
+
+Typography uses local Space Grotesk with named size tokens in `reference-style.css`: 12 px attribution, 14 px small controls, 16 px links, 21 px desktop body and 28 px navigation/headings. Phones use 18 px body and 24 px headings. Mobile credits retain table semantics while displaying each project above its role/format.
 
 ## Content
 
-The two videos are official trailers for Gepack and Don't Forget to Breathe. Photographs retain their author credits in the viewer and Image credits panel. Professional enquiries lead to Tine's verified Filmmakers profile. The PDFs contain selected screen credits.
+The two videos are official trailers for Gepack and Don't Forget to Breathe. Photographs retain their author credits in the viewer and Photo credits panel. Professional enquiries lead to Tine's verified Filmmakers profile. The PDFs contain selected screen credits and use the same Space Grotesk family, with a white paper background for printing.
+
+To regenerate the prebuilt PDFs locally, install ReportLab and fontTools, then run `python3 scripts/generate-credits-pdf.py`. This authoring utility is separate from the dependency-free Netlify build.
 
 ## Deployment
 
@@ -35,4 +41,4 @@ Production: https://tine-ugrin.netlify.app/
 
 Netlify deploys `main` from `juresavron/tineugrin`, runs `netlify.toml` and publishes `dist/`. Local Netlify state is ignored. The earlier private review identity in `.openai/hosting.json` is not the public production destination.
 
-See `VISUAL_AUDIT.md` for the visual comparison and `QA.md` for verification.
+See `VISUAL_AUDIT.md` for the visual comparison, `TEXT_STYLE_AUDIT.md` for the wording/type/component audit and `QA.md` for verification.

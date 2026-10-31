@@ -1,5 +1,6 @@
 (() => {
   'use strict';
+  document.documentElement.classList.add('has-js');
   const lang = document.documentElement.lang === 'sl' ? 'sl' : 'en';
   const copy = window.TINE_COPY[lang];
   const t = key => copy[key] || window.TINE_COPY.en[key] || key;
@@ -18,7 +19,8 @@
     link.href = lang === 'sl' ? '/assets/tine-ugrin-credits-sl.pdf' : '/assets/tine-ugrin-credits-en.pdf';
     link.download = 'Tine-Ugrin-' + (lang === 'sl' ? 'Izbrane-vloge' : 'Screen-Credits') + '.pdf';
   });
-  document.getElementById('year').textContent = new Date().getFullYear();
+  const year = document.getElementById('year');
+  if (year) year.textContent = new Date().getFullYear();
 
   const header = document.getElementById('site-header');
   const menuButton = document.getElementById('menu-toggle');
@@ -44,7 +46,7 @@
     menuButton.setAttribute('aria-label', t('openMenu'));
     menuButton.textContent = t('menuLabel');
     main.inert = false;
-    footer.inert = false;
+    if (footer) footer.inert = false;
     syncBodyLock();
     updateHeader();
     if (restore) menuButton.focus();
@@ -57,7 +59,7 @@
     menuButton.setAttribute('aria-label', t('closeMenu'));
     menuButton.textContent = t('menuCloseLabel');
     main.inert = true;
-    footer.inert = true;
+    if (footer) footer.inert = true;
     syncBodyLock();
     updateHeader();
     menu.querySelector('a').focus();
@@ -81,7 +83,7 @@
     syncBodyLock();
     dialog.querySelector('[data-close]').focus();
   }
-  [filmDialog, portraitDialog, imageCredits].forEach(dialog => {
+  document.querySelectorAll('dialog').forEach(dialog => {
     const close = dialog.querySelector('[data-close]');
     close.setAttribute('aria-label', t('closeViewer'));
     close.addEventListener('click', () => dialog.close());
@@ -124,10 +126,10 @@
   });
 
   const portraits = [
-    { id: 'warm', image: '/assets/portrait-warm.webp', download: '/assets/portrait-warm-download.jpg', credit: '© Arin Rapuš Jerman' },
-    { id: 'dark', image: '/assets/hero.webp', download: '/assets/hero-download.jpg', credit: '© Jakob Kastelec' },
-    { id: 'black', image: '/assets/portrait-black.webp', download: '/assets/portrait-black-download.jpg', credit: '© Arin Rapuš Jerman' },
-    { id: 'smile', image: '/assets/about.webp', download: '/assets/about-download.jpg', credit: '© Jakob Kastelec' }
+    { id: 'warm', image: '/assets/portrait-warm.webp', download: '/assets/portrait-warm-download.jpg', credit: '© Arin Rapuš Jerman', alt: t('portraitWarmAlt') },
+    { id: 'dark', image: '/assets/hero.webp', download: '/assets/hero-download.jpg', credit: '© Jakob Kastelec', alt: t('portraitDarkAlt') },
+    { id: 'black', image: '/assets/portrait-black.webp', download: '/assets/portrait-black-download.jpg', credit: '© Arin Rapuš Jerman', alt: t('portraitBlackAlt') },
+    { id: 'smile', image: '/assets/about.webp', download: '/assets/about-download.jpg', credit: '© Jakob Kastelec', alt: t('portraitSmileAlt') }
   ];
   let portraitIndex = 0;
   function showPortrait(index, opener) {
@@ -135,7 +137,7 @@
     const portrait = portraits[portraitIndex];
     const image = document.getElementById('portrait-full');
     image.src = portrait.image;
-    image.alt = 'Tine Ugrin / ' + portrait.credit;
+    image.alt = portrait.alt;
     document.getElementById('portrait-credit').textContent = String(portraitIndex + 1).padStart(2, '0') + ' / 04 — ' + portrait.credit;
     const download = document.getElementById('portrait-download');
     download.href = portrait.download;
@@ -146,15 +148,13 @@
   document.querySelectorAll('[data-portrait]').forEach(button => button.addEventListener('click', () => showPortrait(portraits.findIndex(portrait => portrait.id === button.dataset.portrait), button)));
   const previous = document.getElementById('portrait-prev');
   const next = document.getElementById('portrait-next');
-  previous.setAttribute('aria-label', lang === 'sl' ? 'Prejšnji portret' : 'Previous portrait');
-  next.setAttribute('aria-label', lang === 'sl' ? 'Naslednji portret' : 'Next portrait');
-  previous.addEventListener('click', () => showPortrait(portraitIndex - 1));
-  next.addEventListener('click', () => showPortrait(portraitIndex + 1));
-  portraitDialog.addEventListener('keydown', event => {
+  previous?.addEventListener('click', () => showPortrait(portraitIndex - 1));
+  next?.addEventListener('click', () => showPortrait(portraitIndex + 1));
+  portraitDialog?.addEventListener('keydown', event => {
     if (event.key === 'ArrowLeft') { event.preventDefault(); showPortrait(portraitIndex - 1); }
     if (event.key === 'ArrowRight') { event.preventDefault(); showPortrait(portraitIndex + 1); }
   });
-  document.getElementById('credits-open').addEventListener('click', () => openDialog(imageCredits));
+  document.getElementById('credits-open')?.addEventListener('click', () => openDialog(imageCredits));
   document.getElementById('print-credits')?.addEventListener('click', () => window.print());
   if (page === 'credits' && new URLSearchParams(location.search).get('print') === '1') {
     window.addEventListener('load', () => {

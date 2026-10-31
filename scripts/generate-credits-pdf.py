@@ -1,13 +1,17 @@
 #!/usr/bin/env python3
 """Regenerate the two checked-in A4 selected-credit PDFs.
 
-Local authoring utility only: requires ReportLab and is deliberately not part of
+Local authoring utility only: requires ReportLab and fontTools, and is not part of
 the Netlify/site build. Run from any directory with:
     python3 scripts/generate-credits-pdf.py
 The website ships the prebuilt PDFs in dist/assets/.
 """
 
 from pathlib import Path
+from io import BytesIO
+
+from fontTools.ttLib import TTFont as SourceFont
+from fontTools.varLib.instancer import instantiateVariableFont
 
 from reportlab.lib.colors import HexColor
 from reportlab.lib.pagesizes import A4
@@ -19,9 +23,8 @@ from reportlab.pdfgen import canvas
 ROOT = Path(__file__).resolve().parents[1]
 ASSETS = ROOT / "dist" / "assets"
 PAGE_W, PAGE_H = A4
-PAPER = HexColor("#F4F3EF")
+PAPER = HexColor("#FFFFFF")
 INK = HexColor("#101615")
-BLUE = HexColor("#4f62ed")
 MUTED = HexColor("#5A605C")
 RULE = HexColor("#CECFC9")
 LEFT, RIGHT = 44, PAGE_W - 44
@@ -30,21 +33,24 @@ CASTING = "https://www.filmmakers.eu/en/actors/tine-ugrin"
 PORTFOLIO = "https://tine-ugrin.netlify.app"
 IMDB = "https://www.imdb.com/name/nm5864569/"
 
-# These local font assets contain TrueType data; their historical .woff2 suffix
-# is retained because the same files are also used by the website.
-for name, filename in (
-    ("Barlow", "font-0.woff2"),
-    ("BarlowBold", "font-1.woff2"),
-    ("DM", "font-2.woff2"),
-    ("DMMedium", "font-3.woff2"),
-    ("DMSemibold", "font-4.woff2"),
-):
-    pdfmetrics.registerFont(TTFont(name, str(ASSETS / "fonts" / filename)))
+# Use the website font. ReportLab needs static instances of the variable font.
+for name, style, weight in (("Space", "Regular", 400), ("SpaceMedium", "Medium", 500), ("SpaceSemibold", "Semibold", 600)):
+    font = SourceFont(ASSETS / "fonts" / "space-grotesk.ttf")
+    instance = instantiateVariableFont(font, {"wght": weight}, inplace=True)
+    # Distinct PostScript names prevent PDF font caches merging the weights.
+    names = {1: "Space Grotesk", 2: style, 4: "Space Grotesk " + style,
+             6: "SpaceGrotesk-" + style, 16: "Space Grotesk", 17: style}
+    for record in instance["name"].names:
+        if record.nameID in names:
+            record.string = names[record.nameID].encode(record.getEncoding())
+    data = BytesIO()
+    instance.save(data)
+    data.seek(0)
+    pdfmetrics.registerFont(TTFont(name, data))
 
 
 TEXT = {
     "en": {
-        "kicker": "FILM / TELEVISION / THEATRE",
         "actor": "Actor / Film, television & theatre",
         "languages_label": "LANGUAGES",
         "languages": ["Slovenian · English", "Italian · Serbo-Croatian"],
@@ -55,14 +61,12 @@ TEXT = {
         "series": "Television series",
         "tv_actor": "TV actor",
         "breathe": "Don't Forget to Breathe",
-        "contact": "CASTING & PROFESSIONAL CONTACT",
+        "contact": "CASTING PROFILE",
         "portfolio": "PORTFOLIO",
         "photo": "Portrait © Jakob Kastelec",
-        "note": "Selected credits. Full casting details available via Filmmakers.",
         "date": "October 2026 / EN",
     },
     "sl": {
-        "kicker": "FILM / TELEVIZIJA / GLEDALIŠČE",
         "actor": "Igralec / Film, televizija in gledališče",
         "languages_label": "JEZIKI",
         "languages": ["Slovenščina · Angleščina", "Italijanščina · Srbohrvaščina"],
@@ -73,24 +77,23 @@ TEXT = {
         "series": "Televizijska serija",
         "tv_actor": "TV igralec",
         "breathe": "Ne pozabi dihati",
-        "contact": "KASTING IN POKLICNI STIK",
+        "contact": "IGRALSKI PROFIL",
         "portfolio": "PORTFELJ",
         "photo": "Portret © Jakob Kastelec",
-        "note": "Izbrane vloge. Celoten kasting profil je na voljo na Filmmakers.",
         "date": "Oktober 2026 / SL",
     },
 }
 
 
-def label(c, text, x, y, size=8, color=MUTED, align="left"):
+def label(c, text, x, y, size=9, color=MUTED, align="left"):
     """Small, tracked labels with a predictable width for right alignment."""
-    tracking = 0.9
-    width = pdfmetrics.stringWidth(text, "DMMedium", size)
+    tracking = 0.4
+    width = pdfmetrics.stringWidth(text, "SpaceMedium", size)
     width += max(0, len(text) - 1) * tracking
     if align == "right":
         x -= width
     obj = c.beginText(x, y)
-    obj.setFont("DMMedium", size)
+    obj.setFont("SpaceMedium", size)
     obj.setCharSpace(tracking)
     obj.setFillColor(color)
     obj.textOut(text)
@@ -104,15 +107,18 @@ def line(c, y, color=RULE, width=0.5):
     c.line(LEFT, y, RIGHT, y)
 
 
-def text(c, value, x, y, font="DM", size=10, color=INK):
+def text(c, value, x, y, font="Space", size=10, color=INK):
     c.setFillColor(color)
     c.setFont(font, size)
     c.drawString(x, y, value)
 
 
 def link(c, value, url, x, y, size=9.6):
-    text(c, value, x, y, "DMMedium", size, BLUE)
-    width = pdfmetrics.stringWidth(value, "DMMedium", size)
+    text(c, value, x, y, "SpaceMedium", size)
+    width = pdfmetrics.stringWidth(value, "SpaceMedium", size)
+    c.setStrokeColor(INK)
+    c.setLineWidth(0.4)
+    c.line(x, y - 2, x + width, y - 2)
     c.linkURL(url, (x, y - 3, x + width, y + size + 3), relative=0)
 
 
@@ -128,15 +134,11 @@ def generate(language):
 
     c.setFillColor(PAPER)
     c.rect(0, 0, PAGE_W, PAGE_H, fill=1, stroke=0)
-    c.setStrokeColor(BLUE)
-    c.setLineWidth(2)
-    c.line(LEFT, 800, 352, 800)
-    label(c, t["kicker"], LEFT, 781, color=BLUE)
-    text(c, "TINE UGRIN", LEFT, 727, "BarlowBold", 52)
-    text(c, t["actor"], LEFT, 706, size=10.4)
-    label(c, t["languages_label"], LEFT, 659)
+    text(c, "TINE UGRIN", LEFT, 753, "SpaceSemibold", 36)
+    text(c, t["actor"], LEFT, 728, size=10.4)
+    label(c, t["languages_label"], LEFT, 675)
     for i, value in enumerate(t["languages"]):
-        text(c, value, LEFT, 640 - i * 16, size=11)
+        text(c, value, LEFT, 656 - i * 17, size=11)
 
     portrait_w = 146
     portrait_h = portrait_w * 2160 / 1550
@@ -146,10 +148,10 @@ def generate(language):
     # are preserved without additional cropping or retouching.
     c.drawImage(str(ASSETS / "hero-download.jpg"), portrait_x, portrait_y,
                 width=portrait_w, height=portrait_h)
-    text(c, t["photo"], portrait_x, portrait_y - 13, size=7.2, color=MUTED)
+    text(c, t["photo"], portrait_x, portrait_y - 15, size=8, color=MUTED)
 
-    text(c, t["section"], LEFT, 533, "Barlow", 28)
-    project_x, role_x, format_x = LEFT, 270, 348
+    text(c, t["section"], LEFT, 533, "Space", 22)
+    project_x, role_x, format_x = LEFT, 250, 340
     for value, x in zip(t["columns"][:3], (project_x, role_x, format_x)):
         label(c, value, x, 489)
     label(c, t["columns"][3], RIGHT, 489, align="right")
@@ -169,10 +171,10 @@ def generate(language):
     ]
     for i, (project, role, form, year) in enumerate(rows):
         y = 452 - i * 38
-        text(c, project, project_x, y, "DMSemibold", 11.1)
+        text(c, project, project_x, y, "SpaceMedium", 11.1)
         text(c, role, role_x, y, size=9.8)
         text(c, form, format_x, y, size=9.4)
-        c.setFont("DMMedium", 10.2)
+        c.setFont("Space", 10.2)
         c.setFillColor(INK)
         c.drawRightString(RIGHT, y, year)
         line(c, y - 13)
@@ -185,11 +187,10 @@ def generate(language):
     link(c, "imdb.com/name/nm5864569/", IMDB, 316, 105)
 
     line(c, 76)
-    text(c, t["note"], LEFT, 60, size=7.7, color=MUTED)
-    text(c, "TINE UGRIN", LEFT, 41, "Barlow", 10, MUTED)
+    text(c, "TINE UGRIN", LEFT, 54, "SpaceMedium", 10, MUTED)
     c.setFillColor(MUTED)
-    c.setFont("DM", 7.7)
-    c.drawRightString(RIGHT, 41, t["date"])
+    c.setFont("Space", 9)
+    c.drawRightString(RIGHT, 54, t["date"])
     c.showPage()
     c.save()
     print(path.relative_to(ROOT), path.stat().st_size, "bytes")
