@@ -25,6 +25,8 @@
   <link rel="stylesheet" href="/assets/credits-rail.css">
   <link rel="stylesheet" href="/assets/screen-section.css">
   <link rel="stylesheet" href="/assets/casting-file.css">
+  <link rel="stylesheet" href="/assets/reference-style.css">
+  <link rel="preload" href="/assets/fonts/space-grotesk.ttf" as="font" type="font/ttf" crossorigin>
   
   <script defer src="/assets/copy.js"></script>
   <script defer src="/assets/site.js"></script>
@@ -37,15 +39,15 @@
 <body>
   <a class="skip-link" href="#main" data-i18n="skip">Skip to content</a>
   <header class="site-header" id="site-header">
-    <a class="monogram" href="#home" aria-label="Tine Ugrin, home">TU<span>.</span></a>
-    <nav class="desktop-nav" aria-label="Main navigation">
-      <a href="#about" data-i18n="navAbout">About</a><a href="#credits" data-i18n="navCredits">Credits</a><a href="#screen" data-i18n="navScreen">On screen</a><a href="#portraits" data-i18n="navPortraits">Portraits</a>
-    </nav>
-    <div class="header-end"><button class="header-casting" data-open-casting type="button"><span data-i18n="forCasting">For casting</span><span aria-hidden="true">↗</span></button><div class="language-switch" aria-label="Language"><a href="/" lang="en" class="lang-en" aria-current="page">EN</a><span>/</span><a href="/sl/" lang="sl" class="lang-sl">SL</a></div><button class="menu-toggle" id="menu-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu"><span></span><span></span></button></div>
-    <span class="reading-progress" aria-hidden="true"></span>
+    <a class="monogram" href="#home" aria-label="Tine Ugrin, home"><span class="brand-name">TINE UGRIN</span><span class="brand-role"> / <span data-i18n="brandActor">ACTOR</span></span></a>
+    <div class="site-rail">
+      <nav class="desktop-nav" aria-label="Main navigation"><a href="#about" data-i18n="navAbout">About</a><a href="#credits" data-i18n="navCredits">Credits</a><a href="#screen" data-i18n="navScreen">Video</a><a href="#portraits" data-i18n="navPortraits">Gallery</a><a href="#contact" data-i18n="navContact">Contact</a></nav>
+      <nav class="rail-profiles" aria-label="Professional profiles"><a href="https://www.filmmakers.eu/en/actors/tine-ugrin" target="_blank" rel="noopener noreferrer">Filmmakers</a><a href="https://www.imdb.com/name/nm5864569/" target="_blank" rel="noopener noreferrer">IMDb</a><a href="https://www.instagram.com/tine_ugrin/" target="_blank" rel="noopener noreferrer">Instagram</a><a href="/assets/tine-ugrin-credits-en.pdf" data-language-pdf download data-i18n="railCreditsPdf">Screen credits / PDF</a></nav>
+      <div class="header-end"><button class="header-casting" data-open-casting type="button"><span data-i18n="castingShort">Casting</span></button><div class="language-switch" aria-label="Language"><a href="/" lang="en" class="lang-en" aria-current="page">EN</a><span>/</span><a href="/sl/" lang="sl" class="lang-sl">SL</a></div><button class="menu-toggle" id="menu-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu"><span></span><span></span></button></div>
+    </div>
   </header>
   <div class="mobile-menu" id="mobile-menu" hidden>
-    <nav aria-label="Mobile navigation"><a href="#about" data-i18n="navAbout">About</a><a href="#credits" data-i18n="navCredits">Credits</a><a href="#screen" data-i18n="navScreen">On screen</a><a href="#portraits" data-i18n="navPortraits">Portraits</a><a href="#contact" data-i18n="navContact">Contact</a></nav>
+    <nav aria-label="Mobile navigation"><a href="#about" data-i18n="navAbout">About</a><a href="#credits" data-i18n="navCredits">Credits</a><a href="#screen" data-i18n="navScreen">Video</a><a href="#portraits" data-i18n="navPortraits">Gallery</a><a href="#contact" data-i18n="navContact">Contact</a></nav>
     <a class="menu-instagram" href="https://www.instagram.com/tine_ugrin/" target="_blank" rel="noopener noreferrer">Instagram / @tine_ugrin ↗</a>
   </div>
   <main id="main">
@@ -53,12 +55,12 @@
       <div class="hero-photo"><img src="/assets/hero.webp" alt="Portrait of Tine Ugrin by Jakob Kastelec" width="1550" height="2160" fetchpriority="high"><div class="hero-shade"></div></div>
       <div class="hero-topline"><span class="micro"><span class="status-dot"></span><span data-i18n="slovenianActor">Slovenian actor</span></span><span class="micro hero-disciplines" data-i18n="disciplines">Film / Television / Theatre</span></div>
       <div class="hero-title-wrap"><h1 id="hero-title"><span>TINE</span> <span class="surname">UGRIN<span class="title-period">.</span></span></h1></div>
-      <div class="hero-bottom"><a class="explore-link" href="#about"><span data-i18n="explorePortfolio">Meet Tine</span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v16M5 13l7 7 7-7"/></svg></a><a class="hero-watch" href="#screen"><span class="watch-circle"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m9 5 11 7-11 7Z"/></svg></span><span><span class="watch-title" data-i18n="watchTrailers">Watch trailers</span><span class="watch-subtitle" data-i18n="heroScreenNote">A selection of screen work</span></span><svg class="watch-arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 19 19 5M5 5h14v14"/></svg></a></div>
+      <div class="hero-bottom"><a class="explore-link" href="#about"><span data-i18n="explorePortfolio">About</span></a><a class="hero-watch" href="#screen"><span class="watch-title" data-i18n="watchTrailers">Watch trailers</span></a><button class="hero-casting" data-open-casting type="button" data-i18n="forCasting">For casting</button></div>
       <span class="hero-credit micro" data-i18n="heroPhotoCredit">Photography © Jakob Kastelec</span>
     </section>
 
     <section class="about-section section-pad" id="about" aria-labelledby="about-heading">
-      <div class="editorial-heading"><span class="micro">01 /</span><h2 id="about-heading" data-i18n="aboutTitle">About.</h2><span class="micro" data-i18n="thePerson">The person</span></div>
+      <div class="editorial-heading"><span class="micro">01 /</span><h2 id="about-heading" data-i18n="aboutTitle">About</h2><span class="micro" data-i18n="thePerson">The person</span></div>
       <div class="about-layout"><div class="about-copy"><p class="about-lead" data-i18n="aboutLead">A Slovenian actor.<br>A curiosity for different worlds.</p><p class="about-bio" data-i18n="aboutBody">Tine’s screen work includes the road-trip film Gepack, Martin Turk’s Don’t Forget to Breathe and the television series Gospod profesor. His work also extends to short films and theatre.</p><dl class="about-facts"><div><dt data-i18n="languages">Languages</dt><dd data-i18n="spokenLanguages">Slovenian · English<br>Italian · Serbo-Croatian</dd></div></dl><div class="about-actions"><button class="text-action" data-open-casting type="button"><span data-i18n="headshotsCasting">Headshots & casting file</span><span aria-hidden="true">↗</span></button><a class="text-action subtle-action" href="https://www.filmmakers.eu/en/actors/tine-ugrin" target="_blank" rel="noopener noreferrer"><span data-i18n="fullProfile">Full profile</span><span aria-hidden="true">↗</span></a></div></div><figure class="about-image"><button type="button" data-portrait="smile" aria-label="View smiling portrait of Tine"><img src="/assets/about.webp" alt="Tine Ugrin smiling, photographed by Jakob Kastelec" loading="lazy" width="1000" height="1370"><span class="image-expand" aria-hidden="true">↗</span></button><figcaption class="micro">Tine Ugrin / © Jakob Kastelec</figcaption></figure></div>
     </section>
 
@@ -67,7 +69,7 @@
       <div class="cr-print-identity"><h2>Tine Ugrin</h2><p data-i18n="crActorLine">Actor / Film, television &amp; theatre</p><a href="https://www.filmmakers.eu/en/actors/tine-ugrin">filmmakers.eu/en/actors/tine-ugrin</a></div>
       <div class="cr-topline"><span data-i18n="crKicker">02 / Selected work</span><span data-i18n="crCollection">Seven projects</span></div>
       <div class="cr-heading-row">
-        <div><h2 id="credits-heading" data-i18n="crHeading">Credits.</h2><p class="cr-intro" data-i18n="crIntro">Selected film & television.</p></div>
+        <div><h2 id="credits-heading" data-i18n="crHeading">Credits</h2><p class="cr-intro" data-i18n="crIntro">Selected film & television.</p></div>
         <div class="cr-controls" aria-label="Browse credits" data-cr-label="crBrowse">
           <span class="cr-counter" id="cr-counter" aria-label="Project 1 of 7">01 / 07</span>
           <button class="cr-arrow" type="button" data-cr-previous aria-label="Previous credits" aria-controls="cr-track" disabled><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 12H4m7-7-7 7 7 7"/></svg></button>
@@ -155,7 +157,7 @@
 
     <section class="ss-section section-pad" id="screen" aria-labelledby="screen-heading" data-ss-selected="breathe">
       <div class="ss-topline"><span data-i18n="ssKicker">03 / Film</span><span data-i18n="ssCollection">Two official trailers</span></div>
-      <div class="ss-heading-row"><h2 id="screen-heading" data-i18n="ssHeading">On screen.</h2><p data-i18n="ssIntro">A glimpse into two different worlds.</p></div>
+      <div class="ss-heading-row"><h2 id="screen-heading" data-i18n="ssHeading">Video</h2><p data-i18n="ssIntro">A glimpse into two different worlds.</p></div>
       <figure class="ss-film" id="ss-stage" aria-labelledby="ss-active-title">
         <div class="ss-poster">
           <img class="ss-poster-image" data-ss-poster src="/assets/breathe.webp" alt="Tine Ugrin and Klara Kuk in Don’t Forget to Breathe" width="1620" height="1080" loading="lazy" decoding="async">
@@ -179,7 +181,7 @@
     </section>
 
     <section class="portrait-strip section-pad" id="portraits" aria-labelledby="portraits-heading">
-      <div class="editorial-heading"><span class="micro">04 /</span><h2 id="portraits-heading" data-i18n="offScreen">Off screen.</h2><span class="micro" data-i18n="portraitLabel">Portraits</span></div>
+      <div class="editorial-heading"><span class="micro">04 /</span><h2 id="portraits-heading" data-i18n="offScreen">Gallery</h2><span class="micro" data-i18n="portraitLabel">Portraits</span></div>
       <div class="portrait-strip-grid">
         <figure><button type="button" data-portrait="warm" aria-label="View warm portrait of Tine"><img src="/assets/portrait-warm.webp" alt="Tine Ugrin in a green sweater, photographed by Arin Rapuš Jerman" loading="lazy" width="1000" height="1500"><span class="image-expand" aria-hidden="true">↗</span></button><figcaption><span>01</span><span>© Arin Rapuš Jerman</span></figcaption></figure>
         <figure><button type="button" data-portrait="dark" aria-label="View portrait of Tine in a dark suit"><img src="/assets/hero.webp" alt="Tine Ugrin in a dark suit, photographed by Jakob Kastelec" loading="lazy" width="1550" height="2160"><span class="image-expand" aria-hidden="true">↗</span></button><figcaption><span>02</span><span>© Jakob Kastelec</span></figcaption></figure>
@@ -189,10 +191,10 @@
       <div class="instagram-line" id="instagram"><div><span class="micro" data-i18n="followAlong">Follow along</span><p>Instagram / @tine_ugrin</p></div><a class="text-action" href="https://www.instagram.com/tine_ugrin/" target="_blank" rel="noopener noreferrer"><span data-i18n="visitInstagram">Visit Instagram</span><span aria-hidden="true">↗</span></a></div>
     </section>
   </main>
-  <footer class="site-footer section-pad" id="contact">
-    <div class="footer-contact"><div><span class="micro" data-i18n="contactDisciplines">Casting · Productions · Collaborations</span><p data-i18n="characterInMind">Have a character in mind?</p></div><button class="footer-casting" type="button" data-open-casting><span data-i18n="forCasting">For casting</span><span aria-hidden="true">↗</span></button></div>
-    <nav class="profile-links" aria-label="Professional profiles"><a href="https://www.filmmakers.eu/en/actors/tine-ugrin" target="_blank" rel="noopener noreferrer"><span>Filmmakers</span><span aria-hidden="true">↗</span></a><a href="https://www.imdb.com/name/nm5864569/" target="_blank" rel="noopener noreferrer"><span>IMDb</span><span aria-hidden="true">↗</span></a><a href="https://bsf.si/sl/ime/tine-ugrin/" target="_blank" rel="noopener noreferrer"><span data-i18n="filmography">Filmography</span><span aria-hidden="true">↗</span></a></nav>
-    <div class="footer-bottom"><a class="footer-name" href="#home">TINE UGRIN<span>.</span></a><span class="micro">© <span id="year">2026</span> Tine Ugrin</span><button id="credits-open" type="button" data-i18n="imageCredits">Image credits</button><a class="back-top micro" href="#home"><span data-i18n="backTop">Back to top</span> ↑</a></div>
+  <footer class="site-footer section-pad" id="contact" aria-labelledby="contact-heading">
+    <div class="contact-copy"><h2 id="contact-heading" data-i18n="contactTitle">Contact</h2><p data-i18n="contactIntro">For casting, productions and collaborations.</p><p data-i18n="professionalContactNote">Tine’s professional contact is listed on Filmmakers.</p><a class="contact-profile" href="https://www.filmmakers.eu/en/actors/tine-ugrin" target="_blank" rel="noopener noreferrer" data-i18n="contactVia">Contact via Filmmakers</a><div class="contact-resources"><button class="footer-casting" type="button" data-open-casting data-i18n="openCastingFile">Open casting file</button><a href="/assets/tine-ugrin-credits-en.pdf" data-language-pdf download data-i18n="railCreditsPdf">Screen credits / PDF</a></div></div>
+    <nav class="profile-links" aria-label="Professional profiles"><a href="https://www.filmmakers.eu/en/actors/tine-ugrin" target="_blank" rel="noopener noreferrer">Filmmakers</a><a href="https://www.imdb.com/name/nm5864569/" target="_blank" rel="noopener noreferrer">IMDb</a><a href="https://www.instagram.com/tine_ugrin/" target="_blank" rel="noopener noreferrer">Instagram</a><a href="https://bsf.si/sl/ime/tine-ugrin/" target="_blank" rel="noopener noreferrer" data-i18n="filmography">Filmography</a></nav>
+    <div class="footer-bottom"><span class="micro">© <span id="year">2026</span> Tine Ugrin</span><button id="credits-open" type="button" data-i18n="imageCredits">Image credits</button><a class="back-top micro" href="#home"><span data-i18n="backTop">Back to top</span> ↑</a></div>
   </footer>
 
   <dialog id="casting-file-dialog" class="cf-dialog" aria-labelledby="cf-title" aria-describedby="cf-introduction">

@@ -33,3 +33,11 @@
   font-display: swap;
   src: url(font-4.woff2) format('truetype');
 }
+
+@font-face {
+  font-family: 'Space Grotesk';
+  font-style: normal;
+  font-weight: 300 700;
+  font-display: swap;
+  src: url(space-grotesk.ttf) format('truetype');
+}

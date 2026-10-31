@@ -1,6 +1,6 @@
 # Tine Ugrin — Actor portfolio
 
-An English/Slovenian portfolio for actor Tine Ugrin. The page follows the supplied sketch: portrait hero, About, visual credits, screen section, portrait strip and professional profiles. A persistent Casting file brings professional resources together.
+An English/Slovenian portfolio for actor Tine Ugrin. The page follows the supplied sketch: portrait hero, About, visual credits, video, gallery and contact. Full-screen photography, white Space Grotesk typography and fixed side navigation follow the visual direction of the supplied [Jurij Drevenšek reference](https://www.jurij-drevensek.com/contact/). Tine’s own photographs, credits and professional links supply the content. A persistent Casting file brings professional resources together.
 
 ## Structure
 
@@ -8,6 +8,7 @@ An English/Slovenian portfolio for actor Tine Ugrin. The page follows the suppli
 - `components/`: credits rail, screen section and casting file, with their bilingual copy.
 - `copy.json`: shared page and film-viewer copy.
 - `dist/`: deployable static site, bundled fonts, portraits and film stills.
+- `dist/assets/reference-style.css`: photographic theme and responsive side/mobile navigation.
 - `scripts/`: dependency-free build and source checks.
 
 ## Build and check
@@ -27,7 +28,7 @@ Serve `dist/` with any static web server. Both `/` and `/sl/` are generated. The
 
 ## Content and attribution
 
-Portraits and film stills retain photographer credits in the interface and `dist/assets/asset-credits.json`. The two official film trailers are correctly labelled; neither is presented as a personal acting reel. The Off screen section contains professional portraits and an Instagram link verified through Tine’s Filmmakers profile, not a simulated social feed. Casting enquiries use Tine’s existing professional Filmmakers profile. Height, playing age, personal email and representation have not been invented. Downloadable EN/SL PDFs contain verified selected screen credits, not an unverified full CV. Gospod profesor’s Tibor Fortuna role is sourced from the official Filmmakers profile.
+Portraits and film stills retain photographer credits in the interface and `dist/assets/asset-credits.json`. The two official film trailers are correctly labelled; neither is presented as a personal acting reel. The Gallery contains professional portraits and an Instagram link verified through Tine’s Filmmakers profile. Casting enquiries use Tine’s existing professional Filmmakers profile. Height, playing age, personal email and representation have not been invented. Downloadable EN/SL PDFs contain verified selected screen credits. Gospod profesor’s Tibor Fortuna role is sourced from the official Filmmakers profile. Bundled font licenses are included under `dist/assets/fonts/`.
 
 ## Netlify deployment
 

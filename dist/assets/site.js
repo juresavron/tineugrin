@@ -13,7 +13,7 @@
   const frame=document.getElementById('video-frame');
   const announcer=document.getElementById('announcer');
   const openers=new WeakMap();
-  const sections=[...document.querySelectorAll('main > section[id]')];
+  const sections=[...document.querySelectorAll('main > section[id],footer#contact')];
   const navLinks=[...document.querySelectorAll('.desktop-nav a[href^="#"],#mobile-menu a[href^="#"]')];
   let scrollFrame=0,activeSection='';
   function syncBodyLock(){document.body.classList.toggle('modal-open',!menu.hidden||Boolean(document.querySelector('dialog[open]')));}
@@ -21,7 +21,8 @@
     header.classList.toggle('is-scrolled',window.scrollY>50||!menu.hidden);
     const max=document.documentElement.scrollHeight-window.innerHeight;
     header.style.setProperty('--reading-progress',String(max>0?Math.min(1,Math.max(0,window.scrollY/max)):0));
-    const current=[...sections].reverse().find(section=>section.getBoundingClientRect().top<window.innerHeight*.38);
+    const atEnd=window.scrollY>100&&window.scrollY+window.innerHeight>=document.documentElement.scrollHeight-8;
+    const current=atEnd?document.getElementById('contact'):[...sections].reverse().find(section=>section.getBoundingClientRect().top<window.innerHeight*.38);
     if(current&&current.id!==activeSection){
       activeSection=current.id;
       navLinks.forEach(link=>{if(link.hash==='#'+activeSection)link.setAttribute('aria-current','location');else link.removeAttribute('aria-current');});
