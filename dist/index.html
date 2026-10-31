@@ -9,142 +9,191 @@
   <meta property="og:title" content="Tine Ugrin — Actor">
   <meta property="og:description" content="Selected performances. Different worlds. The portfolio of Slovenian actor Tine Ugrin.">
   <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
   <meta property="og:url" content="https://tine-ugrin.netlify.app/">
   <meta property="og:image" content="https://tine-ugrin.netlify.app/assets/social.jpg">
+  <meta property="og:image:alt" content="Tine Ugrin, Slovenian actor">
+  <meta property="og:locale" content="en_GB">
   <link rel="canonical" href="https://tine-ugrin.netlify.app/">
+  <link rel="alternate" hreflang="x-default" href="https://tine-ugrin.netlify.app/">
   <link rel="alternate" hreflang="en" href="https://tine-ugrin.netlify.app/">
   <link rel="alternate" hreflang="sl" href="https://tine-ugrin.netlify.app/sl/">
   <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
   <link rel="preload" href="/assets/hero.webp" as="image" fetchpriority="high">
   <link rel="stylesheet" href="/assets/fonts/fonts.css">
-  <link rel="stylesheet" href="/assets/site.css">
-  <link rel="stylesheet" href="/assets/refinements.css">
-  <link rel="stylesheet" href="/assets/character-study.css">
-  <link rel="stylesheet" href="/assets/portrait-contact-sheet.css">
+  <link rel="stylesheet" href="/assets/layout.css">
+  <link rel="stylesheet" href="/assets/credits-rail.css">
+  <link rel="stylesheet" href="/assets/screen-section.css">
   <link rel="stylesheet" href="/assets/casting-file.css">
   
   <script defer src="/assets/copy.js"></script>
   <script defer src="/assets/site.js"></script>
-  <script defer src="/assets/character-study.js"></script>
-  <script defer src="/assets/portrait-contact-sheet.js"></script>
+  <script defer src="/assets/credits-rail.js"></script>
+  <script defer src="/assets/screen-section.js"></script>
   <script defer src="/assets/casting-file.js"></script>
   
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"Person","name":"Tine Ugrin","jobTitle":"Actor","url":"https://tine-ugrin.netlify.app/","image":"https://tine-ugrin.netlify.app/assets/social.jpg","sameAs":["https://www.filmmakers.eu/en/actors/tine-ugrin","https://www.imdb.com/name/nm5864569/","https://www.instagram.com/tine_ugrin/"]}</script>
 </head>
 <body>
   <a class="skip-link" href="#main" data-i18n="skip">Skip to content</a>
   <header class="site-header" id="site-header">
     <a class="monogram" href="#home" aria-label="Tine Ugrin, home">TU<span>.</span></a>
     <nav class="desktop-nav" aria-label="Main navigation">
-      <a href="#work" data-i18n="navWork">Selected work</a>
-      <a href="#about" data-i18n="navAbout">About</a>
-      <a href="#portraits" data-i18n="navPortraits">Portraits</a>
-      <a href="#contact" data-i18n="navContact">Contact</a>
+      <a href="#about" data-i18n="navAbout">About</a><a href="#credits" data-i18n="navCredits">Credits</a><a href="#screen" data-i18n="navScreen">On screen</a><a href="#portraits" data-i18n="navPortraits">Portraits</a>
     </nav>
     <div class="header-end"><button class="header-casting" data-open-casting type="button"><span data-i18n="forCasting">For casting</span><span aria-hidden="true">↗</span></button><div class="language-switch" aria-label="Language"><a href="/" lang="en" class="lang-en" aria-current="page">EN</a><span>/</span><a href="/sl/" lang="sl" class="lang-sl">SL</a></div><button class="menu-toggle" id="menu-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu"><span></span><span></span></button></div>
     <span class="reading-progress" aria-hidden="true"></span>
   </header>
-
   <div class="mobile-menu" id="mobile-menu" hidden>
-    <nav aria-label="Mobile navigation"><a href="#work" data-i18n="navWork">Selected work</a><a href="#about" data-i18n="navAbout">About</a><a href="#portraits" data-i18n="navPortraits">Portraits</a><a href="#contact" data-i18n="navContact">Contact</a></nav>
-    <span class="micro" data-i18n="actorLine">Actor / Film, television & theatre</span>
+    <nav aria-label="Mobile navigation"><a href="#about" data-i18n="navAbout">About</a><a href="#credits" data-i18n="navCredits">Credits</a><a href="#screen" data-i18n="navScreen">On screen</a><a href="#portraits" data-i18n="navPortraits">Portraits</a><a href="#contact" data-i18n="navContact">Contact</a></nav>
+    <a class="menu-instagram" href="https://www.instagram.com/tine_ugrin/" target="_blank" rel="noopener noreferrer">Instagram / @tine_ugrin ↗</a>
   </div>
-
   <main id="main">
     <section class="hero" id="home" aria-labelledby="hero-title">
       <div class="hero-photo"><img src="/assets/hero.webp" alt="Portrait of Tine Ugrin by Jakob Kastelec" width="1550" height="2160" fetchpriority="high"><div class="hero-shade"></div></div>
       <div class="hero-topline"><span class="micro"><span class="status-dot"></span><span data-i18n="slovenianActor">Slovenian actor</span></span><span class="micro hero-disciplines" data-i18n="disciplines">Film / Television / Theatre</span></div>
-      <div class="hero-title-wrap"><h1 id="hero-title"><span>TINE</span><span class="surname">UGRIN<span class="title-period">.</span></span></h1></div>
-      <div class="hero-bottom"><a class="explore-link" href="#work"><span data-i18n="exploreWork">Meet the characters</span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v16M5 13l7 7 7-7"/></svg></a><button class="hero-watch" data-film="gepack" data-film-play="true" type="button"><span class="watch-circle"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m9 5 11 7-11 7Z"/></svg></span><span><span class="watch-title" data-i18n="watchScreen">Watch on screen</span><span class="watch-subtitle" data-i18n="trailersLabel">Official trailers / 1:30</span></span><svg class="watch-arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 19 19 5M5 5h14v14"/></svg></button></div>
-      <span class="hero-credit micro">Photography © Jakob Kastelec</span>
-      <span class="hero-side micro" aria-hidden="true">TINE UGRIN / SELECTED WORK</span>
-    </section>
-
-    <section class="cs-study section-pad" id="work" aria-labelledby="cs-heading">
-      <div class="cs-rule"><span class="cs-kicker" data-i18n="csKicker">01 / Selected screen work</span><span class="cs-kicker" data-i18n="csIndexCount">Three roles / One actor</span></div>
-      <div class="cs-introduction"><h2 id="cs-heading" data-i18n="csHeading">The character study.</h2><p data-i18n="csIntroduction">Choose a role.<br> Step into its world.</p></div>
-      <div class="cs-layout">
-        <figure class="cs-stage" id="cs-stage" aria-labelledby="cs-project-title" aria-busy="false">
-          <div class="cs-picture" id="cs-picture">
-            <img class="cs-image cs-image-visible" id="cs-stage-image" src="/assets/gepack.webp" alt="Tine Ugrin and the cast of Gepack in a car" width="1920" height="797" loading="lazy" decoding="async">
-            <div class="cs-scrim" aria-hidden="true"></div>
-            <div class="cs-picture-top"><span class="cs-format" id="cs-format" data-i18n="csFeatureFilm">Feature film</span><span class="cs-frame-count" id="cs-frame-count" aria-label="Project 1 of 3">01 / 03</span></div>
-            <div class="cs-picture-bottom"><span class="cs-role-prefix" data-i18n="csInRole">In the role of</span><strong class="cs-character" id="cs-character" data-i18n="csJon">Jon</strong></div>
-            <span class="cs-loading" id="cs-loading" hidden data-i18n="csLoading">Loading frame…</span>
-          </div>
-          <figcaption class="cs-caption"><div class="cs-caption-copy"><h3 id="cs-project-title" data-i18n="csGepackTitle">Gepack</h3><p id="cs-project-detail"><span data-i18n="csDirectedBy">Directed by</span> Žiga Kukovič / 2024</p></div><button class="cs-watch" id="cs-open-film" type="button" aria-label="Watch the trailer for Gepack" disabled><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m8 5 11 7-11 7Z"/></svg><span id="cs-action-label" data-i18n="csWatchTrailer">Watch trailer</span><span class="cs-action-arrow" aria-hidden="true">↗</span></button></figcaption>
-          <p class="cs-photo-credit" id="cs-photo-credit">Film still © Matic Gabriel</p>
-        </figure>
-        <div class="cs-index">
-          <p class="cs-index-label" data-i18n="csSelectRole">Select a character</p>
-          <div class="cs-role-list" role="group" aria-label="Select a character">
-            <button class="cs-role-button cs-is-selected" type="button" data-select-role="gepack" aria-pressed="true" aria-controls="cs-stage" disabled><span class="cs-ordinal">01</span><span class="cs-role-button-copy"><strong data-i18n="csJon">Jon</strong><span class="cs-role-film" data-i18n="csGepackTitle">Gepack</span><span class="cs-role-year">2024</span></span><span class="cs-selection-mark" aria-hidden="true"></span></button>
-            <button class="cs-role-button" type="button" data-select-role="breathe" aria-pressed="false" aria-controls="cs-stage" disabled><span class="cs-ordinal">02</span><span class="cs-role-button-copy"><strong data-i18n="csPeter">Peter</strong><span class="cs-role-film" data-i18n="csBreatheTitle">Don’t Forget to Breathe</span><span class="cs-role-year">2019</span></span><span class="cs-selection-mark" aria-hidden="true"></span></button>
-            <button class="cs-role-button" type="button" data-select-role="legend" aria-pressed="false" aria-controls="cs-stage" disabled><span class="cs-ordinal">03</span><span class="cs-role-button-copy"><strong data-i18n="csTvActor">TV actor</strong><span class="cs-role-film" data-i18n="csLegendTitle">Legenda o bejbi</span><span class="cs-role-year">2024</span></span><span class="cs-selection-mark" aria-hidden="true"></span></button>
-          </div>
-          <div class="cs-index-footer"><span class="cs-index-note" data-i18n="csIndexNote">A role is the beginning<br> of another story.</span><a class="cs-credits-link" href="#credits"><span data-i18n="csViewCredits">Selected credits</span><span aria-hidden="true">↓</span></a></div>
-        </div>
-      </div>
-      <div class="cs-context"><span class="cs-context-label" data-i18n="csContextLabel">Character notes</span><p id="cs-story" data-i18n="csGepackStory">Jon, one of four friends on a road trip to the Croatian coast.</p></div>
-      <p class="cs-status" id="cs-status" role="status" aria-live="polite"></p>
-      <noscript><div class="cs-no-script"><p data-i18n="csNoScript">Explore the films directly:</p><a href="https://www.kinodvor.org/film/gepack/" target="_blank" rel="noopener noreferrer">Gepack ↗</a><a href="https://belafilm.si/seznam-filmi/ne-pozabi-dihati/" target="_blank" rel="noopener noreferrer" data-i18n="csBreatheSource">Don’t Forget to Breathe ↗</a><a href="https://bsf.si/sl/film/legenda-o-bejbi/" target="_blank" rel="noopener noreferrer">Legenda o bejbi ↗</a></div></noscript>
+      <div class="hero-title-wrap"><h1 id="hero-title"><span>TINE</span> <span class="surname">UGRIN<span class="title-period">.</span></span></h1></div>
+      <div class="hero-bottom"><a class="explore-link" href="#about"><span data-i18n="explorePortfolio">Meet Tine</span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v16M5 13l7 7 7-7"/></svg></a><a class="hero-watch" href="#screen"><span class="watch-circle"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m9 5 11 7-11 7Z"/></svg></span><span><span class="watch-title" data-i18n="watchTrailers">Watch trailers</span><span class="watch-subtitle" data-i18n="heroScreenNote">A selection of screen work</span></span><svg class="watch-arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 19 19 5M5 5h14v14"/></svg></a></div>
+      <span class="hero-credit micro" data-i18n="heroPhotoCredit">Photography © Jakob Kastelec</span>
     </section>
 
     <section class="about-section section-pad" id="about" aria-labelledby="about-heading">
-      <div class="section-kicker"><span class="micro" data-i18n="inFocus">02 / In focus</span><span class="micro">TINE UGRIN</span></div>
-      <div class="about-layout"><div class="about-copy"><h2 class="display-heading" id="about-heading" data-i18n="aboutHeading">BEHIND<br>THE PART.</h2><div class="about-body"><p class="about-lead" data-i18n="aboutLead">A Slovenian actor.<br>A curiosity for different worlds.</p><p data-i18n="aboutBody">Tine’s screen work includes the road-trip film Gepack, Martin Turk’s Don’t Forget to Breathe and the television series Gospod profesor. His work also extends to short films and theatre.</p><a class="text-action light-action" href="https://www.filmmakers.eu/en/actors/tine-ugrin" target="_blank" rel="noopener noreferrer"><span data-i18n="castingProfile">Full casting profile</span><span aria-hidden="true">↗</span></a><div class="language-facts"><span class="micro" data-i18n="languages">Languages</span><p data-i18n="spokenLanguages">Slovenian · English<br>Italian · Serbo-Croatian</p></div></div></div><figure class="about-image"><img src="/assets/about.webp" alt="Tine Ugrin smiling, photographed by Jakob Kastelec" loading="lazy" width="1000" height="1370"><figcaption class="micro">Tine Ugrin / © Jakob Kastelec</figcaption></figure></div>
+      <div class="editorial-heading"><span class="micro">01 /</span><h2 id="about-heading" data-i18n="aboutTitle">About.</h2><span class="micro" data-i18n="thePerson">The person</span></div>
+      <div class="about-layout"><div class="about-copy"><p class="about-lead" data-i18n="aboutLead">A Slovenian actor.<br>A curiosity for different worlds.</p><p class="about-bio" data-i18n="aboutBody">Tine’s screen work includes the road-trip film Gepack, Martin Turk’s Don’t Forget to Breathe and the television series Gospod profesor. His work also extends to short films and theatre.</p><dl class="about-facts"><div><dt data-i18n="languages">Languages</dt><dd data-i18n="spokenLanguages">Slovenian · English<br>Italian · Serbo-Croatian</dd></div></dl><div class="about-actions"><button class="text-action" data-open-casting type="button"><span data-i18n="headshotsCasting">Headshots & casting file</span><span aria-hidden="true">↗</span></button><a class="text-action subtle-action" href="https://www.filmmakers.eu/en/actors/tine-ugrin" target="_blank" rel="noopener noreferrer"><span data-i18n="fullProfile">Full profile</span><span aria-hidden="true">↗</span></a></div></div><figure class="about-image"><button type="button" data-portrait="smile" aria-label="View smiling portrait of Tine"><img src="/assets/about.webp" alt="Tine Ugrin smiling, photographed by Jakob Kastelec" loading="lazy" width="1000" height="1370"><span class="image-expand" aria-hidden="true">↗</span></button><figcaption class="micro">Tine Ugrin / © Jakob Kastelec</figcaption></figure></div>
     </section>
 
-    <section class="credits-section section-pad" id="credits" aria-labelledby="credits-heading"><div class="print-identity"><img src="/assets/hero.webp" alt="Tine Ugrin" width="1550" height="2160"><div><h2>Tine Ugrin</h2><p data-i18n="actorLine">Actor / Film, television & theatre</p><p data-i18n="spokenLanguages">Slovenian · English<br>Italian · Serbo-Croatian</p><a href="https://www.filmmakers.eu/en/actors/tine-ugrin">filmmakers.eu/en/actors/tine-ugrin</a></div></div>
-      <div class="section-kicker"><span class="micro" data-i18n="creditsKicker">03 / The credits</span><button class="text-action print-button" id="print-credits" type="button"><span data-i18n="printCredits">Print selected credits</span><span aria-hidden="true">↗</span></button></div>
-      <div class="credits-heading"><h2 id="credits-heading" data-i18n="selectedCredits">SELECTED CREDITS</h2><span class="micro" data-i18n="screenWork">Film & television</span></div>
-      <table class="credits-table"><thead><tr><th scope="col" data-i18n="creditProject">Project</th><th scope="col" data-i18n="creditRole">Role / format</th><th scope="col" data-i18n="creditYear">Year</th></tr></thead><tbody><tr><th scope="row"><a href="https://bsf.si/sl/film/ni-v-navodilih/" target="_blank" rel="noopener noreferrer">Ni v navodilih ↗</a></th><td><span data-i18n="matejShort">Matej / Short film</span></td><td>2025</td></tr><tr><th scope="row"><a href="https://bsf.si/sl/film/suznji/" target="_blank" rel="noopener noreferrer">Sužnji ↗</a></th><td><span data-i18n="timShort">Tim / Short film</span></td><td>2025</td></tr><tr><th scope="row"><button class="credit-project-button" type="button" data-film="gepack">Gepack</button></th><td><span data-i18n="jonFeature">Jon / Feature film</span></td><td>2024</td></tr><tr><th scope="row"><button class="credit-project-button" type="button" data-film="legend">Legenda o bejbi</button></th><td><span data-i18n="tvActorShort">TV actor / Short film</span></td><td>2024</td></tr><tr><th scope="row"><a href="https://bsf.si/sl/film/gospod-profesor/" target="_blank" rel="noopener noreferrer">Gospod profesor ↗</a></th><td><span data-i18n="tvSeries">Television series</span></td><td>2022–23</td></tr><tr><th scope="row"><button class="credit-project-button" type="button" data-film="breathe"><span data-i18n="breatheTitlePlain">Don’t Forget to Breathe</span></button></th><td><span data-i18n="peterFeature">Peter / Feature film</span></td><td>2019</td></tr><tr><th scope="row"><a href="https://bsf.si/sl/film/nika/" target="_blank" rel="noopener noreferrer">Nika ↗</a></th><td><span data-i18n="zanFeature">Žan / Feature film</span></td><td>2016</td></tr></tbody></table>
-      <p class="credits-source micro"><span data-i18n="completeFilmography">For the complete filmography:</span> <a href="https://bsf.si/sl/ime/tine-ugrin/" target="_blank" rel="noopener noreferrer" data-i18n="filmDatabase">Slovenian Film Database ↗</a></p>
+    <section class="cr-credits section-pad" id="credits" aria-labelledby="credits-heading">
+      <span class="cr-anchor" id="work" aria-hidden="true"></span>
+      <div class="cr-print-identity"><h2>Tine Ugrin</h2><p data-i18n="crActorLine">Actor / Film, television &amp; theatre</p><a href="https://www.filmmakers.eu/en/actors/tine-ugrin">filmmakers.eu/en/actors/tine-ugrin</a></div>
+      <div class="cr-topline"><span data-i18n="crKicker">02 / Selected work</span><span data-i18n="crCollection">Seven projects</span></div>
+      <div class="cr-heading-row">
+        <div><h2 id="credits-heading" data-i18n="crHeading">Credits.</h2><p class="cr-intro" data-i18n="crIntro">Selected film & television.</p></div>
+        <div class="cr-controls" aria-label="Browse credits" data-cr-label="crBrowse">
+          <span class="cr-counter" id="cr-counter" aria-label="Project 1 of 7">01 / 07</span>
+          <button class="cr-arrow" type="button" data-cr-previous aria-label="Previous credits" aria-controls="cr-track" disabled><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 12H4m7-7-7 7 7 7"/></svg></button>
+          <button class="cr-arrow" type="button" data-cr-next aria-label="Next credits" aria-controls="cr-track" disabled><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h16m-7-7 7 7-7 7"/></svg></button>
+        </div>
+      </div>
+      <ul class="cr-track" id="cr-track" aria-label="Selected screen credits" data-cr-label="crListLabel" tabindex="0">
+        <li class="cr-card" data-cr-id="gepack">
+          <article class="cr-project" aria-labelledby="cr-gepack-title">
+            <div class="cr-card-topline"><span>01 / <span data-i18n="crFeatureFilm">Feature film</span></span><span class="cr-selected" data-i18n="crSelected" hidden>Selected</span></div>
+            <figure class="cr-figure"><div class="cr-visual"><img src="/assets/gepack.webp" alt="Tine Ugrin and the cast of Gepack in a car" data-i18n-alt="crAltGepack" width="1920" height="797" loading="lazy" decoding="async"></div><figcaption class="cr-photo-credit" data-i18n="crGepackPhoto">Film still © Matic Gabriel</figcaption></figure>
+            <div class="cr-card-copy"><h3 id="cr-gepack-title" data-i18n="crGepackTitle">Gepack</h3><p class="cr-meta"><span data-i18n="crJon">Jon</span><span>2024</span></p></div>
+            <button class="cr-open" type="button" data-cr-film="gepack" aria-label="View film details for Gepack" aria-haspopup="dialog" aria-controls="film-dialog" disabled><span data-i18n="crViewFilm">Film details</span><span aria-hidden="true">↗</span></button>
+            <noscript><a class="cr-source" href="https://bsf.si/sl/film/gepack/" target="_blank" rel="noopener noreferrer"><span data-i18n="crProjectDetails">Project details</span> ↗</a></noscript>
+          </article>
+        </li>
+        <li class="cr-card" data-cr-id="breathe">
+          <article class="cr-project" aria-labelledby="cr-breathe-title">
+            <div class="cr-card-topline"><span>02 / <span data-i18n="crFeatureFilm">Feature film</span></span><span class="cr-selected" data-i18n="crSelected" hidden>Selected</span></div>
+            <figure class="cr-figure"><div class="cr-visual"><img src="/assets/breathe.webp" alt="Tine Ugrin and Klara Kuk in Don’t Forget to Breathe" data-i18n-alt="crAltBreathe" width="1620" height="1080" loading="lazy" decoding="async"></div><figcaption class="cr-photo-credit" data-i18n="crBreathePhoto">Film still © Željko Stevanić</figcaption></figure>
+            <div class="cr-card-copy"><h3 id="cr-breathe-title" data-i18n="crBreatheTitle">Don’t Forget to Breathe</h3><p class="cr-meta"><span data-i18n="crPeter">Peter</span><span>2019</span></p></div>
+            <button class="cr-open" type="button" data-cr-film="breathe" aria-label="View film details for Don’t Forget to Breathe" aria-haspopup="dialog" aria-controls="film-dialog" disabled><span data-i18n="crViewFilm">Film details</span><span aria-hidden="true">↗</span></button>
+            <noscript><a class="cr-source" href="https://bsf.si/sl/film/ne-pozabi-dihati/" target="_blank" rel="noopener noreferrer"><span data-i18n="crProjectDetails">Project details</span> ↗</a></noscript>
+          </article>
+        </li>
+        <li class="cr-card" data-cr-id="legend">
+          <article class="cr-project" aria-labelledby="cr-legend-title">
+            <div class="cr-card-topline"><span>03 / <span data-i18n="crShortFilm">Short film</span></span><span class="cr-selected" data-i18n="crSelected" hidden>Selected</span></div>
+            <figure class="cr-figure"><div class="cr-visual"><img src="/assets/legend.webp" alt="Tine Ugrin in Legenda o bejbi" data-i18n-alt="crAltLegend" width="1920" height="1080" loading="lazy" decoding="async"></div><figcaption class="cr-photo-credit" data-i18n="crLegendPhoto">Film still © Teo Toth</figcaption></figure>
+            <div class="cr-card-copy"><h3 id="cr-legend-title" data-i18n="crLegendTitle">Legenda o bejbi</h3><p class="cr-meta"><span data-i18n="crTvActor">TV actor</span><span>2024</span></p></div>
+            <button class="cr-open" type="button" data-cr-film="legend" aria-label="View film details for Legenda o bejbi" aria-haspopup="dialog" aria-controls="film-dialog" disabled><span data-i18n="crViewFilm">Film details</span><span aria-hidden="true">↗</span></button>
+            <noscript><a class="cr-source" href="https://bsf.si/sl/film/legenda-o-bejbi/" target="_blank" rel="noopener noreferrer"><span data-i18n="crProjectDetails">Project details</span> ↗</a></noscript>
+          </article>
+        </li>
+        <li class="cr-card" data-cr-id="ni-v-navodilih">
+          <article class="cr-project" aria-labelledby="cr-navodilih-title">
+            <div class="cr-card-topline"><span>04 / <span data-i18n="crShortFilm">Short film</span></span></div>
+            <div class="cr-figure"><div class="cr-visual cr-type-visual cr-type-blue" aria-hidden="true"><span class="cr-type-year">2025</span><strong class="cr-type-role" data-i18n="crMatej">Matej</strong><span class="cr-type-rule"></span></div><p class="cr-photo-credit" data-i18n="crDatabaseCaption">Slovenian Film Database</p></div>
+            <div class="cr-card-copy"><h3 id="cr-navodilih-title">Ni v navodilih</h3><p class="cr-meta"><span data-i18n="crMatej">Matej</span><span>2025</span></p></div>
+            <a class="cr-source" href="https://bsf.si/sl/film/ni-v-navodilih/" target="_blank" rel="noopener noreferrer" aria-label="View Ni v navodilih in the Slovenian Film Database" data-cr-source><span data-i18n="crProjectDetails">Project details</span><span aria-hidden="true">↗</span></a>
+          </article>
+        </li>
+        <li class="cr-card" data-cr-id="suznji">
+          <article class="cr-project" aria-labelledby="cr-suznji-title">
+            <div class="cr-card-topline"><span>05 / <span data-i18n="crShortFilm">Short film</span></span></div>
+            <div class="cr-figure"><div class="cr-visual cr-type-visual cr-type-ink" aria-hidden="true"><span class="cr-type-year">2025</span><strong class="cr-type-role" data-i18n="crTim">Tim</strong><span class="cr-type-rule"></span></div><p class="cr-photo-credit" data-i18n="crDatabaseCaption">Slovenian Film Database</p></div>
+            <div class="cr-card-copy"><h3 id="cr-suznji-title">Sužnji</h3><p class="cr-meta"><span data-i18n="crTim">Tim</span><span>2025</span></p></div>
+            <a class="cr-source" href="https://bsf.si/sl/film/suznji/" target="_blank" rel="noopener noreferrer" aria-label="View Sužnji in the Slovenian Film Database" data-cr-source><span data-i18n="crProjectDetails">Project details</span><span aria-hidden="true">↗</span></a>
+          </article>
+        </li>
+        <li class="cr-card" data-cr-id="gospod-profesor">
+          <article class="cr-project" aria-labelledby="cr-profesor-title">
+            <div class="cr-card-topline"><span>06 / <span data-i18n="crTelevisionSeries">Television series</span></span></div>
+            <div class="cr-figure"><div class="cr-visual cr-type-visual cr-type-paper" aria-hidden="true"><span class="cr-type-year">2022–23</span><strong class="cr-type-role cr-type-role-long">Tibor<br>Fortuna</strong><span class="cr-type-rule"></span></div><p class="cr-photo-credit" data-i18n="crDatabaseCaption">Slovenian Film Database</p></div>
+            <div class="cr-card-copy"><h3 id="cr-profesor-title">Gospod profesor</h3><p class="cr-meta"><span>Tibor Fortuna</span><span>2022–23</span></p></div>
+            <a class="cr-source" href="https://bsf.si/sl/film/gospod-profesor/" target="_blank" rel="noopener noreferrer" aria-label="View Gospod profesor in the Slovenian Film Database" data-cr-source><span data-i18n="crProjectDetails">Project details</span><span aria-hidden="true">↗</span></a>
+          </article>
+        </li>
+        <li class="cr-card" data-cr-id="nika">
+          <article class="cr-project" aria-labelledby="cr-nika-title">
+            <div class="cr-card-topline"><span>07 / <span data-i18n="crFeatureFilm">Feature film</span></span></div>
+            <div class="cr-figure"><div class="cr-visual cr-type-visual cr-type-blue" aria-hidden="true"><span class="cr-type-year">2016</span><strong class="cr-type-role" data-i18n="crZan">Žan</strong><span class="cr-type-rule"></span></div><p class="cr-photo-credit" data-i18n="crDatabaseCaption">Slovenian Film Database</p></div>
+            <div class="cr-card-copy"><h3 id="cr-nika-title">Nika</h3><p class="cr-meta"><span data-i18n="crZan">Žan</span><span>2016</span></p></div>
+            <a class="cr-source" href="https://bsf.si/sl/film/nika/" target="_blank" rel="noopener noreferrer" aria-label="View Nika in the Slovenian Film Database" data-cr-source><span data-i18n="crProjectDetails">Project details</span><span aria-hidden="true">↗</span></a>
+          </article>
+        </li>
+      </ul>
+      <div class="cr-credit-tools">
+        <details class="cr-complete" id="cr-complete"><summary><span data-i18n="crAllCredits">All selected credits</span><span class="cr-summary-mark" aria-hidden="true">+</span></summary>
+          <div class="cr-table-wrap"><table class="cr-table"><caption class="cr-sr-only" data-i18n="crTableCaption">Tine Ugrin — selected screen credits</caption><thead><tr><th scope="col" data-i18n="crProject">Project</th><th scope="col" data-i18n="crRoleFormat">Role / Format</th><th scope="col" data-i18n="crYear">Year</th></tr></thead><tbody>
+            <tr><th scope="row"><a href="https://bsf.si/sl/film/ni-v-navodilih/" target="_blank" rel="noopener noreferrer">Ni v navodilih <span aria-hidden="true">↗</span></a></th><td data-i18n="crMatejShort">Matej / Short film</td><td>2025</td></tr>
+            <tr><th scope="row"><a href="https://bsf.si/sl/film/suznji/" target="_blank" rel="noopener noreferrer">Sužnji <span aria-hidden="true">↗</span></a></th><td data-i18n="crTimShort">Tim / Short film</td><td>2025</td></tr>
+            <tr><th scope="row"><a href="https://bsf.si/sl/film/gepack/" target="_blank" rel="noopener noreferrer">Gepack <span aria-hidden="true">↗</span></a></th><td data-i18n="crJonFeature">Jon / Feature film</td><td>2024</td></tr>
+            <tr><th scope="row"><a href="https://bsf.si/sl/film/legenda-o-bejbi/" target="_blank" rel="noopener noreferrer">Legenda o bejbi <span aria-hidden="true">↗</span></a></th><td data-i18n="crTvActorShort">TV actor / Short film</td><td>2024</td></tr>
+            <tr><th scope="row"><a href="https://bsf.si/sl/film/gospod-profesor/" target="_blank" rel="noopener noreferrer">Gospod profesor <span aria-hidden="true">↗</span></a></th><td data-i18n="crTiborSeries">Tibor Fortuna / Television series</td><td>2022–23</td></tr>
+            <tr><th scope="row"><a href="https://bsf.si/sl/film/ne-pozabi-dihati/" target="_blank" rel="noopener noreferrer" data-i18n="crBreatheSource">Don’t Forget to Breathe ↗</a></th><td data-i18n="crPeterFeature">Peter / Feature film</td><td>2019</td></tr>
+            <tr><th scope="row"><a href="https://bsf.si/sl/film/nika/" target="_blank" rel="noopener noreferrer">Nika <span aria-hidden="true">↗</span></a></th><td data-i18n="crZanFeature">Žan / Feature film</td><td>2016</td></tr>
+          </tbody></table><p class="cr-full-filmography"><span data-i18n="crFilmographyIntro">For the complete filmography:</span> <a href="https://bsf.si/sl/ime/tine-ugrin/" target="_blank" rel="noopener noreferrer" data-i18n="crFilmDatabase">Slovenian Film Database ↗</a></p></div>
+        </details>
+        <button class="cr-print" id="print-credits" type="button"><span data-i18n="crPrint">Print screen credits</span><span aria-hidden="true">↗</span></button>
+      </div>
+      <div class="cr-download-row"><a class="cr-download" id="credits-pdf-link" href="/assets/tine-ugrin-credits-en.pdf" data-language-pdf="credits" download><span data-i18n="crDownload">Download screen credits / PDF</span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v12m-5-5 5 5 5-5M4 16v5h16v-5"/></svg></a></div>
+      <p class="cr-sr-only" id="cr-status" role="status" aria-live="polite" aria-atomic="true"></p>
     </section>
 
-    <section class="pcs-section section-pad" id="portraits" aria-labelledby="pcs-heading" data-pcs-selection="warm">
-  <div class="pcs-topline"><span class="pcs-eyebrow" data-i18n="pcsKicker">04 / Out of character</span><span class="pcs-eyebrow" data-i18n="pcsCollection">Portraits / Casting & press</span></div>
-  <div class="pcs-heading-row"><h2 id="pcs-heading" data-i18n="pcsHeading">THE CONTACT SHEET.</h2><p data-i18n="pcsIntro">A closer look at the person<br>behind the parts.</p></div>
-  <div class="pcs-layout">
-    <figure class="pcs-selected">
-      <div class="pcs-stage">
-        <img class="pcs-stage-image" data-pcs-image src="/assets/portrait-warm.webp" alt="Tine Ugrin in a green sweater, photographed by Arin Rapuš Jerman" width="1000" height="1500" loading="lazy">
-        <img class="pcs-stage-image pcs-stage-dissolve" data-pcs-dissolve src="/assets/portrait-warm.webp" alt="" aria-hidden="true" width="1000" height="1500" hidden>
-        <span class="pcs-frame-mark pcs-frame-mark-start" aria-hidden="true"></span><span class="pcs-frame-mark pcs-frame-mark-end" aria-hidden="true"></span>
+    <section class="ss-section section-pad" id="screen" aria-labelledby="screen-heading" data-ss-selected="breathe">
+      <div class="ss-topline"><span data-i18n="ssKicker">03 / Film</span><span data-i18n="ssCollection">Two official trailers</span></div>
+      <div class="ss-heading-row"><h2 id="screen-heading" data-i18n="ssHeading">On screen.</h2><p data-i18n="ssIntro">A glimpse into two different worlds.</p></div>
+      <figure class="ss-film" id="ss-stage" aria-labelledby="ss-active-title">
+        <div class="ss-poster">
+          <img class="ss-poster-image" data-ss-poster src="/assets/breathe.webp" alt="Tine Ugrin and Klara Kuk in Don’t Forget to Breathe" width="1620" height="1080" loading="lazy" decoding="async">
+          <span class="ss-poster-shade" aria-hidden="true"></span>
+          <button class="ss-play" type="button" data-ss-watch aria-label="Watch the official trailer for Don’t Forget to Breathe" aria-haspopup="dialog" aria-controls="film-dialog" disabled><span class="ss-play-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m9 5 10 7-10 7Z"/></svg></span><span class="ss-play-label" data-i18n="ssWatchTrailer">Watch trailer</span></button>
+          <span class="ss-frame-index" data-ss-index aria-hidden="true">01 / 02</span>
+        </div>
+        <figcaption class="ss-film-caption">
+          <div class="ss-film-information"><h3 id="ss-active-title" data-ss-title data-i18n="ssBreatheTitle">Don’t Forget to Breathe</h3><p class="ss-film-facts" data-ss-facts><span data-i18n="ssAs">As</span> Peter <span aria-hidden="true">/</span> Martin Turk <span aria-hidden="true">/</span> 2019</p></div>
+          <div class="ss-film-media"><p id="ss-media" data-i18n="ssTrailerRuntime">Official trailer · 1:30</p><span data-ss-subtitles data-i18n="ssEnglishSubtitles">English subtitles</span></div>
+        </figcaption>
+      </figure>
+      <div class="ss-credit"><span data-ss-credit><span data-i18n="ssStill">Film still</span> © Željko Stevanić / SFC</span><a href="https://bsf.si/sl/ime/tine-ugrin/" target="_blank" rel="noopener noreferrer"><span data-i18n="ssSource">Source: Slovenian Film Database</span><span aria-hidden="true"> ↗</span></a></div>
+      <div class="ss-selector-heading"><span data-i18n="ssChooseTrailer">Choose a trailer</span><span class="ss-selector-rule" aria-hidden="true"></span></div>
+      <div class="ss-selectors" role="group" aria-label="Choose a trailer" data-ss-selectors>
+        <button class="ss-selector" type="button" data-ss-select="breathe" aria-pressed="true" aria-controls="ss-stage" disabled><span class="ss-selector-image"><img src="/assets/breathe.webp" alt="" width="1620" height="1080" loading="lazy" decoding="async"></span><span class="ss-selector-copy"><span class="ss-selector-title" data-i18n="ssBreatheTitle">Don’t Forget to Breathe</span><span class="ss-selector-meta" data-i18n="ssBreatheMeta">Peter / 2019</span><span class="ss-selector-runtime" data-i18n="ssTrailerRuntime">Official trailer · 1:30</span></span><span class="ss-selector-state" aria-hidden="true"><svg viewBox="0 0 20 20"><path d="m5 10 3 3 7-7"/></svg></span></button>
+        <button class="ss-selector" type="button" data-ss-select="gepack" aria-pressed="false" aria-controls="ss-stage" disabled><span class="ss-selector-image"><img src="/assets/gepack.webp" alt="" width="1920" height="797" loading="lazy" decoding="async"></span><span class="ss-selector-copy"><span class="ss-selector-title" data-i18n="ssGepackTitle">Gepack</span><span class="ss-selector-meta" data-i18n="ssGepackMeta">Jon / 2024</span><span class="ss-selector-runtime" data-i18n="ssTrailerRuntime">Official trailer · 1:30</span></span><span class="ss-selector-state" aria-hidden="true"><svg viewBox="0 0 20 20"><path d="m5 10 3 3 7-7"/></svg></span></button>
       </div>
-      <figcaption class="pcs-selected-caption"><span data-pcs-count>01 / 04</span><span id="pcs-credit" data-pcs-credit>© Arin Rapuš Jerman</span></figcaption>
-    </figure>
-    <div class="pcs-sheet">
-      <div class="pcs-sheet-label"><span class="pcs-eyebrow" data-i18n="pcsSheetLabel">Portrait index</span><span class="pcs-index-line" aria-hidden="true"></span><span class="pcs-eyebrow">01—04</span></div>
-      <div class="pcs-thumbnails" role="group" aria-label="Choose a portrait" data-pcs-group>
-        <button class="pcs-thumb" type="button" data-pcs-thumb="warm" aria-pressed="true" aria-label="Select portrait 01: green sweater">
-          <span class="pcs-thumb-image"><img src="/assets/portrait-warm.webp" alt="" loading="lazy" width="1000" height="1500"></span><span class="pcs-thumb-caption"><span>01</span><span class="pcs-thumb-marker" aria-hidden="true">↗</span></span>
-        </button>
-        <button class="pcs-thumb" type="button" data-pcs-thumb="dark" aria-pressed="false" aria-label="Select portrait 02: dark suit">
-          <span class="pcs-thumb-image"><img src="/assets/hero.webp" alt="" loading="lazy" width="1550" height="2160"></span><span class="pcs-thumb-caption"><span>02</span><span class="pcs-thumb-marker" aria-hidden="true">↗</span></span>
-        </button>
-        <button class="pcs-thumb" type="button" data-pcs-thumb="black" aria-pressed="false" aria-label="Select portrait 03: black turtleneck">
-          <span class="pcs-thumb-image"><img src="/assets/portrait-black.webp" alt="" loading="lazy" width="1000" height="1500"></span><span class="pcs-thumb-caption"><span>03</span><span class="pcs-thumb-marker" aria-hidden="true">↗</span></span>
-        </button>
-        <button class="pcs-thumb" type="button" data-pcs-thumb="smile" aria-pressed="false" aria-label="Select portrait 04: smiling portrait">
-          <span class="pcs-thumb-image"><img src="/assets/about.webp" alt="" loading="lazy" width="1000" height="1370"></span><span class="pcs-thumb-caption"><span>04</span><span class="pcs-thumb-marker" aria-hidden="true">↗</span></span>
-        </button>
-      </div>
-      <div class="pcs-selection-info"><span class="pcs-selection-name" data-pcs-name>Tine Ugrin / 01</span><span class="pcs-eyebrow" data-i18n="pcsFileNote">Original JPEG / Full resolution</span></div>
-      <div class="pcs-actions">
-        <a class="pcs-download" data-pcs-download href="/assets/portrait-warm-download.jpg" download="Tine-Ugrin-Portrait-01.jpg"><span data-i18n="pcsDownload">Download this portrait</span><span aria-hidden="true">↓</span></a>
-        <a class="pcs-view" data-pcs-view href="/assets/portrait-warm-download.jpg" target="_blank" rel="noopener noreferrer"><span data-i18n="pcsViewFull">View full size</span><span aria-hidden="true">↗</span></a>
-      </div>
-      <p class="pcs-photography"><span data-i18n="pcsPhotography">Photography</span><br>Arin Rapuš Jerman & Jakob Kastelec</p>
-      <noscript><div class="pcs-no-script"><span data-i18n="pcsOriginals">Original portrait files</span><a href="/assets/portrait-warm-download.jpg" download="Tine-Ugrin-Portrait-01.jpg">01 / Arin Rapuš Jerman ↓</a><a href="/assets/hero-download.jpg" download="Tine-Ugrin-Portrait-02.jpg">02 / Jakob Kastelec ↓</a><a href="/assets/portrait-black-download.jpg" download="Tine-Ugrin-Portrait-03.jpg">03 / Arin Rapuš Jerman ↓</a><a href="/assets/about-download.jpg" download="Tine-Ugrin-Portrait-04.jpg">04 / Jakob Kastelec ↓</a></div></noscript>
-    </div>
-  </div>
-  <span class="pcs-announcer" role="status" aria-live="polite" aria-atomic="true" data-pcs-announcer></span>
-</section>
+      <p class="ss-announcer" role="status" aria-live="polite" aria-atomic="true" data-ss-announcer></p>
+      <noscript><div class="ss-direct-links"><span data-i18n="ssDirectLinks">Watch the official trailers:</span><a href="https://vimeo.com/336166678" target="_blank" rel="noopener noreferrer"><span data-i18n="ssBreatheTitle">Don’t Forget to Breathe</span> ↗</a><a href="https://www.youtube.com/watch?v=iqsXFf8O_rw" target="_blank" rel="noopener noreferrer">Gepack ↗</a></div></noscript>
+    </section>
 
-    <section class="contact-section section-pad" id="contact" aria-labelledby="contact-heading"><div class="contact-top"><span class="micro" data-i18n="contactKicker">05 / The next story</span><span class="micro" data-i18n="contactDisciplines">Casting · Productions · Collaborations</span></div><a class="contact-title" href="https://www.filmmakers.eu/en/actors/tine-ugrin" target="_blank" rel="noopener noreferrer"><h2 id="contact-heading" data-i18n="letsTalk">LET’S TALK.</h2><svg viewBox="0 0 100 100" aria-hidden="true"><path d="M14 86 86 14M14 14h72v72"/></svg></a><div class="contact-bottom"><p data-i18n="contactBody">Have a character in mind?<br>Find Tine’s professional contact on Filmmakers.</p><div class="contact-actions"><a class="contact-button" href="https://www.filmmakers.eu/en/actors/tine-ugrin" target="_blank" rel="noopener noreferrer"><span data-i18n="contactVia">Contact via Filmmakers</span><span aria-hidden="true">↗</span></a><button class="text-action contact-casting" data-open-casting type="button"><span data-i18n="openCastingFile">Open casting file</span><span aria-hidden="true">↗</span></button></div></div></section>
+    <section class="portrait-strip section-pad" id="portraits" aria-labelledby="portraits-heading">
+      <div class="editorial-heading"><span class="micro">04 /</span><h2 id="portraits-heading" data-i18n="offScreen">Off screen.</h2><span class="micro" data-i18n="portraitLabel">Portraits</span></div>
+      <div class="portrait-strip-grid">
+        <figure><button type="button" data-portrait="warm" aria-label="View warm portrait of Tine"><img src="/assets/portrait-warm.webp" alt="Tine Ugrin in a green sweater, photographed by Arin Rapuš Jerman" loading="lazy" width="1000" height="1500"><span class="image-expand" aria-hidden="true">↗</span></button><figcaption><span>01</span><span>© Arin Rapuš Jerman</span></figcaption></figure>
+        <figure><button type="button" data-portrait="dark" aria-label="View portrait of Tine in a dark suit"><img src="/assets/hero.webp" alt="Tine Ugrin in a dark suit, photographed by Jakob Kastelec" loading="lazy" width="1550" height="2160"><span class="image-expand" aria-hidden="true">↗</span></button><figcaption><span>02</span><span>© Jakob Kastelec</span></figcaption></figure>
+        <figure><button type="button" data-portrait="black" aria-label="View portrait of Tine in a black turtleneck"><img src="/assets/portrait-black.webp" alt="Tine Ugrin in a black turtleneck, photographed by Arin Rapuš Jerman" loading="lazy" width="1000" height="1500"><span class="image-expand" aria-hidden="true">↗</span></button><figcaption><span>03</span><span>© Arin Rapuš Jerman</span></figcaption></figure>
+        <figure><button type="button" data-portrait="smile" aria-label="View smiling portrait of Tine"><img src="/assets/about.webp" alt="Tine Ugrin smiling, photographed by Jakob Kastelec" loading="lazy" width="1000" height="1370"><span class="image-expand" aria-hidden="true">↗</span></button><figcaption><span>04</span><span>© Jakob Kastelec</span></figcaption></figure>
+      </div>
+      <div class="instagram-line" id="instagram"><div><span class="micro" data-i18n="followAlong">Follow along</span><p>Instagram / @tine_ugrin</p></div><a class="text-action" href="https://www.instagram.com/tine_ugrin/" target="_blank" rel="noopener noreferrer"><span data-i18n="visitInstagram">Visit Instagram</span><span aria-hidden="true">↗</span></a></div>
+    </section>
   </main>
-
-  <footer class="site-footer"><span class="footer-name">TINE UGRIN</span><div class="footer-links"><a href="https://www.imdb.com/name/nm5864569/" target="_blank" rel="noopener noreferrer">IMDb ↗</a><a href="https://www.filmmakers.eu/en/actors/tine-ugrin" target="_blank" rel="noopener noreferrer">Filmmakers ↗</a><button id="credits-open" type="button" data-i18n="imageCredits">Image credits</button></div><span class="micro">© <span id="year">2026</span> Tine Ugrin</span><a class="back-top micro" href="#home"><span data-i18n="backTop">Back to top</span> ↑</a></footer>
+  <footer class="site-footer section-pad" id="contact">
+    <div class="footer-contact"><div><span class="micro" data-i18n="contactDisciplines">Casting · Productions · Collaborations</span><p data-i18n="characterInMind">Have a character in mind?</p></div><button class="footer-casting" type="button" data-open-casting><span data-i18n="forCasting">For casting</span><span aria-hidden="true">↗</span></button></div>
+    <nav class="profile-links" aria-label="Professional profiles"><a href="https://www.filmmakers.eu/en/actors/tine-ugrin" target="_blank" rel="noopener noreferrer"><span>Filmmakers</span><span aria-hidden="true">↗</span></a><a href="https://www.imdb.com/name/nm5864569/" target="_blank" rel="noopener noreferrer"><span>IMDb</span><span aria-hidden="true">↗</span></a><a href="https://bsf.si/sl/ime/tine-ugrin/" target="_blank" rel="noopener noreferrer"><span data-i18n="filmography">Filmography</span><span aria-hidden="true">↗</span></a></nav>
+    <div class="footer-bottom"><a class="footer-name" href="#home">TINE UGRIN<span>.</span></a><span class="micro">© <span id="year">2026</span> Tine Ugrin</span><button id="credits-open" type="button" data-i18n="imageCredits">Image credits</button><a class="back-top micro" href="#home"><span data-i18n="backTop">Back to top</span> ↑</a></div>
+  </footer>
 
   <dialog id="casting-file-dialog" class="cf-dialog" aria-labelledby="cf-title" aria-describedby="cf-introduction">
   <header class="cf-header">
@@ -179,7 +228,7 @@
         <ul>
           <li><span class="cf-project-title">Gepack</span><span class="cf-project-detail" data-i18n="cfGepackCredit">Jon / Feature film / 2024</span></li>
           <li><span class="cf-project-title" data-i18n="cfBreatheTitle">Don’t Forget to Breathe</span><span class="cf-project-detail" data-i18n="cfBreatheCredit">Peter / Feature film / 2019</span></li>
-          <li><span class="cf-project-title">Gospod profesor</span><span class="cf-project-detail" data-i18n="cfProfessorCredit">Television series / 2022–2023</span></li>
+          <li><span class="cf-project-title">Gospod profesor</span><span class="cf-project-detail" data-i18n="cfProfessorCredit">Tibor Fortuna / Television series / 2022–2023</span></li>
         </ul>
       </section>
       <div class="cf-professional-contact">
@@ -189,6 +238,7 @@
       </div>
     </div>
   </div>
+  <div class="cf-pdf-resource"><a class="cf-profile-link" href="/assets/tine-ugrin-credits-en.pdf" data-language-pdf download><span data-i18n="downloadScreenCredits">Download screen credits</span><span aria-hidden="true">↓</span></a><p data-i18n="screenCreditsPdf">PDF / Selected screen credits</p></div>
   <footer class="cf-actions">
     <a href="#credits" class="cf-resource-action" data-cf-view-credits><span data-i18n="cfViewCredits">View selected credits</span><span aria-hidden="true">↓</span></a>
     <button type="button" class="cf-resource-action" data-cf-print><span data-i18n="cfPrintCredits">Print selected credits</span><span aria-hidden="true">↗</span></button>

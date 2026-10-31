@@ -3,7 +3,7 @@ import subprocess,sys
 
 root=Path(__file__).resolve().parent.parent
 source=(root/'src/index.html').read_text()
-for name in ('character-study','portrait-contact-sheet','casting-file'):
+for name in ('credits-rail','screen-section','casting-file'):
     marker='<!-- component:'+name+' -->'
     assert source.count(marker)==1, 'Missing or repeated component: '+name
     source=source.replace(marker,(root/'components'/f'{name}.html').read_text().strip())
