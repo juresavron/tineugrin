@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>https://tine-ugrin.netlify.app/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://tine-ugrin.netlify.app/" />
+    <xhtml:link rel="alternate" hreflang="sl" href="https://tine-ugrin.netlify.app/sl/" />
+  </url>
+  <url>
+    <loc>https://tine-ugrin.netlify.app/sl/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://tine-ugrin.netlify.app/" />
+    <xhtml:link rel="alternate" hreflang="sl" href="https://tine-ugrin.netlify.app/sl/" />
+  </url>
+</urlset>

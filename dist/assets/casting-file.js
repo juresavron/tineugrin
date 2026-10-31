@@ -92,6 +92,7 @@
       heading.setAttribute('tabindex', '-1');
       heading.addEventListener('blur', () => heading.removeAttribute('tabindex'), { once: true });
     }
+    document.getElementById('credits')?.scrollIntoView({behavior:window.matchMedia('(prefers-reduced-motion: reduce)').matches?'instant':'smooth',block:'start'});
     heading.focus({ preventScroll: true });
   }
 

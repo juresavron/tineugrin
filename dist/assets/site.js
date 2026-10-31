@@ -52,7 +52,7 @@
     if(!target)return;event.preventDefault();history.pushState(null,'',link.hash);
     target.scrollIntoView({behavior:reduced.matches?'instant':'smooth',block:'start'});focusSection(target);languageLinks();
   }));
-  window.addEventListener('resize',()=>{if(window.innerWidth>760&&!menu.hidden)closeMenu();});
+  window.addEventListener('resize',()=>{if(window.innerWidth>980&&!menu.hidden)closeMenu();});
   document.addEventListener('keydown',event=>{if(event.key==='Escape'&&!menu.hidden)closeMenu(true);});
   document.addEventListener('portfolio:before-overlay',()=>closeMenu());
   function languageLinks(){
@@ -60,6 +60,7 @@
     document.querySelectorAll('.lang-sl').forEach(link=>{link.href='/sl/'+location.search+location.hash;});
   }
   window.addEventListener('hashchange',languageLinks);document.addEventListener('portfolio:role-change',languageLinks);languageLinks();
+  document.querySelectorAll('[data-language-pdf]').forEach(link=>{link.href=lang==='sl'?'/assets/tine-ugrin-credits-sl.pdf':'/assets/tine-ugrin-credits-en.pdf';link.download='Tine-Ugrin-'+(lang==='sl'?'Izbrane-vloge':'Screen-Credits')+'.pdf';});
   document.getElementById('year').textContent=new Date().getFullYear();
   const films={
     gepack:{title:'Gepack',year:'2024',image:'/assets/gepack.webp',role:'Jon',director:'Žiga Kukovič',format:'featureFilm',description:'gepackDescription',video:'https://www.youtube-nocookie.com/embed/iqsXFf8O_rw?rel=0',watch:'https://www.youtube.com/watch?v=iqsXFf8O_rw',source:'https://www.gepack.si.inicial.si/',credit:'Film still © Matic Gabriel / Trailer: Produkcija 3230',media:'officialTrailer',duration:'1:30',provider:'YouTube'},
@@ -68,7 +69,7 @@
   };
   let currentFilm='gepack',filmRender=0;
   const filmSelectors=[];
-  function openDialog(dialog){openers.set(dialog,document.activeElement);closeMenu();dialog.showModal();syncBodyLock();}
+  function openDialog(dialog,opener){openers.set(dialog,opener instanceof HTMLElement?opener:document.activeElement);closeMenu();dialog.showModal();syncBodyLock();}
   function externalLink(href,label){const a=document.createElement('a');a.href=href;a.target='_blank';a.rel='noopener noreferrer';a.textContent=label+' ↗';return a;}
   function playFilm(){
     const film=films[currentFilm];if(!film.video||frame.querySelector('iframe'))return;
@@ -93,7 +94,7 @@
     const links=document.getElementById('film-links');links.replaceChildren();if(film.watch)links.append(externalLink(film.watch,t('openOn')+' '+film.provider));links.append(externalLink(film.source,t('readFilm')));
     filmSelectors.forEach(button=>button.setAttribute('aria-pressed',String(button.dataset.filmSelector===id)));
     announcer.textContent=t('tineAs')+' '+film.role+' / '+film.title;
-    if(!filmDialog.open)openDialog(filmDialog);if(options.play&&film.video)playFilm();
+    if(!filmDialog.open)openDialog(filmDialog,options.opener);if(options.play&&film.video)playFilm();
   }
   const filmTabs=document.getElementById('video-tabs');
   Object.keys(films).forEach(id=>{
@@ -102,7 +103,7 @@
     button.addEventListener('click',()=>showFilm(id));filmTabs.append(button);filmSelectors.push(button);
   });
   document.querySelectorAll('[data-film]').forEach(button=>button.addEventListener('click',()=>showFilm(button.dataset.film,{play:button.dataset.filmPlay==='true'})));
-  document.addEventListener('portfolio:open-film',event=>showFilm(event.detail?.id,{play:event.detail?.play!==false}));
+  document.addEventListener('portfolio:open-film',event=>showFilm(event.detail?.id,{play:event.detail?.play===true,opener:event.detail?.opener}));
   const portraits=[
     {id:'warm',image:'/assets/portrait-warm.webp',download:'/assets/portrait-warm-download.jpg',credit:'© Arin Rapuš Jerman',alt:'Tine Ugrin / Arin Rapuš Jerman'},
     {id:'dark',image:'/assets/hero.webp',download:'/assets/hero-download.jpg',credit:'© Jakob Kastelec',alt:'Tine Ugrin / Jakob Kastelec'},
@@ -129,5 +130,5 @@
     dialog.addEventListener('close',()=>{if(dialog===filmDialog){filmRender++;frame.replaceChildren();frame.removeAttribute('aria-busy');}syncBodyLock();const opener=openers.get(dialog);if(opener instanceof HTMLElement&&opener.isConnected)opener.focus({preventScroll:true});});
   });
   document.getElementById('credits-open').addEventListener('click',()=>openDialog(creditsDialog));
-  document.getElementById('print-credits').addEventListener('click',()=>window.print());
+  document.getElementById('print-credits')?.addEventListener('click',()=>window.print());
 })();
