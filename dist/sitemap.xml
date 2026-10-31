@@ -1,13 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
-  <url>
-    <loc>https://tine-ugrin.netlify.app/</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://tine-ugrin.netlify.app/" />
-    <xhtml:link rel="alternate" hreflang="sl" href="https://tine-ugrin.netlify.app/sl/" />
-  </url>
-  <url>
-    <loc>https://tine-ugrin.netlify.app/sl/</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://tine-ugrin.netlify.app/" />
-    <xhtml:link rel="alternate" hreflang="sl" href="https://tine-ugrin.netlify.app/sl/" />
-  </url>
+  <url><loc>https://tine-ugrin.netlify.app/</loc><xhtml:link rel="alternate" hreflang="en" href="https://tine-ugrin.netlify.app/" /><xhtml:link rel="alternate" hreflang="sl" href="https://tine-ugrin.netlify.app/sl/" /></url>
+  <url><loc>https://tine-ugrin.netlify.app/sl/</loc><xhtml:link rel="alternate" hreflang="en" href="https://tine-ugrin.netlify.app/" /><xhtml:link rel="alternate" hreflang="sl" href="https://tine-ugrin.netlify.app/sl/" /></url>
+  <url><loc>https://tine-ugrin.netlify.app/about/</loc><xhtml:link rel="alternate" hreflang="en" href="https://tine-ugrin.netlify.app/about/" /><xhtml:link rel="alternate" hreflang="sl" href="https://tine-ugrin.netlify.app/sl/about/" /></url>
+  <url><loc>https://tine-ugrin.netlify.app/sl/about/</loc><xhtml:link rel="alternate" hreflang="en" href="https://tine-ugrin.netlify.app/about/" /><xhtml:link rel="alternate" hreflang="sl" href="https://tine-ugrin.netlify.app/sl/about/" /></url>
+  <url><loc>https://tine-ugrin.netlify.app/credits/</loc><xhtml:link rel="alternate" hreflang="en" href="https://tine-ugrin.netlify.app/credits/" /><xhtml:link rel="alternate" hreflang="sl" href="https://tine-ugrin.netlify.app/sl/credits/" /></url>
+  <url><loc>https://tine-ugrin.netlify.app/sl/credits/</loc><xhtml:link rel="alternate" hreflang="en" href="https://tine-ugrin.netlify.app/credits/" /><xhtml:link rel="alternate" hreflang="sl" href="https://tine-ugrin.netlify.app/sl/credits/" /></url>
+  <url><loc>https://tine-ugrin.netlify.app/video/</loc><xhtml:link rel="alternate" hreflang="en" href="https://tine-ugrin.netlify.app/video/" /><xhtml:link rel="alternate" hreflang="sl" href="https://tine-ugrin.netlify.app/sl/video/" /></url>
+  <url><loc>https://tine-ugrin.netlify.app/sl/video/</loc><xhtml:link rel="alternate" hreflang="en" href="https://tine-ugrin.netlify.app/video/" /><xhtml:link rel="alternate" hreflang="sl" href="https://tine-ugrin.netlify.app/sl/video/" /></url>
+  <url><loc>https://tine-ugrin.netlify.app/gallery/</loc><xhtml:link rel="alternate" hreflang="en" href="https://tine-ugrin.netlify.app/gallery/" /><xhtml:link rel="alternate" hreflang="sl" href="https://tine-ugrin.netlify.app/sl/gallery/" /></url>
+  <url><loc>https://tine-ugrin.netlify.app/sl/gallery/</loc><xhtml:link rel="alternate" hreflang="en" href="https://tine-ugrin.netlify.app/gallery/" /><xhtml:link rel="alternate" hreflang="sl" href="https://tine-ugrin.netlify.app/sl/gallery/" /></url>
+  <url><loc>https://tine-ugrin.netlify.app/contact/</loc><xhtml:link rel="alternate" hreflang="en" href="https://tine-ugrin.netlify.app/contact/" /><xhtml:link rel="alternate" hreflang="sl" href="https://tine-ugrin.netlify.app/sl/contact/" /></url>
+  <url><loc>https://tine-ugrin.netlify.app/sl/contact/</loc><xhtml:link rel="alternate" hreflang="en" href="https://tine-ugrin.netlify.app/contact/" /><xhtml:link rel="alternate" hreflang="sl" href="https://tine-ugrin.netlify.app/sl/contact/" /></url>
 </urlset>

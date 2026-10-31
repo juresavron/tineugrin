@@ -3,7 +3,6 @@
   const lang=document.documentElement.lang==='sl'?'sl':'en';
   const copy=window.TINE_COPY[lang];
   const t=key=>copy[key]||window.TINE_COPY.en[key]||key;
-  const reduced=window.matchMedia('(prefers-reduced-motion: reduce)');
   const header=document.getElementById('site-header');
   const menuButton=document.getElementById('menu-toggle');
   const menu=document.getElementById('mobile-menu');
@@ -13,24 +12,17 @@
   const frame=document.getElementById('video-frame');
   const announcer=document.getElementById('announcer');
   const openers=new WeakMap();
-  const sections=[...document.querySelectorAll('main > section[id],footer#contact')];
-  const navLinks=[...document.querySelectorAll('.desktop-nav a[href^="#"],#mobile-menu a[href^="#"]')];
-  let scrollFrame=0,activeSection='';
+  const page=document.body.dataset.page||'home';
+  const routes={home:'',about:'about/',credits:'credits/',screen:'video/',portraits:'gallery/',contact:'contact/'};
+  const prefix=lang==='sl'?'/sl/':'/';
+  const legacy={about:'about',credits:'credits',work:'credits',screen:'screen',portraits:'portraits',instagram:'portraits',contact:'contact'};
+  const oldDestination=legacy[location.hash.slice(1)]||(new URLSearchParams(location.search).has('role')?'credits':null);
+  if(page==='home'&&oldDestination){location.replace(prefix+routes[oldDestination]+location.search);return;}
+  let scrollFrame=0;
   function syncBodyLock(){document.body.classList.toggle('modal-open',!menu.hidden||Boolean(document.querySelector('dialog[open]')));}
-  function updateHeader(){
-    header.classList.toggle('is-scrolled',window.scrollY>50||!menu.hidden);
-    const max=document.documentElement.scrollHeight-window.innerHeight;
-    header.style.setProperty('--reading-progress',String(max>0?Math.min(1,Math.max(0,window.scrollY/max)):0));
-    const atEnd=window.scrollY>100&&window.scrollY+window.innerHeight>=document.documentElement.scrollHeight-8;
-    const current=atEnd?document.getElementById('contact'):[...sections].reverse().find(section=>section.getBoundingClientRect().top<window.innerHeight*.38);
-    if(current&&current.id!==activeSection){
-      activeSection=current.id;
-      navLinks.forEach(link=>{if(link.hash==='#'+activeSection)link.setAttribute('aria-current','location');else link.removeAttribute('aria-current');});
-    }
-  }
+  function updateHeader(){header.classList.toggle('is-scrolled',window.scrollY>50||!menu.hidden);}
   function queueHeader(){if(scrollFrame)return;scrollFrame=requestAnimationFrame(()=>{scrollFrame=0;updateHeader();});}
   window.addEventListener('scroll',queueHeader,{passive:true});
-  window.addEventListener('resize',queueHeader);
   updateHeader();
   function closeMenu(restore=false){
     menu.hidden=true;menuButton.setAttribute('aria-expanded','false');menuButton.setAttribute('aria-label',t('openMenu'));
@@ -43,24 +35,21 @@
     menu.hidden=false;menuButton.setAttribute('aria-expanded','true');menuButton.setAttribute('aria-label',t('closeMenu'));
     document.querySelector('main').inert=true;document.querySelector('footer').inert=true;syncBodyLock();updateHeader();
   });
-  function focusSection(section){
-    const target=section.querySelector('h1,h2')||section;
-    target.setAttribute('tabindex','-1');target.focus({preventScroll:true});
-    target.addEventListener('blur',()=>target.removeAttribute('tabindex'),{once:true});
-  }
-  menu.querySelectorAll('a[href^="#"]').forEach(link=>link.addEventListener('click',event=>{
-    const target=document.getElementById(link.hash.slice(1));closeMenu();
-    if(!target)return;event.preventDefault();history.pushState(null,'',link.hash);
-    target.scrollIntoView({behavior:reduced.matches?'instant':'smooth',block:'start'});focusSection(target);languageLinks();
-  }));
+  menu.querySelectorAll('a').forEach(link=>link.addEventListener('click',()=>closeMenu()));
   window.addEventListener('resize',()=>{if(window.innerWidth>980&&!menu.hidden)closeMenu();});
   document.addEventListener('keydown',event=>{if(event.key==='Escape'&&!menu.hidden)closeMenu(true);});
   document.addEventListener('portfolio:before-overlay',()=>closeMenu());
   function languageLinks(){
-    document.querySelectorAll('.lang-en').forEach(link=>{link.href='/'+location.search+location.hash;});
-    document.querySelectorAll('.lang-sl').forEach(link=>{link.href='/sl/'+location.search+location.hash;});
+    document.querySelectorAll('.lang-en').forEach(link=>{link.href='/'+routes[page]+location.search+location.hash;});
+    document.querySelectorAll('.lang-sl').forEach(link=>{link.href='/sl/'+routes[page]+location.search+location.hash;});
   }
   window.addEventListener('hashchange',languageLinks);document.addEventListener('portfolio:role-change',languageLinks);languageLinks();
+  if(page==='credits'&&new URLSearchParams(location.search).get('print')==='1'){
+    window.addEventListener('load',()=>{
+      const url=new URL(location.href);url.searchParams.delete('print');history.replaceState(history.state,'',url.pathname+url.search+url.hash);
+      languageLinks();requestAnimationFrame(()=>window.print());
+    },{once:true});
+  }
   document.querySelectorAll('[data-language-pdf]').forEach(link=>{link.href=lang==='sl'?'/assets/tine-ugrin-credits-sl.pdf':'/assets/tine-ugrin-credits-en.pdf';link.download='Tine-Ugrin-'+(lang==='sl'?'Izbrane-vloge':'Screen-Credits')+'.pdf';});
   document.getElementById('year').textContent=new Date().getFullYear();
   const films={

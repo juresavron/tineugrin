@@ -106,7 +106,8 @@
     "castingShort": "Casting",
     "contactTitle": "Contact",
     "contactIntro": "For casting, productions and collaborations.",
-    "professionalContactNote": "Tine’s professional contact is listed on Filmmakers."
+    "professionalContactNote": "Tine’s professional contact is listed on Filmmakers.",
+    "backHome": "Back to home"
   },
   "sl": {
     "skip": "Preskoči na vsebino",
@@ -215,6 +216,7 @@
     "castingShort": "Casting",
     "contactTitle": "Kontakt",
     "contactIntro": "Za casting, produkcije in sodelovanja.",
-    "professionalContactNote": "Tinetov poslovni kontakt je objavljen na Filmmakers."
+    "professionalContactNote": "Tinetov poslovni kontakt je objavljen na Filmmakers.",
+    "backHome": "Nazaj na začetek"
   }
 }

@@ -77,7 +77,6 @@
     if (event.clientX < rect.left || event.clientX > rect.right || event.clientY < rect.top || event.clientY > rect.bottom) dialog.close();
   });
   dialog.querySelector('[data-cf-view-credits]').addEventListener('click', () => {
-    pendingAction = 'credits';
     dialog.close();
   });
   dialog.querySelector('[data-cf-print]').addEventListener('click', () => {
@@ -100,9 +99,13 @@
     if (!document.querySelector('dialog[open]')) document.body.classList.remove('modal-open');
     const action = pendingAction;
     pendingAction = null;
-    if (action === 'credits' || action === 'print') {
-      focusCredits();
-      if (action === 'print') requestAnimationFrame(() => window.print());
+    if (action === 'print') {
+      if (document.getElementById('credits')) {
+        focusCredits();
+        requestAnimationFrame(() => window.print());
+      } else {
+        window.location.assign((lang === 'sl' ? '/sl/' : '/') + 'credits/?print=1');
+      }
       return;
     }
     if (invoker instanceof HTMLElement && invoker.isConnected && !invoker.closest('[inert]')) invoker.focus({ preventScroll: true });
