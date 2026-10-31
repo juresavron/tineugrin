@@ -15,10 +15,6 @@
   }
   document.querySelectorAll('.lang-en').forEach(link => { link.href = '/' + routes[page] + location.search; });
   document.querySelectorAll('.lang-sl').forEach(link => { link.href = '/sl/' + routes[page] + location.search; });
-  document.querySelectorAll('[data-language-pdf]').forEach(link => {
-    link.href = lang === 'sl' ? '/assets/tine-ugrin-credits-sl.pdf' : '/assets/tine-ugrin-credits-en.pdf';
-    link.download = 'Tine-Ugrin-' + (lang === 'sl' ? 'Izbrane-vloge' : 'Screen-Credits') + '.pdf';
-  });
   const year = document.getElementById('year');
   if (year) year.textContent = new Date().getFullYear();
 

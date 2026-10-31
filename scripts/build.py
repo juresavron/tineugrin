@@ -22,12 +22,12 @@ descriptions = {
         'sl': 'Tine Ugrin — slovenski filmski, televizijski in gledališki igralec. Portreti, napovedniki in igralski profil.',
     },
     'about': {
-        'en': 'Biography, languages and casting profile of Slovenian actor Tine Ugrin.',
-        'sl': 'O slovenskem igralcu Tinetu Ugrinu, njegovih vlogah, jezikih in igralskem profilu.',
+        'en': 'Tine Ugrin — Slovenian actor based in Ljubljana. Training, languages, casting details and his 2026 acting CV.',
+        'sl': 'Tine Ugrin — slovenski igralec iz Ljubljane. Izobraževanje, jeziki, podatki za casting in igralski CV za leto 2026.',
     },
     'credits': {
-        'en': 'Selected film and television credits for Tine Ugrin. Download the PDF or browse his full filmography.',
-        'sl': 'Izbrane filmske in televizijske vloge Tineta Ugrina. Prenesite PDF ali si oglejte celotno filmografijo.',
+        'en': 'Selected screen and theatre credits, upcoming projects and the complete 2026 acting CV of Tine Ugrin.',
+        'sl': 'Izbrane filmske, televizijske in gledališke vloge, prihajajoči projekti ter celoten igralski CV Tineta Ugrina za leto 2026.',
     },
     'screen': {
         'en': 'Watch official trailers for Gepack and Don’t Forget to Breathe, featuring Tine Ugrin.',
@@ -38,8 +38,8 @@ descriptions = {
         'sl': 'Portreti igralca Tineta Ugrina za prenos. Fotografije Jakoba Kastelca in Arina Rapuša Jermana.',
     },
     'contact': {
-        'en': 'Casting enquiries for Tine Ugrin via his Filmmakers profile.',
-        'sl': 'Kontakt Tineta Ugrina za casting in sodelovanja prek profila Filmmakers.',
+        'en': 'Contact actor Tine Ugrin directly for casting and professional enquiries.',
+        'sl': 'Neposredni kontakt igralca Tineta Ugrina za casting in sodelovanja.',
     },
 }
 

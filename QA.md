@@ -32,3 +32,11 @@ The existing build validation passes for all 12 pages: balanced markup, one prim
 - Opened and closed the localized Vimeo trailer; closing removes the iframe. Video playback itself was verified in the preceding visual release.
 - Checked the mobile navigation fallback with scripts disabled.
 - Rendered both updated credits PDFs. Each is one A4 page with three link annotations and embedded Space Grotesk weights. Text remains within page bounds; no clipping or overlap was observed.
+
+## Original CV content update
+
+- Inspected all three supplied CV pages and preserved the download byte for byte (SHA-256 recorded in `CV_CONTENT_SOURCE.md`).
+- Checked all four CV download links across English/Slovenian About and Credits; they reference the same original file with an explicit download filename. No JavaScript switches them back to the earlier summaries.
+- Verified both Contact pages use the email from the supplied CV.
+- Reviewed the three updated page types on desktop and at 320 px English / 390 px Slovenian. No horizontal overflow was observed.
+- Screen, theatre and upcoming groups retain readable rows and semantic table headers. Future projects are separated from completed work.

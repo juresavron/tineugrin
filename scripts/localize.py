@@ -34,7 +34,6 @@ def translate(markup, language):
     markup = re.sub(r'<[a-z][^<>]*>', attributes, markup)
     if language == 'sl':
         markup = markup.replace('<html lang="en">', '<html lang="sl">')
-        markup = markup.replace('/assets/tine-ugrin-credits-en.pdf', '/assets/tine-ugrin-credits-sl.pdf')
         markup = markup.replace('content="en_GB"', 'content="sl_SI"')
         markup = markup.replace('content="Tine Ugrin, Slovenian actor"', 'content="Tine Ugrin, slovenski igralec"')
         markup = markup.replace('class="lang-en" aria-current="page"', 'class="lang-en"')

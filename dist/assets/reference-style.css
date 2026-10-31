@@ -49,6 +49,7 @@ p,figure{margin:0}
 .page-about .page-title,.page-contact .page-title,.page-portraits .page-title{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;padding:0;margin:-1px;border:0}
 .about-bio{max-width:650px;font-size:var(--text-body);line-height:1.3}
 .about-facts{margin:34px 0 32px}
+.about-facts>div+div{margin-top:22px}
 .about-facts dt{font-size:var(--text-small);color:var(--muted);margin-bottom:8px}
 .about-facts dd{font-size:var(--text-base);margin:0}
 .about-actions,.credits-actions{display:flex;flex-wrap:wrap;align-items:flex-start;gap:10px 30px;font-size:var(--text-base)}
@@ -76,8 +77,11 @@ p,figure{margin:0}
 .cr-table thead th{font-size:var(--text-small);color:var(--muted);padding-top:0;padding-bottom:12px}
 .cr-table tr>:last-child{text-align:right;padding-right:0;white-space:nowrap}
 .cr-table a:hover{text-decoration:underline;text-underline-offset:4px}
-.cr-table a span{font-size:var(--text-meta);opacity:.6}
+.cr-table a span[aria-hidden=true]{font-size:var(--text-meta);opacity:.6}
 .credits-actions{margin-top:26px;gap:12px 26px}
+.credits-intro-actions{margin:0 0 36px}
+.credits-group+.credits-group{margin-top:48px}
+.credits-subtitle{font-size:var(--text-body);font-weight:400;line-height:1.4;margin:0 0 24px}
 .page-footer{display:flex;justify-content:space-between;align-items:center;gap:24px;min-height:74px;padding:12px 23.2vw 12px 3.3vw;font-size:var(--text-meta);color:var(--muted)}
 .page-footer button{min-height:44px;padding:10px 0;background:none;border:0;font-size:var(--text-small);text-decoration:underline;text-underline-offset:3px}
 dialog{width:min(1120px,calc(100vw - 48px));max-height:calc(100svh - 32px);padding:24px;border:0;background:#101514;color:#fff;overflow:auto}
@@ -100,6 +104,7 @@ dialog::backdrop{background:#050807e8}
 .image-credits-dialog{max-width:620px}
 .image-credits-dialog p{font-size:var(--text-base);line-height:1.8;margin:20px 0}
 .image-credits-dialog p a{text-decoration:underline;text-underline-offset:3px}
+@media(min-width:981px){.page-credits .site-header{height:150px;background:var(--paper)}}
 @media(min-width:1800px){.monogram{left:5vw}.site-rail{right:5vw}.section-pad{padding-top:230px}.about-bio{max-width:700px}}
 @media(max-width:1100px) and (min-width:981px){.monogram{top:60px}.site-rail{top:60px}.page-about .section-pad,.page-contact .section-pad{padding-left:22vw;padding-right:24vw}.section-pad{padding-top:185px}.portrait-strip-grid{gap:28px 20px}}
 @media(max-width:980px){

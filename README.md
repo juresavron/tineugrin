@@ -1,13 +1,13 @@
 # Tine Ugrin — Actor
 
-A minimal English/Slovenian portfolio: a portrait homepage and separate About, Gallery, Video and Contact pages. Screen credits remain available as a supporting page and two PDF downloads.
+A minimal English/Slovenian portfolio: a portrait homepage and separate About, Gallery, Video and Contact pages. A supporting Credits page presents selected screen, theatre and upcoming work. The original 2026 acting CV is downloadable from About and Credits in both languages.
 
 ## Source
 
 - `src/index.html`: page content and component slots.
 - `components/site-header.html` and `page-footer.html`: shared navigation and footer.
 - `components/*-dialog.html`: video, portrait and photo attribution viewers.
-- `components/credits-rail.html`: the compact credits table.
+- `components/credits-rail.html`: compact screen, theatre and upcoming credits tables.
 - `components/screen-section.html`: two official trailer thumbnails.
 - `copy.json` and component copy: English and Slovenian text.
 - `dist/assets/reference-style.css` and `site.js`: the active layout and interactions.
@@ -31,9 +31,11 @@ Typography uses local Space Grotesk with named size tokens in `reference-style.c
 
 ## Content
 
-The two videos are official trailers for Gepack and Don't Forget to Breathe. Photographs retain their author credits in the viewer and Photo credits panel. Professional enquiries lead to Tine's verified Filmmakers profile. The PDFs contain selected screen credits and use the same Space Grotesk family, with a white paper background for printing.
+The two videos are official trailers for Gepack and Don't Forget to Breathe. Photographs retain their author credits in the viewer and Photo credits panel. Professional enquiries use the email supplied in Tine's CV; Filmmakers remains accessible in the supporting navigation.
 
-To regenerate the prebuilt PDFs locally, install ReportLab and fontTools, then run `python3 scripts/generate-credits-pdf.py`. This authoring utility is separate from the dependency-free Netlify build.
+`dist/assets/tine-ugrin-cv-2026-en.pdf` is the owner's original three-page English CV, preserved byte for byte. Both site languages link to this file; the Slovenian label explicitly says EN. About and Credits use its casting information and selected projects. Upcoming work is presented separately. See `CV_CONTENT_SOURCE.md` for provenance and content choices.
+
+The earlier selected-credit PDFs and `scripts/generate-credits-pdf.py` remain legacy authoring assets and are no longer linked by the website. Do not use that generator to overwrite the original CV.
 
 ## Deployment
 
