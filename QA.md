@@ -1,27 +1,24 @@
-# Separate-page portfolio verification
+# Minimal portfolio verification
 
-## Build checks
+## Static checks
 
-- Six actual page routes in English and Slovenian; 12 generated HTML files and 206 matching translation keys.
-- Every page has one main content section and one primary heading.
-- Navigation uses separate page URLs. The current page is marked in desktop and mobile navigation before JavaScript runs.
-- Local pages, images, downloads, anchors and font assets resolve. Each route has its own title, description, canonical URL and language alternatives. The sitemap lists all 12 routes.
-- All active JavaScript files pass Node syntax checks.
+The existing build validation passes for all 12 pages: balanced markup, one primary heading and one content section per page, active navigation, canonical URLs, language alternatives, local links, images, fonts and downloads. The active JavaScript passes Node's syntax check.
 
-## Browser checks
+## Visual review
 
-- The homepage contains only the portrait opening and has no scrolling content sections.
-- About, Credits, Video, Gallery and Contact were opened and visually inspected as separate desktop pages.
-- Content pages use plain charcoal backgrounds. The busy film still has been removed from page backgrounds.
-- All 12 pages were checked in responsive frames: English at 320 px and Slovenian at 390 px. Content width equals available viewport width on every page.
-- Tablet and desktop widths were inspected during the style pass.
-- Mobile navigation loads the requested subpage; EN/SL switching stays on the equivalent page.
-- Portrait navigation updates the matching original JPEG download.
-- Casting resources open from a content page, and View selected credits navigates to the Credits page.
-- Film details open without starting video. Explicit Play creates the selected Vimeo player; closing removes it.
-- Legacy homepage credit links forward to the new Credits route and preserve the role query.
-- Print routing was reviewed in source: requests from other pages navigate to Credits; native print hooks expose the full credits table and restore it afterwards.
+- Compared Jurij's five primary pages with Tine's five primary pages and supporting Credits page.
+- Inspected the rebuilt Home, About, Gallery, Video, Contact and Credits layouts in a desktop browser.
+- Reviewed all 12 routes in responsive frames: English at 320 px and Slovenian at 390 px. Every document's content width equals its available viewport width.
+- Inspected the mobile gallery and About/menu views. Portrait tiles preserve faces; the menu separates page navigation from supporting links.
 
-## Content limits
+## Interactions
 
-Personal showreel, approved full CV, direct contact and unverified profile URLs have not been invented. Videos remain labelled as official trailers; the PDF downloads are selected screen credits. Temporary responsive-review HTML is excluded from release output.
+- Mobile menu opens, makes page content inert and navigates to the chosen separate page.
+- Portrait navigation updates its author attribution and matching original JPEG. Closing restores focus and releases the body scroll lock.
+- A trailer click starts the Vimeo player; its visible playback controls confirm playback. Closing removes the iframe and releases the scroll lock.
+- Video links remain direct external links when JavaScript is unavailable.
+- Language links preserve the current page; English and Slovenian PDFs point to their corresponding files.
+- Legacy homepage section links continue to forward to their corresponding pages.
+- Credits retain semantic table markup, print styling and a PDF download.
+
+Production verification is recorded after publication.

@@ -1,43 +1,38 @@
-# Tine Ugrin — Actor portfolio
+# Tine Ugrin — Actor
 
-An English/Slovenian actor portfolio with a full-screen portrait homepage and five separate pages: About, Credits, Video, Gallery and Contact. The visual style uses Space Grotesk, white type, a fixed vertical desktop menu and plain charcoal backgrounds on content pages.
+A minimal English/Slovenian portfolio: a portrait homepage and separate About, Gallery, Video and Contact pages. Screen credits remain available as a supporting page and two PDF downloads.
 
-## Structure
+## Source
 
-- `src/index.html`: shared source template and page content.
-- `components/`: credits filmstrip, video section and casting file, with bilingual copy.
-- `copy.json`: shared page and viewer copy.
-- `scripts/build.py`: creates all 12 HTML pages, page metadata, language links and sitemap.
-- `scripts/localize.py`: shared translation helpers.
-- `dist/`: deployable pages, bundled fonts, photographs and downloads.
+- `src/index.html`: shared header, page content and lightweight viewers.
+- `components/credits-rail.html`: the compact credits table.
+- `components/screen-section.html`: two official trailer thumbnails.
+- `copy.json` and component copy: English and Slovenian text.
+- `dist/assets/reference-style.css` and `site.js`: the active layout and interactions.
+- `scripts/build.py`: generates 12 static pages, metadata, language links and sitemap.
 
-English routes are `/`, `/about/`, `/credits/`, `/video/`, `/gallery/` and `/contact/`. Each has an equivalent under `/sl/`. Navigation performs normal page loads. Each page contains only its own content; the homepage has no scrolling sections. Language switching preserves the current page and selected credit.
+The primary menu follows the reference order: About, Gallery, Video, Contact. Credits is a secondary link. Each route is a real page with its own title, canonical URL and language alternatives. Language switching keeps the current page.
 
-## Build and check
-
-Requires Python 3 and Node.js. No package installation is needed.
+## Build
 
 ```sh
 python3 scripts/build.py
 python3 scripts/check-site.py
 node --check dist/assets/site.js
-node --check dist/assets/credits-rail.js
-node --check dist/assets/screen-section.js
-node --check dist/assets/casting-file.js
 ```
 
-Serve `dist/` with a static web server. Each route is a real directory with an `index.html`, so direct navigation and refresh work without an SPA fallback. The build check validates all pages, local links, page headings, active navigation, canonical URLs and language metadata.
+Python 3 and Node.js are sufficient; no dependency installation is required. Serve `dist/` for local review. `qa-*.html` files are excluded from version control and must be removed before packaging a manual deploy.
 
-The credits filmstrip supports keyboard, touch and visible arrows. Film details open without autoplay; playback requires an explicit action. Closing the viewer removes the player. Old homepage links such as `?role=breathe#work` forward to `/credits/?role=breathe` without starting video. Casting resources remain available from every page. Printing from another page opens the credits page before printing.
+Portraits open in a keyboard-accessible viewer with original JPEG downloads. Trailer links open a player only after a click; closing removes the iframe. With JavaScript unavailable, the trailer links lead directly to the original video. Credits support browser printing and PDF downloads.
 
-## Content and attribution
+## Content
 
-Portraits and film stills retain their photographer credits and `dist/assets/asset-credits.json`. Video contains two official film trailers, correctly labelled. The gallery contains professional portraits and a verified Instagram link. Casting enquiries use Tine's professional Filmmakers profile. Personal contact details and representation have not been invented.
-
-The two PDF downloads contain verified selected screen credits, not an unverified full CV. Their optional regeneration script, `scripts/generate-credits-pdf.py`, requires ReportLab; PDF generation is not part of the dependency-free Netlify build.
+The two videos are official trailers for Gepack and Don't Forget to Breathe. Photographs retain their author credits in the viewer and Image credits panel. Professional enquiries lead to Tine's verified Filmmakers profile. The PDFs contain selected screen credits.
 
 ## Deployment
 
 Production: https://tine-ugrin.netlify.app/
 
-Netlify builds the `main` branch using `netlify.toml` and publishes `dist/`. No dependencies or environment variables are required. Local Netlify state is ignored by Git. The earlier private review identity remains in `.openai/hosting.json`; only `dist/` is published on Netlify.
+Netlify deploys `main` from `juresavron/tineugrin`, runs `netlify.toml` and publishes `dist/`. Local Netlify state is ignored. The earlier private review identity in `.openai/hosting.json` is not the public production destination.
+
+See `VISUAL_AUDIT.md` for the visual comparison and `QA.md` for verification.

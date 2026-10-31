@@ -3,7 +3,7 @@ import json,re
 
 root=Path(__file__).resolve().parent.parent
 copy=json.loads((root/'copy.json').read_text())
-for name in ('credits-rail','screen-section','casting-file'):
+for name in ('credits-rail','screen-section'):
     extra=json.loads((root/'components'/f'{name}-copy.json').read_text())
     for language in ('en','sl'):
         for key,value in extra[language].items():

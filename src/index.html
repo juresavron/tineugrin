@@ -21,81 +21,63 @@
   <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
   <link rel="preload" href="/assets/hero.webp" as="image" fetchpriority="high">
   <link rel="stylesheet" href="/assets/fonts/fonts.css">
-  <link rel="stylesheet" href="/assets/layout.css">
-  <link rel="stylesheet" href="/assets/credits-rail.css">
-  <link rel="stylesheet" href="/assets/screen-section.css">
-  <link rel="stylesheet" href="/assets/casting-file.css">
   <link rel="stylesheet" href="/assets/reference-style.css">
   <link rel="preload" href="/assets/fonts/space-grotesk.ttf" as="font" type="font/ttf" crossorigin>
   
   <script defer src="/assets/copy.js"></script>
   <script defer src="/assets/site.js"></script>
-  <script defer src="/assets/credits-rail.js"></script>
-  <script defer src="/assets/screen-section.js"></script>
-  <script defer src="/assets/casting-file.js"></script>
   
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"Person","name":"Tine Ugrin","jobTitle":"Actor","url":"https://tine-ugrin.netlify.app/","image":"https://tine-ugrin.netlify.app/assets/social.jpg","sameAs":["https://www.filmmakers.eu/en/actors/tine-ugrin","https://www.imdb.com/name/nm5864569/","https://www.instagram.com/tine_ugrin/"]}</script>
 </head>
 <body>
   <a class="skip-link" href="#main" data-i18n="skip">Skip to content</a>
   <header class="site-header" id="site-header">
-    <a class="monogram" href="/" aria-label="Tine Ugrin, home"><span class="brand-name">TINE UGRIN</span><span class="brand-role"> / <span data-i18n="brandActor">ACTOR</span></span></a>
+    <a class="monogram" href="/" aria-label="Tine Ugrin, home">TINE UGRIN <span class="brand-role">/ <span data-i18n="brandActor">ACTOR</span></span></a>
     <div class="site-rail">
-      <nav class="desktop-nav" aria-label="Main navigation"><a href="#about" data-i18n="navAbout">About</a><a href="#credits" data-i18n="navCredits">Credits</a><a href="#screen" data-i18n="navScreen">Video</a><a href="#portraits" data-i18n="navPortraits">Gallery</a><a href="#contact" data-i18n="navContact">Contact</a></nav>
-      <nav class="rail-profiles" aria-label="Professional profiles"><a href="https://www.filmmakers.eu/en/actors/tine-ugrin" target="_blank" rel="noopener noreferrer">Filmmakers</a><a href="https://www.imdb.com/name/nm5864569/" target="_blank" rel="noopener noreferrer">IMDb</a><a href="https://www.instagram.com/tine_ugrin/" target="_blank" rel="noopener noreferrer">Instagram</a><a href="/assets/tine-ugrin-credits-en.pdf" data-language-pdf download data-i18n="railCreditsPdf">Screen credits / PDF</a></nav>
-      <div class="header-end"><button class="header-casting" data-open-casting type="button"><span data-i18n="castingShort">Casting</span></button><div class="language-switch" aria-label="Language"><a href="/" lang="en" class="lang-en" aria-current="page">EN</a><span>/</span><a href="/sl/" lang="sl" class="lang-sl">SL</a></div><button class="menu-toggle" id="menu-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu"><span></span><span></span></button></div>
+      <nav class="desktop-nav" aria-label="Main navigation"><a href="#about" data-i18n="navAbout">About</a><a href="#portraits" data-i18n="navPortraits">Gallery</a><a href="#screen" data-i18n="navScreen">Video</a><a href="#contact" data-i18n="navContact">Contact</a></nav>
+      <nav class="rail-profiles" aria-label="Professional profiles"><a href="https://www.filmmakers.eu/en/actors/tine-ugrin" target="_blank" rel="noopener noreferrer">Filmmakers</a><a href="https://www.imdb.com/name/nm5864569/" target="_blank" rel="noopener noreferrer">IMDb</a><a href="https://www.instagram.com/tine_ugrin/" target="_blank" rel="noopener noreferrer">Instagram</a><a href="#credits" data-i18n="navCredits">Credits</a></nav>
+      <div class="language-switch" aria-label="Language"><a href="/" lang="en" class="lang-en" aria-current="page">EN</a><span>/</span><a href="/sl/" lang="sl" class="lang-sl">SL</a></div>
     </div>
+    <button class="menu-toggle" id="menu-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu" data-i18n="menuLabel">Menu</button>
   </header>
   <div class="mobile-menu" id="mobile-menu" hidden>
-    <nav aria-label="Mobile navigation"><a href="#about" data-i18n="navAbout">About</a><a href="#credits" data-i18n="navCredits">Credits</a><a href="#screen" data-i18n="navScreen">Video</a><a href="#portraits" data-i18n="navPortraits">Gallery</a><a href="#contact" data-i18n="navContact">Contact</a></nav>
-    <a class="menu-instagram" href="https://www.instagram.com/tine_ugrin/" target="_blank" rel="noopener noreferrer">Instagram / @tine_ugrin ↗</a>
+    <nav class="mobile-nav" aria-label="Mobile navigation"><a href="#about" data-i18n="navAbout">About</a><a href="#portraits" data-i18n="navPortraits">Gallery</a><a href="#screen" data-i18n="navScreen">Video</a><a href="#contact" data-i18n="navContact">Contact</a></nav>
+    <nav class="mobile-profiles" aria-label="Professional profiles"><a href="https://www.filmmakers.eu/en/actors/tine-ugrin" target="_blank" rel="noopener noreferrer">Filmmakers</a><a href="https://www.imdb.com/name/nm5864569/" target="_blank" rel="noopener noreferrer">IMDb</a><a href="https://www.instagram.com/tine_ugrin/" target="_blank" rel="noopener noreferrer">Instagram</a><a href="#credits" data-i18n="navCredits">Credits</a></nav>
+    <div class="mobile-languages language-switch" aria-label="Language"><a href="/" lang="en" class="lang-en" aria-current="page">EN</a><span>/</span><a href="/sl/" lang="sl" class="lang-sl">SL</a></div>
   </div>
   <main id="main">
     <section class="hero" id="home" aria-labelledby="hero-title">
+      <h1 class="sr-only" id="hero-title">Tine Ugrin</h1>
       <div class="hero-photo"><img src="/assets/hero.webp" alt="Portrait of Tine Ugrin by Jakob Kastelec" width="1550" height="2160" fetchpriority="high"><div class="hero-shade"></div></div>
-      <div class="hero-topline"><span class="micro"><span class="status-dot"></span><span data-i18n="slovenianActor">Slovenian actor</span></span><span class="micro hero-disciplines" data-i18n="disciplines">Film / Television / Theatre</span></div>
-      <div class="hero-title-wrap"><h1 id="hero-title"><span>TINE</span> <span class="surname">UGRIN<span class="title-period">.</span></span></h1></div>
-      <div class="hero-bottom"><a class="explore-link" href="#about"><span data-i18n="explorePortfolio">About</span></a><a class="hero-watch" href="#screen"><span class="watch-title" data-i18n="watchTrailers">Watch trailers</span></a><button class="hero-casting" data-open-casting type="button" data-i18n="forCasting">For casting</button></div>
-      <span class="hero-credit micro" data-i18n="heroPhotoCredit">Photography © Jakob Kastelec</span>
+      <span class="hero-credit" data-i18n="heroPhotoCredit">Photography © Jakob Kastelec</span>
     </section>
-
     <section class="about-section section-pad" id="about" aria-labelledby="about-heading">
-      <div class="editorial-heading"><span class="micro">01 /</span><h2 id="about-heading" data-i18n="aboutTitle">About.</h2><span class="micro" data-i18n="thePerson">The person</span></div>
-      <div class="about-layout"><div class="about-copy"><p class="about-lead" data-i18n="aboutLead">A Slovenian actor.<br>A curiosity for different worlds.</p><p class="about-bio" data-i18n="aboutBody">Tine’s screen work includes the road-trip film Gepack, Martin Turk’s Don’t Forget to Breathe and the television series Gospod profesor. His work also extends to short films and theatre.</p><dl class="about-facts"><div><dt data-i18n="languages">Languages</dt><dd data-i18n="spokenLanguages">Slovenian · English<br>Italian · Serbo-Croatian</dd></div></dl><div class="about-actions"><button class="text-action" data-open-casting type="button"><span data-i18n="headshotsCasting">Headshots & casting file</span><span aria-hidden="true">↗</span></button><a class="text-action subtle-action" href="https://www.filmmakers.eu/en/actors/tine-ugrin" target="_blank" rel="noopener noreferrer"><span data-i18n="fullProfile">Full profile</span><span aria-hidden="true">↗</span></a></div></div><figure class="about-image"><button type="button" data-portrait="smile" aria-label="View smiling portrait of Tine"><img src="/assets/about.webp" alt="Tine Ugrin smiling, photographed by Jakob Kastelec" loading="lazy" width="1000" height="1370"><span class="image-expand" aria-hidden="true">↗</span></button><figcaption class="micro">Tine Ugrin / © Jakob Kastelec</figcaption></figure></div>
+      <h2 id="about-heading" class="page-title" data-i18n="aboutTitle">About</h2>
+      <p class="about-bio" data-i18n="aboutBody">Tine Ugrin is a Slovenian actor working in film, television and theatre. His screen credits include Gepack, Don’t Forget to Breathe and Gospod profesor.</p>
+      <dl class="about-facts"><div><dt data-i18n="languages">Languages</dt><dd data-i18n="spokenLanguages">Slovenian, English, Italian, Serbo-Croatian.</dd></div></dl>
+      <div class="about-actions"><a href="/assets/tine-ugrin-credits-en.pdf" data-language-pdf download data-i18n="railCreditsPdf">Screen credits / PDF</a><a href="https://www.filmmakers.eu/en/actors/tine-ugrin" target="_blank" rel="noopener noreferrer" data-i18n="fullProfile">Full profile / Filmmakers</a></div>
     </section>
-
     <!-- component:credits-rail -->
-
     <!-- component:screen-section -->
-
     <section class="portrait-strip section-pad" id="portraits" aria-labelledby="portraits-heading">
-      <div class="editorial-heading"><span class="micro">04 /</span><h2 id="portraits-heading" data-i18n="offScreen">Off screen.</h2><span class="micro" data-i18n="portraitLabel">Portraits</span></div>
+      <h2 id="portraits-heading" class="page-title" data-i18n="offScreen">Gallery</h2>
       <div class="portrait-strip-grid">
-        <figure><button type="button" data-portrait="warm" aria-label="View warm portrait of Tine"><img src="/assets/portrait-warm.webp" alt="Tine Ugrin in a green sweater, photographed by Arin Rapuš Jerman" loading="lazy" width="1000" height="1500"><span class="image-expand" aria-hidden="true">↗</span></button><figcaption><span>01</span><span>© Arin Rapuš Jerman</span></figcaption></figure>
-        <figure><button type="button" data-portrait="dark" aria-label="View portrait of Tine in a dark suit"><img src="/assets/hero.webp" alt="Tine Ugrin in a dark suit, photographed by Jakob Kastelec" loading="lazy" width="1550" height="2160"><span class="image-expand" aria-hidden="true">↗</span></button><figcaption><span>02</span><span>© Jakob Kastelec</span></figcaption></figure>
-        <figure><button type="button" data-portrait="black" aria-label="View portrait of Tine in a black turtleneck"><img src="/assets/portrait-black.webp" alt="Tine Ugrin in a black turtleneck, photographed by Arin Rapuš Jerman" loading="lazy" width="1000" height="1500"><span class="image-expand" aria-hidden="true">↗</span></button><figcaption><span>03</span><span>© Arin Rapuš Jerman</span></figcaption></figure>
-        <figure><button type="button" data-portrait="smile" aria-label="View smiling portrait of Tine"><img src="/assets/about.webp" alt="Tine Ugrin smiling, photographed by Jakob Kastelec" loading="lazy" width="1000" height="1370"><span class="image-expand" aria-hidden="true">↗</span></button><figcaption><span>04</span><span>© Jakob Kastelec</span></figcaption></figure>
+        <figure><button type="button" data-portrait="warm" aria-label="View warm portrait of Tine"><img src="/assets/portrait-warm.webp" alt="Tine Ugrin in a green sweater, photographed by Arin Rapuš Jerman" width="1000" height="1500" loading="lazy"></button></figure>
+        <figure><button type="button" data-portrait="dark" aria-label="View portrait of Tine in a dark suit"><img src="/assets/hero.webp" alt="Tine Ugrin in a dark suit, photographed by Jakob Kastelec" width="1550" height="2160" loading="lazy"></button></figure>
+        <figure><button type="button" data-portrait="black" aria-label="View portrait of Tine in a black turtleneck"><img src="/assets/portrait-black.webp" alt="Tine Ugrin in a black turtleneck, photographed by Arin Rapuš Jerman" width="1000" height="1500" loading="lazy"></button></figure>
+        <figure><button type="button" data-portrait="smile" aria-label="View smiling portrait of Tine"><img src="/assets/about.webp" alt="Tine Ugrin smiling, photographed by Jakob Kastelec" width="1000" height="1370" loading="lazy"></button></figure>
       </div>
-      <div class="instagram-line" id="instagram"><div><span class="micro" data-i18n="followAlong">Follow along</span><p>Instagram / @tine_ugrin</p></div><a class="text-action" href="https://www.instagram.com/tine_ugrin/" target="_blank" rel="noopener noreferrer"><span data-i18n="visitInstagram">Visit Instagram</span><span aria-hidden="true">↗</span></a></div>
     </section>
-  <section class="contact-section site-footer section-pad" id="contact" aria-labelledby="contact-heading">
-    <div class="contact-copy"><h2 id="contact-heading" data-i18n="contactTitle">Contact</h2><p data-i18n="contactIntro">For casting, productions and collaborations.</p><p data-i18n="professionalContactNote">Tine’s professional contact is listed on Filmmakers.</p><a class="contact-profile" href="https://www.filmmakers.eu/en/actors/tine-ugrin" target="_blank" rel="noopener noreferrer" data-i18n="contactVia">Contact via Filmmakers</a><div class="contact-resources"><button class="footer-casting" type="button" data-open-casting data-i18n="openCastingFile">Open casting file</button><a href="/assets/tine-ugrin-credits-en.pdf" data-language-pdf download data-i18n="railCreditsPdf">Screen credits / PDF</a></div></div>
-    <nav class="profile-links" aria-label="Professional profiles"><a href="https://www.filmmakers.eu/en/actors/tine-ugrin" target="_blank" rel="noopener noreferrer">Filmmakers</a><a href="https://www.imdb.com/name/nm5864569/" target="_blank" rel="noopener noreferrer">IMDb</a><a href="https://www.instagram.com/tine_ugrin/" target="_blank" rel="noopener noreferrer">Instagram</a><a href="https://bsf.si/sl/ime/tine-ugrin/" target="_blank" rel="noopener noreferrer" data-i18n="filmography">Filmography</a></nav>
-  </section>
+    <section class="contact-section section-pad" id="contact" aria-labelledby="contact-heading">
+      <h2 id="contact-heading" class="page-title" data-i18n="contactTitle">Contact</h2>
+      <p data-i18n="contactIntro">Casting & enquiries</p>
+      <a class="contact-profile" href="https://www.filmmakers.eu/en/actors/tine-ugrin" target="_blank" rel="noopener noreferrer" data-i18n="contactVia">Contact via Filmmakers ↗</a>
+    </section>
   </main>
-  <footer class="page-footer section-pad">
-    <div class="footer-bottom"><span class="micro">© <span id="year">2026</span> Tine Ugrin</span><button id="credits-open" type="button" data-i18n="imageCredits">Image credits</button><a class="back-top micro" href="/"><span data-i18n="backHome">Back to home</span> ↗</a></div>
-  </footer>
-
-  <!-- component:casting-file -->
-
-  <dialog class="film-dialog" id="film-dialog" aria-labelledby="film-title">
-    <div class="dialog-top"><span class="micro" id="film-format">ON SCREEN</span><button class="close-button" data-close="film-dialog" type="button" aria-label="Close film viewer">✕</button></div>
-    <div class="film-dialog-layout"><div><div class="video-frame" id="video-frame"></div><div class="video-tabs" id="video-tabs" role="group" aria-label="Choose a character"></div></div>
-    <div class="film-information"><p class="film-character-label" data-i18n="tineAs">Tine as</p><p class="film-character" id="film-character"></p><span class="micro" id="film-year"></span><h2 id="film-title"></h2><p id="film-description"></p><dl id="film-facts"></dl><div class="film-links" id="film-links"></div><p class="media-caption micro" id="film-caption"></p></div></div>
-  </dialog>
-  <dialog class="portrait-dialog" id="portrait-dialog" aria-label="Portrait viewer"><div class="dialog-top"><span class="micro" data-i18n="portraitViewer">PORTRAITS / TINE UGRIN</span><button class="close-button" data-close="portrait-dialog" type="button" aria-label="Close portrait viewer">✕</button></div><div class="portrait-viewer"><button class="gallery-arrow gallery-previous" id="portrait-prev" type="button" aria-label="Previous portrait">←</button><img id="portrait-full" loading="lazy" src="/assets/portrait-warm.webp" alt=""><button class="gallery-arrow gallery-next" id="portrait-next" type="button" aria-label="Next portrait">→</button></div><div class="portrait-dialog-bottom"><p class="micro" id="portrait-credit"></p><a class="text-action light-action" id="portrait-download" download><span data-i18n="downloadPortrait">Download portrait</span><span aria-hidden="true">↓</span></a></div></dialog>
-  <dialog class="image-credits-dialog" id="image-credits-dialog" aria-labelledby="image-credits-heading"><div class="dialog-top"><span class="micro">TINE UGRIN / PORTFOLIO</span><button class="close-button" data-close="image-credits-dialog" type="button" aria-label="Close image credits">✕</button></div><h2 id="image-credits-heading" data-i18n="imageCredits">Image credits</h2><p>Portraits © Arin Rapuš Jerman & Jakob Kastelec.</p><p><em>Gepack</em> © Matic Gabriel.<br><em>Ne pozabi dihati</em> © Željko Stevanić.<br><em>Legenda o bejbi</em> © Teo Toth.</p><p class="credit-sources"><a href="https://www.filmmakers.eu/en/actors/tine-ugrin" target="_blank" rel="noopener noreferrer">Filmmakers ↗</a><a href="https://bsf.si/sl/ime/tine-ugrin/" target="_blank" rel="noopener noreferrer" data-i18n="filmDatabase">Slovenian Film Database ↗</a></p><p class="small-copy" data-i18n="rightsNotice">Photographs and film material remain the property of their respective rights holders.</p></dialog>
+  <footer class="page-footer"><span>© <span id="year">2026</span> Tine Ugrin</span><button id="credits-open" type="button" data-i18n="imageCredits">Image credits</button></footer>
+  <dialog class="film-dialog" id="film-dialog" aria-labelledby="film-title"><div class="dialog-top"><h2 id="film-title"></h2><button class="close-button" data-close="film-dialog" type="button" aria-label="Close viewer">×</button></div><div class="video-frame" id="video-frame"></div><a class="video-external" id="video-external" target="_blank" rel="noopener noreferrer"></a></dialog>
+  <dialog class="portrait-dialog" id="portrait-dialog" aria-label="Portrait viewer"><div class="dialog-top"><span data-i18n="portraitViewer">Portraits / Tine Ugrin</span><button class="close-button" data-close="portrait-dialog" type="button" aria-label="Close viewer">×</button></div><div class="portrait-viewer"><button class="gallery-arrow" id="portrait-prev" type="button" aria-label="Previous portrait">←</button><img id="portrait-full" src="/assets/portrait-warm.webp" alt="" loading="lazy"><button class="gallery-arrow" id="portrait-next" type="button" aria-label="Next portrait">→</button></div><div class="portrait-dialog-bottom"><p id="portrait-credit"></p><a id="portrait-download" download data-i18n="downloadPortrait">Download portrait</a></div></dialog>
+  <dialog class="image-credits-dialog" id="image-credits-dialog" aria-labelledby="image-credits-heading"><div class="dialog-top"><h2 id="image-credits-heading" data-i18n="imageCredits">Image credits</h2><button class="close-button" data-close="image-credits-dialog" type="button" aria-label="Close viewer">×</button></div><p>Portraits © Arin Rapuš Jerman & Jakob Kastelec.</p><p><em>Gepack</em> © Matic Gabriel.<br><em>Ne pozabi dihati</em> © Željko Stevanić.<br><em>Legenda o bejbi</em> © Teo Toth.</p><p><a href="https://www.filmmakers.eu/en/actors/tine-ugrin" target="_blank" rel="noopener noreferrer">Filmmakers ↗</a><br><a href="https://bsf.si/sl/ime/tine-ugrin/" target="_blank" rel="noopener noreferrer" data-i18n="filmDatabase">Slovenian Film Database ↗</a></p></dialog>
   <div class="sr-only" id="announcer" aria-live="polite"></div>
 </body>
 </html>
