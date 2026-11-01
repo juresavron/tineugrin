@@ -52,3 +52,16 @@ The existing build validation passes for all 12 pages: balanced markup, one prim
 - Verified empty-form submission focuses the required name field without sending a message.
 - Verified navigation and native POST form remain available without scripts.
 - Enabled Netlify form detection and saved the email notification to Tine’s supplied contact address. No test enquiry was sent.
+
+## WhatsApp follow-up — 1 November 2026
+
+- Read the owner’s design messages and both attachments. Rendered the one-page PDF and extracted its original portrait JPEG without altering its bytes.
+- Reviewed the wider gold About panel and actual supplied portrait on desktop. Navigation remains fixed and vertical on the right.
+- Checked all 14 routes at 320 px English and 390 px Slovenian with no horizontal overflow. Both hero title rows fit within their viewports.
+- Checked the 1024 px layout: credit table ends at 798 px and navigation begins at 860 px, leaving the content clear of the rail.
+- Verified role rotation, slash colours and pause/resume behaviour. Reduced-motion handling is present in both the script and CSS.
+- Opened all three disclosures: five portraits, twelve credit rows and four videos are visible. Keyboard activation also works without scripts.
+- Verified mobile menu closure, background-inert cleanup, five-image viewer navigation, matching original downloads and focus restoration.
+- Opened the additional video: the official Nika Zorjan title and artist channel are visible. Closing removes its iframe and releases the body lock.
+- Verified contact inputs share their left edge and width; text fields are 48 px tall and the message area is 164 px tall at 320 px.
+- Original CV and existing form contract remain unchanged. No WhatsApp reply or test enquiry was sent.

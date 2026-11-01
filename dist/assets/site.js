@@ -17,13 +17,39 @@
   updateLanguageLinks();
   window.addEventListener('hashchange', updateLanguageLinks);
   if (page === 'home') {
-    const legacy = {work:'credits',instagram:'portraits'};
+    const legacy = {work:'credits'};
     const destination = legacy[location.hash.slice(1)] || (new URLSearchParams(location.search).has('role') ? 'credits' : null);
     if (destination) {
       history.replaceState(history.state, '', location.pathname + location.search + '#' + destination);
       requestAnimationFrame(() => document.getElementById(destination)?.scrollIntoView());
       updateLanguageLinks();
     }
+  }
+
+  const role = document.getElementById('hero-role');
+  const roleToggle = document.getElementById('role-toggle');
+  if (role && roleToggle) {
+    const words = [...role.querySelectorAll('.role-word')];
+    const motion = window.matchMedia('(prefers-reduced-motion: reduce)');
+    let roleIndex = 0;
+    let paused = false;
+    let timer;
+    function syncRoleRotation() {
+      clearInterval(timer);
+      roleToggle.hidden = motion.matches;
+      roleToggle.setAttribute('aria-pressed', String(paused));
+      roleToggle.setAttribute('aria-label', paused ? t('resumeRoles') : t('pauseRoles'));
+      if (paused || motion.matches || document.hidden) return;
+      timer = setInterval(() => {
+        roleIndex = (roleIndex + 1) % words.length;
+        role.dataset.roleIndex = String(roleIndex);
+        words.forEach((word, index) => word.classList.toggle('is-active', index === roleIndex));
+      }, 3800);
+    }
+    roleToggle.addEventListener('click', () => { paused = !paused; syncRoleRotation(); });
+    motion.addEventListener('change', syncRoleRotation);
+    document.addEventListener('visibilitychange', syncRoleRotation);
+    syncRoleRotation();
   }
 
   const header = document.getElementById('site-header');
@@ -37,7 +63,7 @@
   }
   function updateHeader() {
     const threshold = hero ? Math.max(100, hero.clientHeight - 110) : 24;
-    header.classList.toggle('is-scrolled', page !== 'home' || window.scrollY > threshold || !menu.hidden);
+    header.classList.toggle('is-scrolled', window.scrollY > threshold || !menu.hidden);
   }
   window.addEventListener('scroll', updateHeader, {passive:true});
   updateHeader();
@@ -118,7 +144,8 @@
   const films = {
     gepack:{title:'Gepack',year:'2024',video:'https://www.youtube-nocookie.com/embed/iqsXFf8O_rw?rel=0&autoplay=1',watch:'https://www.youtube.com/watch?v=iqsXFf8O_rw',provider:'YouTube'},
     breathe:{title:t('breatheTitlePlain'),year:'2019',video:'https://player.vimeo.com/video/336166678?dnt=1&autoplay=1',watch:'https://vimeo.com/336166678',provider:'Vimeo'},
-    nika:{title:'Nika',year:'2016',video:'https://www.youtube-nocookie.com/embed/aW7g_AE0U24?rel=0&autoplay=1',watch:'https://www.youtube.com/watch?v=aW7g_AE0U24',provider:'YouTube'}
+    nika:{title:'Nika',year:'2016',video:'https://www.youtube-nocookie.com/embed/aW7g_AE0U24?rel=0&autoplay=1',watch:'https://www.youtube.com/watch?v=aW7g_AE0U24',provider:'YouTube'},
+    napaka:{title:'Nika Zorjan — Napaka',year:'2024',video:'https://www.youtube-nocookie.com/embed/50wkqOsw-_Y?rel=0&autoplay=1',watch:'https://www.youtube.com/watch?v=50wkqOsw-_Y',provider:'YouTube',kind:t('officialMusicVideo')}
   };
   document.querySelectorAll('[data-film]').forEach(link => {
     const film = films[link.dataset.film];
@@ -130,7 +157,7 @@
       external.href = film.watch;
       external.textContent = t('openOn') + ' ' + film.provider + ' ↗';
       const iframe = document.createElement('iframe');
-      iframe.title = film.title + ' — ' + t('officialTrailer');
+      iframe.title = film.title + ' — ' + (film.kind || t('officialTrailer'));
       iframe.allow = 'autoplay; fullscreen; picture-in-picture; encrypted-media';
       iframe.referrerPolicy = 'strict-origin-when-cross-origin';
       iframe.allowFullscreen = true;
@@ -142,7 +169,9 @@
   const portraits = [
     {id:'warm',image:'/assets/portrait-warm.webp',download:'/assets/portrait-warm-download.jpg',credit:'© Arin Rapuš Jerman',alt:t('portraitWarmAlt')},
     {id:'dark',image:'/assets/hero.webp',download:'/assets/hero-download.jpg',credit:'© Jakob Kastelec',alt:t('portraitDarkAlt')},
-    {id:'black',image:'/assets/portrait-black.webp',download:'/assets/portrait-black-download.jpg',credit:'© Arin Rapuš Jerman',alt:t('portraitBlackAlt')}
+    {id:'black',image:'/assets/portrait-black.webp',download:'/assets/portrait-black-download.jpg',credit:'© Arin Rapuš Jerman',alt:t('portraitBlackAlt')},
+    {id:'warm-smile',image:'/assets/about-warm.webp',download:'/assets/about-warm-download.jpg',credit:t('suppliedPhoto'),alt:t('portraitWarmSmileAlt')},
+    {id:'smile',image:'/assets/about.webp',download:'/assets/about-download.jpg',credit:'© Jakob Kastelec',alt:t('portraitSmileAlt')}
   ];
   let portraitIndex = 0;
   function showPortrait(index, opener) {
@@ -151,7 +180,7 @@
     const image = document.getElementById('portrait-full');
     image.src = portrait.image;
     image.alt = portrait.alt;
-    document.getElementById('portrait-credit').textContent = String(portraitIndex + 1).padStart(2,'0') + ' / 03 — ' + portrait.credit;
+    document.getElementById('portrait-credit').textContent = String(portraitIndex + 1).padStart(2,'0') + ' / ' + String(portraits.length).padStart(2,'0') + ' — ' + portrait.credit;
     const download = document.getElementById('portrait-download');
     download.href = portrait.download;
     download.download = 'Tine-Ugrin-Portrait-' + (portraitIndex + 1) + '.jpg';
@@ -167,9 +196,19 @@
   });
   document.getElementById('credits-open')?.addEventListener('click', () => openDialog(imageCredits));
 
-  function printCredits() { document.body.classList.add('printing-credits'); window.print(); }
+  let printDisclosures = [];
+  function restorePrintCredits() {
+    document.body.classList.remove('printing-credits');
+    printDisclosures.forEach(([details, open]) => { details.open = open; });
+    printDisclosures = [];
+  }
+  function printCredits() {
+    printDisclosures = [...document.querySelectorAll('#credits details')].map(details => [details, details.open]);
+    printDisclosures.forEach(([details]) => { details.open = true; });
+    document.body.classList.add('printing-credits'); window.print();
+  }
   document.getElementById('print-credits')?.addEventListener('click', printCredits);
-  window.addEventListener('afterprint', () => document.body.classList.remove('printing-credits'));
+  window.addEventListener('afterprint', restorePrintCredits);
   if (page === 'credits' && new URLSearchParams(location.search).get('print') === '1') {
     window.addEventListener('load', () => {
       const url = new URL(location.href); url.searchParams.delete('print');

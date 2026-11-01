@@ -2,12 +2,14 @@
 
 An English/Slovenian actor portfolio built around Tine’s supplied November 2026 layout reference.
 
-The homepage follows this sequence: portrait hero, short introduction on paper, split About/casting panel on warm brown, selected work on white, three portraits, a featured video with two smaller trailers, warm Contact/form section and a compact footer. Header links move between the homepage sections. The existing About, Credits, Gallery, Video and Contact URLs remain available as real pages.
+The homepage follows this sequence: portrait hero, short introduction on paper, split About/casting panel on warm gold, selected work on white, gallery, video, Instagram strip, warm Contact/form section and a compact footer. Header links move between sections. Desktop navigation stays vertical on the right; mobile navigation stays in a fixed header. Existing standalone URLs remain available.
+
+The hero cycles Actor → Radio Host → Content Creator with the requested slash colours. A pause control and reduced-motion handling are included. Native disclosures reveal additional photos, credits and video; they work without JavaScript. See `WHATSAPP_BRIEF.md` for the owner's follow-up requirements and the two casting-profile links still awaiting verified URLs.
 
 ## Source and build
 
 - `src/index.html`: shared document shell and metadata.
-- `components/hero.html`, `intro.html`, `about.html`, `credits-rail.html`, `gallery.html`, `screen-section.html`, `contact.html`: reusable page sections.
+- `components/hero.html`, `intro.html`, `about.html`, `credits-rail.html`, `gallery.html`, `screen-section.html`, `instagram.html`, `contact.html`: reusable page sections.
 - `components/site-header.html`, `page-footer.html` and `*-dialog.html`: shared navigation, footer and viewers.
 - `copy.json` and component copy files: English/Slovenian visible text and accessibility labels.
 - `dist/assets/reference-style.css` and `site.js`: responsive layout and interactions.
@@ -25,7 +27,7 @@ Python and Node.js are sufficient. No dependency installation is required. Serve
 
 The original owner-supplied three-page English CV is unchanged at `dist/assets/tine-ugrin-cv-2026-en.pdf`. Both site languages use this download, with EN identified on the Slovenian buttons. Casting details and selected projects use that CV. See `CV_CONTENT_SOURCE.md`.
 
-Photography retains author attribution and original portrait downloads. The media section uses the verified official trailers for Gepack, Don’t Forget to Breathe and Nika. Video iframes load only after a click and are removed on close. The public Nika trailer is linked by its distributor and is published by Nora Production Group. All media provenance is recorded in `dist/assets/asset-credits.json`.
+Photography retains author attribution and original portrait downloads. The smiling green-sweater portrait was extracted from Tine’s supplied PDF; its photographer is unconfirmed, so it is credited as supplied by Tine. The gallery has three initial portraits and two additional portraits. The media section uses three official film trailers and an additional official Nika Zorjan music video featuring Tine. Players load only after a click and are removed on close. All media provenance is recorded in `dist/assets/asset-credits.json`.
 
 The earlier selected-credit PDF generator remains a legacy authoring utility. It must not overwrite the original CV.
 

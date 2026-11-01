@@ -19,8 +19,8 @@ pages = {
 }
 descriptions = {
     'home': {
-        'en': 'Tine Ugrin — Slovenian film, television and theatre actor. Portraits, trailers and casting information.',
-        'sl': 'Tine Ugrin — slovenski filmski, televizijski in gledališki igralec. Portreti, napovedniki in igralski profil.',
+        'en': 'Tine Ugrin — Slovenian actor, radio host and content creator. Selected work, portraits and casting information.',
+        'sl': 'Tine Ugrin — slovenski igralec, radijski voditelj in ustvarjalec vsebin. Izbrana dela, portreti in igralski profil.',
     },
     'about': {
         'en': 'Tine Ugrin — Slovenian actor based in Ljubljana. Training, languages, casting details and his 2026 acting CV.',
@@ -55,7 +55,7 @@ def main():
     source = (root / 'src/index.html').read_text()
     components = {path.stem: path.read_text().strip() for path in (root / 'components').glob('*.html')}
     page_components = {
-        'home': ['hero', 'intro', 'about', 'credits-rail', 'gallery', 'screen-section', 'contact'],
+        'home': ['hero', 'intro', 'about', 'credits-rail', 'gallery', 'screen-section', 'instagram', 'contact'],
         'about': ['about'], 'credits': ['credits-rail'], 'screen': ['screen-section'],
         'portraits': ['gallery'], 'contact': ['contact'], 'thanks': ['thank-you'],
     }

@@ -31,7 +31,7 @@
   <header class="site-header" id="site-header">
   <a class="monogram" href="/sl/" aria-label="Tine Ugrin, začetek" data-i18n-aria-label="homeLabel">TINE UGRIN <span>/ <span data-i18n="brandActor">IGRALEC</span></span></a>
   <div class="site-rail">
-    <nav class="desktop-nav" aria-label="Glavni meni" data-i18n-aria-label="mainNavigation"><a href="/sl/about/" data-i18n="navAbout">O meni</a><a href="/sl/gallery/" aria-current="page" data-i18n="navPortraits">Galerija</a><a href="/sl/video/" data-i18n="navScreen">Video</a><a href="/sl/contact/" data-i18n="navContact">Kontakt</a></nav>
+    <nav class="desktop-nav" aria-label="Glavni meni" data-i18n-aria-label="mainNavigation"><a href="/sl/about/" data-i18n="navAbout">O meni</a><a href="/sl/credits/" data-i18n="navCredits">Vloge</a><a href="/sl/gallery/" aria-current="page" data-i18n="navPortraits">Galerija</a><a href="/sl/video/" data-i18n="navScreen">Video</a><a href="/sl/contact/" data-i18n="navContact">Kontakt</a></nav>
     <div class="language-switch" aria-label="Jezik" data-i18n-aria-label="languageLabel"><a href="/gallery/" lang="en" class="lang-en">EN</a><span>/</span><a href="/sl/gallery/" lang="sl" class="lang-sl" aria-current="page">SL</a></div>
   </div>
   <button class="menu-toggle" id="menu-toggle" type="button" aria-label="Odpri meni" data-i18n-aria-label="openMenu" aria-expanded="false" aria-controls="mobile-menu" data-i18n="menuLabel">Meni</button>
@@ -43,11 +43,15 @@
   <main id="main">
     <section class="gallery-section" id="portraits" aria-labelledby="portraits-heading">
   <h1 id="portraits-heading" class="section-title" data-i18n="offScreen">Galerija</h1>
-  <div class="portrait-strip-grid content-column">
+  <div class="content-column gallery-content"><div class="portrait-strip-grid">
     <figure><button type="button" data-portrait="warm" aria-label="Ogled portreta v zelenem puloverju" data-i18n-aria-label="portraitWarmLabel"><img src="/assets/portrait-warm.webp" alt="Tine Ugrin v zelenem puloverju, fotograf Arin Rapuš Jerman" data-i18n-alt="portraitWarmAlt" width="1000" height="1500" loading="lazy"></button></figure>
     <figure><button type="button" data-portrait="dark" aria-label="Ogled portreta v temni obleki" data-i18n-aria-label="portraitDarkLabel"><img src="/assets/hero.webp" alt="Tine Ugrin v temni obleki, fotograf Jakob Kastelec" data-i18n-alt="portraitDarkAlt" width="1550" height="2160" loading="lazy"></button></figure>
     <figure><button type="button" data-portrait="black" aria-label="Ogled portreta v črnem puliju" data-i18n-aria-label="portraitBlackLabel"><img src="/assets/portrait-black.webp" alt="Tine Ugrin v črnem puliju, fotograf Arin Rapuš Jerman" data-i18n-alt="portraitBlackAlt" width="1000" height="1500" loading="lazy"></button></figure>
   </div>
+  <details class="more-disclosure"><summary><span class="more-label" data-i18n="showMorePhotos">Več fotografij</span><span class="less-label" data-i18n="showFewerPhotos">Manj fotografij</span><span class="disclosure-mark" aria-hidden="true">+</span></summary><div class="more-content portrait-strip-grid extra-portraits">
+    <figure><button type="button" data-portrait="warm-smile" aria-label="Oglej si nasmejani portret v zelenem puloverju" data-i18n-aria-label="portraitWarmSmileLabel"><img src="/assets/about-warm.webp" alt="Nasmejani Tine Ugrin v zelenem puloverju" data-i18n-alt="portraitWarmSmileAlt" width="1100" height="1650" loading="lazy"></button></figure>
+    <figure><button type="button" data-portrait="smile" aria-label="Ogled nasmejanega portreta" data-i18n-aria-label="portraitSmileLabel"><img src="/assets/about.webp" alt="Nasmejani Tine Ugrin, fotograf Jakob Kastelec" data-i18n-alt="portraitSmileAlt" width="1000" height="1370" loading="lazy"></button></figure>
+  </div></details></div>
 </section>
   </main>
   <footer class="page-footer">

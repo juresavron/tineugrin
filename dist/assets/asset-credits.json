@@ -160,7 +160,27 @@
       "embed_url": "https://www.youtube-nocookie.com/embed/aW7g_AE0U24?rel=0",
       "source_page": "https://www.cinemania-group.si/kino_film.asp?film=795&menu=9&podrocje=9",
       "poster": "https://bsf.si/media/publicity/image/0f/thumbnails/0f13f2ec6eb143de7890d23125e0dd8f1de461a4.jpeg.1920x1080_q95.jpg"
+    },
+    {
+      "project": "Nika Zorjan — Napaka",
+      "label": "Official music video",
+      "watch_url": "https://www.youtube.com/watch?v=50wkqOsw-_Y",
+      "embed_url": "https://www.youtube-nocookie.com/embed/50wkqOsw-_Y?rel=0",
+      "source": "Nika Zorjan official artist channel; video credits list Tine Ugrin as actor",
+      "year": 2024
     }
   ],
-  "showreel_note": "No verified public personal acting showreel found. Do not label a film trailer as his acting showreel."
+  "showreel_note": "No verified public personal acting showreel found. Do not label a film trailer as his acting showreel.",
+  "owner_supplied_reference": {
+    "source": "Tine Ugrin, WhatsApp, 1 November 2026",
+    "file": "ABOUT ME.pdf",
+    "sha256": "2293bfdc3e49f5fa239d933ef59cc03c67548a1d8743bac72674b4fed8eff274",
+    "portrait": "about-warm-download.jpg",
+    "note": "Original JPEG extracted unchanged from image object 19; web version optimized separately. Photographer attribution pending confirmation."
+  },
+  "radio": {
+    "role": "Radio Host",
+    "station": "Radio Capris",
+    "source_page": "https://www.radiocapris.si/si/oddaje/vikend-program/"
+  }
 }
