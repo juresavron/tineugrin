@@ -4,7 +4,7 @@ An English/Slovenian actor portfolio built around Tine’s supplied November 202
 
 The homepage follows this sequence: portrait hero, short introduction on paper, split About/casting panel on warm gold, selected work on white, gallery, video, Instagram strip, warm Contact/form section and a compact footer. Header links move between sections. Desktop navigation stays vertical on the right; mobile navigation stays in a fixed header. Existing standalone URLs remain available.
 
-The hero cycles Actor → Radio Host → Content Creator with the requested slash colours. A pause control and reduced-motion handling are included. Native disclosures reveal additional photos, credits and video; they work without JavaScript. See `WHATSAPP_BRIEF.md` for the owner's follow-up requirements and the two casting-profile links still awaiting verified URLs.
+The hero cycles Actor → Radio Host → Content Creator with the requested slash colours. A pause control and reduced-motion handling are included. Native disclosures reveal additional photos, credits and video; they work without JavaScript. The updated two-page reference supplies the photographic Instagram banner, centered section headings and outlined CV buttons. See `WHATSAPP_BRIEF.md` for the owner's follow-up requirements and outstanding content.
 
 ## Source and build
 
@@ -12,6 +12,7 @@ The hero cycles Actor → Radio Host → Content Creator with the requested slas
 - `components/hero.html`, `intro.html`, `about.html`, `credits-rail.html`, `gallery.html`, `screen-section.html`, `instagram.html`, `contact.html`: reusable page sections.
 - `components/site-header.html`, `page-footer.html` and `*-dialog.html`: shared navigation, footer and viewers.
 - `copy.json` and component copy files: English/Slovenian visible text and accessibility labels.
+- `content/credits.json` and `scripts/credits.py`: all 32 CV credits in seven categories, including source role types and expandable production/director details. The homepage initially shows five selected credits.
 - `dist/assets/reference-style.css` and `site.js`: responsive layout and interactions.
 - `scripts/build.py`: creates 14 static pages, language links, metadata and sitemap. The two form confirmation pages are excluded from indexing.
 
@@ -27,7 +28,7 @@ Python and Node.js are sufficient. No dependency installation is required. Serve
 
 The original owner-supplied three-page English CV is unchanged at `dist/assets/tine-ugrin-cv-2026-en.pdf`. Both site languages use this download, with EN identified on the Slovenian buttons. Casting details and selected projects use that CV. See `CV_CONTENT_SOURCE.md`.
 
-Photography retains author attribution and original portrait downloads. The smiling green-sweater portrait was extracted from Tine’s supplied PDF; its photographer is unconfirmed, so it is credited as supplied by Tine. The gallery has three initial portraits and two additional portraits. The media section uses three official film trailers and an additional official Nika Zorjan music video featuring Tine. Players load only after a click and are removed on close. All media provenance is recorded in `dist/assets/asset-credits.json`.
+Photography retains author attribution and original portrait downloads. The smiling green-sweater portrait and black-and-white Instagram photograph were extracted from Tine’s supplied PDFs; their photographers are unconfirmed, so they are credited as supplied by Tine. The gallery has three initial portraits and four additional portraits, including two original photographs from his shared Drive folder. The media section uses three official film trailers and an additional official Nika Zorjan music video featuring Tine. Players load only after a click and are removed on close. All media provenance is recorded in `dist/assets/asset-credits.json`.
 
 The earlier selected-credit PDF generator remains a legacy authoring utility. It must not overwrite the original CV.
 

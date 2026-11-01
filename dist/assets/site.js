@@ -171,7 +171,9 @@
     {id:'dark',image:'/assets/hero.webp',download:'/assets/hero-download.jpg',credit:'© Jakob Kastelec',alt:t('portraitDarkAlt')},
     {id:'black',image:'/assets/portrait-black.webp',download:'/assets/portrait-black-download.jpg',credit:'© Arin Rapuš Jerman',alt:t('portraitBlackAlt')},
     {id:'warm-smile',image:'/assets/about-warm.webp',download:'/assets/about-warm-download.jpg',credit:t('suppliedPhoto'),alt:t('portraitWarmSmileAlt')},
-    {id:'smile',image:'/assets/about.webp',download:'/assets/about-download.jpg',credit:'© Jakob Kastelec',alt:t('portraitSmileAlt')}
+    {id:'smile',image:'/assets/about.webp',download:'/assets/about-download.jpg',credit:'© Jakob Kastelec',alt:t('portraitSmileAlt')},
+    {id:'drive-warm',image:'/assets/portrait-drive-warm.webp',download:'/assets/portrait-drive-warm-download.jpg',credit:t('suppliedPhoto'),alt:t('portraitDriveWarmAlt')},
+    {id:'drive-mono',image:'/assets/portrait-drive-mono.webp',download:'/assets/portrait-drive-mono-download.jpg',credit:t('suppliedPhoto'),alt:t('portraitDriveMonoAlt')}
   ];
   let portraitIndex = 0;
   function showPortrait(index, opener) {

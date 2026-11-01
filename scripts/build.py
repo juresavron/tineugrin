@@ -4,6 +4,7 @@ from html import escape
 import json
 import re
 from localize import copy, translate
+from credits import render_credits
 
 root = Path(__file__).resolve().parent.parent
 dist = root / 'dist'
@@ -85,6 +86,8 @@ def main():
 
         for language in ('en', 'sl'):
             rendered = translate(page, language)
+            rendered = rendered.replace('<!-- selected-credits -->', render_credits(language, selected=True))
+            rendered = rendered.replace('<!-- full-credits -->', render_credits(language, heading_level=4 if section == 'home' else 3))
             path = path_for(section, language)
             if section != 'home':
                 for destination in pages:

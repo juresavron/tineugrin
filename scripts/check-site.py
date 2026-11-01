@@ -41,7 +41,7 @@ for file in files:
     assert len(a.ids)==len(set(a.ids)), 'Duplicate ids'
     assert 'lorem ipsum' not in file.read_text().lower(),file
     assert a.headings==1,(file,'Expected one primary heading')
-    assert a.main_sections==(['home','intro','about','credits','portraits','screen','contact'] if a.page=='home' else [a.page]),(file,'Unexpected section order')
+    assert a.main_sections==(['home','intro','about','credits','portraits','screen','instagram','contact'] if a.page=='home' else [a.page]),(file,'Unexpected section order')
     if a.page in ('home','contact'):
         assert a.form_names==['portfolio-contact'],file
         assert set(a.form_fields)=={'form-name','language','bot-field','name','email','message'},file

@@ -1,0 +1,442 @@
+{
+  "source": "Owner-supplied T.U._C.V. NEW 2026 - english.pdf, 31 October 2026",
+  "selected": [
+    "gepack",
+    "kajzer",
+    "profesor",
+    "breathe",
+    "nika"
+  ],
+  "notes": [
+    "Alternativa’s role-type is printed as 'sead'; leave the role-type unspecified pending confirmation. TV appearances keep the listed episode counts without inferring a billing category.",
+    "See trough is retained as the title written in the CV pending the owner's text corrections.",
+    "Project descriptions are awaiting owner copy. Existing details use the CV; no claims about box-office performance have been added."
+  ],
+  "entries": [
+    {
+      "id": "gepack",
+      "category": "features",
+      "title": "Gepack",
+      "role": "Jon Šavron",
+      "role_type": "lead",
+      "year": "2024",
+      "production": "3230 Production",
+      "director": "Žiga Kukovič",
+      "url": "https://bsf.si/sl/film/gepack/",
+      "status": null
+    },
+    {
+      "id": "kajzer",
+      "category": "television",
+      "title": "Življenja Tomaža Kajzerja II",
+      "role": {
+        "en": "Bully · Episode 5",
+        "sl": "Nasilnež · 5. epizoda"
+      },
+      "role_type": null,
+      "year": "2024",
+      "production": "RTV Slovenija",
+      "director": "Peter Bratuša",
+      "url": "https://www.youtube.com/watch?v=Jl4HQJMHqug",
+      "status": null
+    },
+    {
+      "id": "profesor",
+      "category": "television",
+      "title": "Gospod profesor",
+      "role": {
+        "en": "Tibor Fortuna · 20 episodes",
+        "sl": "Tibor Fortuna · 20 epizod"
+      },
+      "role_type": null,
+      "year": "2021–2022",
+      "production": "Voyo",
+      "director": "Boris Bezic, Marko Šantić",
+      "url": "https://bsf.si/sl/film/gospod-profesor/",
+      "status": null
+    },
+    {
+      "id": "breathe",
+      "category": "features",
+      "title": {
+        "en": "Don’t Forget to Breathe",
+        "sl": "Ne pozabi dihati"
+      },
+      "role": "Peter Guštin",
+      "role_type": "supporting",
+      "year": "2019",
+      "production": "Bela Film",
+      "director": "Martin Turk",
+      "url": "https://bsf.si/sl/film/ne-pozabi-dihati/",
+      "status": null
+    },
+    {
+      "id": "nika",
+      "category": "features",
+      "title": "Nika",
+      "role": "Žan Sosič",
+      "role_type": "supporting",
+      "year": "2016",
+      "production": "Nora p. g.",
+      "director": "Slobodan Maksimović",
+      "url": "https://bsf.si/sl/film/nika/",
+      "status": null
+    },
+    {
+      "id": "plan",
+      "category": "features",
+      "title": "Vse po planu",
+      "role": {
+        "en": "The Specialist",
+        "sl": "Specialist"
+      },
+      "role_type": "supporting",
+      "year": "2027",
+      "production": "Zilla Production",
+      "director": "Aljaž Tepina",
+      "url": null,
+      "status": "upcoming"
+    },
+    {
+      "id": "terra",
+      "category": "features",
+      "title": "Terra Rossa",
+      "role": {
+        "en": "One-eyed gunslinger",
+        "sl": "Enooki revolveraš"
+      },
+      "role_type": "lead",
+      "year": "2027",
+      "production": "5. Kader",
+      "director": "Luka Jurinčič",
+      "url": null,
+      "status": "upcoming"
+    },
+    {
+      "id": "izi",
+      "category": "shorts",
+      "title": "Izi",
+      "role": "Jan",
+      "role_type": "supporting",
+      "year": {
+        "en": "Nov 2026",
+        "sl": "nov. 2026"
+      },
+      "production": "DP Entertainment",
+      "director": "Domen Puš",
+      "url": null,
+      "status": "upcoming"
+    },
+    {
+      "id": "slaves",
+      "category": "shorts",
+      "title": "Slaves",
+      "role": "Tim",
+      "role_type": "supporting",
+      "year": "2024",
+      "production": "DP Entertainment",
+      "director": "Domen Puš",
+      "url": null,
+      "status": null
+    },
+    {
+      "id": "see-through",
+      "category": "shorts",
+      "title": "See trough",
+      "role": {
+        "en": "Lina’s Alter Ego",
+        "sl": "Linin alter ego"
+      },
+      "role_type": "supporting",
+      "year": "2024",
+      "production": "Abrams Production",
+      "director": "Nadina Kosinac",
+      "url": null,
+      "status": null
+    },
+    {
+      "id": "zadnji",
+      "category": "shorts",
+      "title": "Zadnji objem",
+      "role": "Adam",
+      "role_type": "lead",
+      "year": "2024",
+      "production": "DP Entertainment",
+      "director": "Domen Puš",
+      "url": "https://www.youtube.com/watch?v=ZXlRlqpim7A",
+      "status": null
+    },
+    {
+      "id": "legenda",
+      "category": "shorts",
+      "title": "Legenda o bejbi",
+      "role": {
+        "en": "Famous actor",
+        "sl": "Znani igralec"
+      },
+      "role_type": "supporting",
+      "year": "2024",
+      "production": "Toth & Pučnik production",
+      "director": "Leon Pučnik",
+      "url": null,
+      "status": null
+    },
+    {
+      "id": "cena",
+      "category": "shorts",
+      "title": "Za vsako ceno",
+      "role": {
+        "en": "Director",
+        "sl": "Režiser"
+      },
+      "role_type": "lead",
+      "year": "2023",
+      "production": "5. Kader",
+      "director": "Luka Jurinčič",
+      "url": "https://www.youtube.com/watch?v=DT-Yn6wJNaY",
+      "status": null
+    },
+    {
+      "id": "monolith",
+      "category": "shorts",
+      "title": "The Monolith",
+      "role": "Martin",
+      "role_type": "lead",
+      "year": "2022",
+      "production": "DP Entertainment",
+      "director": "Domen Puš",
+      "url": null,
+      "status": null
+    },
+    {
+      "id": "alternativa",
+      "category": "shorts",
+      "title": "Alternativa",
+      "role": "Frontmen",
+      "role_type": null,
+      "year": "2021",
+      "production": "5. Kader",
+      "director": "Luka Jurinčič",
+      "url": "https://www.youtube.com/watch?v=08jKA6cmCcg",
+      "status": null
+    },
+    {
+      "id": "adam-smith",
+      "category": "shorts",
+      "title": "Nevidna roka Adama Smitha",
+      "role": "Ženin",
+      "role_type": "supporting",
+      "year": "2017",
+      "production": "December",
+      "director": "Slobodan Maksimović",
+      "url": "https://www.youtube.com/watch?v=KaiXo5gY_rg",
+      "status": null
+    },
+    {
+      "id": "portret",
+      "category": "shorts",
+      "title": "Portret izgubljenim",
+      "role": "Noa",
+      "role_type": "lead",
+      "year": "2017",
+      "production": "Spustimo Bankovec",
+      "director": "Jan Krevatin",
+      "url": null,
+      "status": null
+    },
+    {
+      "id": "ponavljaj",
+      "category": "shorts",
+      "title": "Ponavljaj za mano",
+      "role": "Jan",
+      "role_type": "lead",
+      "year": "2017",
+      "production": "Spustimo Bankovec",
+      "director": "Jan Krevatin",
+      "url": null,
+      "status": null
+    },
+    {
+      "id": "moja",
+      "category": "microdramas",
+      "title": "Moja dva fanta",
+      "role": "Anej",
+      "role_type": "lead-male",
+      "year": {
+        "en": "Nov 2026",
+        "sl": "nov. 2026"
+      },
+      "production": "RTV Slovenija",
+      "director": "Luka Marčetić",
+      "url": null,
+      "status": "upcoming"
+    },
+    {
+      "id": "napaka",
+      "category": "music",
+      "title": "Nika Zorjan — Napaka",
+      "role": null,
+      "role_type": "lead",
+      "year": "2024",
+      "production": "NEO Visuals",
+      "director": "Jaka Bizjak",
+      "url": "https://www.youtube.com/watch?v=50wkqOsw-_Y",
+      "status": null
+    },
+    {
+      "id": "de-liri",
+      "category": "music",
+      "title": "De Liri — Kje si?",
+      "role": null,
+      "role_type": "lead",
+      "year": "2023",
+      "production": "Matic Gabriel",
+      "director": "Matic Gabriel",
+      "url": null,
+      "status": null
+    },
+    {
+      "id": "ari",
+      "category": "music",
+      "title": "Ari — Na naju",
+      "role": null,
+      "role_type": "lead",
+      "year": "2023",
+      "production": "5. Kader",
+      "director": "Luka Jurinčič",
+      "url": "https://www.youtube.com/watch?v=p8gXivq9zls",
+      "status": null
+    },
+    {
+      "id": "modrijani",
+      "category": "music",
+      "title": "Modrijani — Ime očeta",
+      "role": null,
+      "role_type": "lead",
+      "year": "2020",
+      "production": "Mediaspot",
+      "director": "Perica Rai",
+      "url": "https://www.youtube.com/watch?v=pzBmaINugVo",
+      "status": null
+    },
+    {
+      "id": "hvala",
+      "category": "music",
+      "title": "Lea Sirk — Hvala, NE!",
+      "role": null,
+      "role_type": "lead",
+      "year": "2019",
+      "production": "Mediaspot",
+      "director": "Perica Rai",
+      "url": "https://www.youtube.com/watch?v=Xzaa22agPqA",
+      "status": null
+    },
+    {
+      "id": "profil",
+      "category": "music",
+      "title": "Lea Sirk — Moj profil",
+      "role": null,
+      "role_type": "lead",
+      "year": "2019",
+      "production": "KARO Media",
+      "director": "Tomi Purič",
+      "url": null,
+      "status": null
+    },
+    {
+      "id": "nina",
+      "category": "music",
+      "title": "Nina Pušlar — Za vedno",
+      "role": null,
+      "role_type": "supporting",
+      "year": "2017",
+      "production": "Supermarket Production",
+      "director": "Ven Jemeršič",
+      "url": "https://www.youtube.com/watch?v=dQVZkaNUuI8",
+      "status": null
+    },
+    {
+      "id": "skoda",
+      "category": "commercials",
+      "title": "Škoda — dnevi odprtih vrat",
+      "role": null,
+      "role_type": "supporting",
+      "year": "2023",
+      "production": "Entity Films Production House",
+      "director": null,
+      "url": "https://www.youtube.com/watch?v=RzLM88gTbDU",
+      "status": null,
+      "brand": "Porsche Slovenia"
+    },
+    {
+      "id": "mercator",
+      "category": "commercials",
+      "title": "Mercator Minute",
+      "role": null,
+      "role_type": "supporting",
+      "year": "2020",
+      "production": null,
+      "director": null,
+      "url": "https://www.youtube.com/watch?v=xGQrfJNbb2Y",
+      "status": null,
+      "brand": "Mercator Slovenia"
+    },
+    {
+      "id": "midsummer",
+      "category": "theatre",
+      "title": {
+        "en": "A Midsummer Night’s Dream",
+        "sl": "Sen kresne noči"
+      },
+      "role": {
+        "en": "Lysander",
+        "sl": "Lizander"
+      },
+      "role_type": "supporting",
+      "year": "2026",
+      "production": "AGRFT",
+      "director": null,
+      "url": null,
+      "status": null
+    },
+    {
+      "id": "chicago",
+      "category": "theatre",
+      "title": "Sexual Perversity in Chicago",
+      "role": "Bernie",
+      "role_type": "lead",
+      "year": "2026",
+      "production": "AGRFT",
+      "director": null,
+      "url": null,
+      "status": null
+    },
+    {
+      "id": "godovi",
+      "category": "theatre",
+      "title": "Noč bogov",
+      "role": {
+        "en": "King Ludvik XIV",
+        "sl": "Kralj Ludvik XIV."
+      },
+      "role_type": "lead",
+      "year": "2018",
+      "production": "Gledališče Koper",
+      "director": null,
+      "url": null,
+      "status": null
+    },
+    {
+      "id": "alamut",
+      "category": "theatre",
+      "title": "Alamut",
+      "role": "Jusuf",
+      "role_type": "supporting",
+      "year": "2017",
+      "production": "Gledališče Koper",
+      "director": null,
+      "url": null,
+      "status": null
+    }
+  ]
+}

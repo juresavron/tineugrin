@@ -65,3 +65,16 @@ The existing build validation passes for all 12 pages: balanced markup, one prim
 - Opened the additional video: the official Nika Zorjan title and artist channel are visible. Closing removes its iframe and releases the body lock.
 - Verified contact inputs share their left edge and width; text fields are 48 px tall and the message area is 164 px tall at 320 px.
 - Original CV and existing form contract remain unchanged. No WhatsApp reply or test enquiry was sent.
+
+## Revised evening WhatsApp brief — 1 November 2026
+
+- Rendered both pages of the updated PDF, read the 20:20 brief, and inspected the original CV's three-page text and relevant page image.
+- Cross-checked all 32 CV entries in seven categories and four upcoming labels. Native full-list disclosure and a selected project's production/director information were opened in the browser.
+- Read back all 15 sports and their levels, instruments, dance, singing, licences, education, four workshops and award. Unspecified ratings and ambiguous billing labels were not inferred.
+- Reviewed desktop hero, outlined CTAs, About/casting split, centered headings, photographic Instagram banner and contact layout. Main heading computed weights are 600.
+- Checked all 14 routes at English 320 px and Slovenian 390 px: no horizontal overflow. Also checked home at 320 px Slovenian and 768/1024 px tablet widths. Expanded English skills, credits and gallery remain within the 320 px viewport.
+- Verified the seven-image viewer opens the new monochrome portrait with the matching original JPEG; Escape closes it and releases the body scroll lock.
+- Verified mobile menu open, background inert state, same-page Work navigation, menu closure and inert cleanup.
+- Verified the empty form focuses the required name field; fields have identical left edge and width. No enquiry was sent.
+- Rechecked the source CV SHA-256: unchanged. Build, existing site checks, JavaScript syntax and diff whitespace checks pass.
+- Corrected narrow bilingual hero CTAs; rechecked 320/390 px and 768 px layouts. Name/title and buttons retain a 26–38 px vertical gap with no overflow.

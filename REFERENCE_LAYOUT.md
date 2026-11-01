@@ -24,3 +24,9 @@ The current video panels contain Gepack (2024), Don’t Forget to Breathe (2019)
 Static checks cover all 14 generated pages: headings, section order, translated routes, canonical/language URLs, form fields and local assets. Desktop review covered the hero, intro, About/casting, media and contact compositions. All routes were checked at English 320 px and Slovenian 390 px with no horizontal overflow. Menu opening/closing, same-page navigation, portrait download mapping, video cleanup, no-script navigation and empty-form validation were verified.
 
 The contact form’s capture service and notification recipient are configured in Netlify. Publication verification must confirm that `portfolio-contact` is detected by the deployed site. A real enquiry was not sent as part of testing.
+
+## Revised two-page reference — 1 November, 20:19
+
+The new composition keeps the one-page flow. Space Grotesk SemiBold and centered main headings unify the sections. CV links are outlined buttons with a diagonal arrow. The Instagram strip becomes a wide black-and-white photographic Follow My Journey section; the contact introduction and send button are centered to match the reference. The fixed right rail remains on desktop and becomes a fixed top menu on mobile.
+
+Five selected credits remain visible by default; a full list reveals all 32 CV entries. Each project opens production/director details. Languages retain every proficiency level and additional skills open in a native disclosure. The gallery reveals four additional portraits for seven total, including two supplied Drive originals. Final biography and project descriptions await owner text.

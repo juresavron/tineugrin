@@ -182,5 +182,32 @@
     "role": "Radio Host",
     "station": "Radio Capris",
     "source_page": "https://www.radiocapris.si/si/oddaje/vikend-program/"
+  },
+  "owner_supplied_followup": {
+    "source": "Tine Ugrin, WhatsApp, 1 November 2026, 20:19–20:20 Europe/Ljubljana",
+    "filename": "ABOUT ME.pdf",
+    "sha256": "90fe8562afc4aad81f01401362d82211af1b45d2631755ad11f6ce8ab14ac38a",
+    "banner": "journey.webp",
+    "note": "The original black-and-white photograph was extracted from PDF image object 69 and optimized for the web. Photographer unconfirmed; attributed as supplied by Tine."
+  },
+  "drive_additions": [
+    {
+      "source_page": "https://drive.google.com/file/d/1MSqygA5Dk69xO57TfacKVNT8H7E4re2Q/view",
+      "original": "portrait-drive-warm-download.jpg",
+      "web": "portrait-drive-warm.webp",
+      "sha256": "a5fc9459753d3668189db542e9adb0090c4a311dcaa9ceddeaf9b88b5427093e",
+      "credit": "Photo supplied by Tine Ugrin"
+    },
+    {
+      "source_page": "https://drive.google.com/file/d/13tsOEUlGPjE6yKVAdOXk7Ku7E0BE_p0N/view",
+      "original": "portrait-drive-mono-download.jpg",
+      "web": "portrait-drive-mono.webp",
+      "sha256": "90cc3cec4db5bee04ee6cd2772e7f3ce0470f7928ce3bf7fce015dcded5d78d9",
+      "credit": "Photo supplied by Tine Ugrin"
+    }
+  ],
+  "profile_links": {
+    "spotlight": "https://app.spotlight.com/9651-5612-6005",
+    "source": "Owner-shared LINKI Google Doc: 1BuO9oUWOlvBlSbi8KyxXc9vNIxWuJ7nW1qUY1enEVBY"
   }
 }
