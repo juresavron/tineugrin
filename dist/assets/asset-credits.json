@@ -152,6 +152,14 @@
       "embed_url": "https://player.vimeo.com/video/336166678?dnt=1",
       "source_page": "https://belafilm.si/seznam-filmi/ne-pozabi-dihati/",
       "duration_seconds": 90
+    },
+    {
+      "project": "Nika",
+      "label": "Official trailer",
+      "watch_url": "https://www.youtube.com/watch?v=aW7g_AE0U24",
+      "embed_url": "https://www.youtube-nocookie.com/embed/aW7g_AE0U24?rel=0",
+      "source_page": "https://www.cinemania-group.si/kino_film.asp?film=795&menu=9&podrocje=9",
+      "poster": "https://bsf.si/media/publicity/image/0f/thumbnails/0f13f2ec6eb143de7890d23125e0dd8f1de461a4.jpeg.1920x1080_q95.jpg"
     }
   ],
   "showreel_note": "No verified public personal acting showreel found. Do not label a film trailer as his acting showreel."

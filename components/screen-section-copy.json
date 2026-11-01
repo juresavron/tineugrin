@@ -6,7 +6,9 @@
     "ssAltBreathe": "Tine Ugrin and Klara Kuk in Don’t Forget to Breathe",
     "ssAltGepack": "Tine Ugrin and the cast of Gepack in a car",
     "ssWatchGepack": "Watch the official trailer for Gepack",
-    "ssWatchBreathe": "Watch the official trailer for Don’t Forget to Breathe"
+    "ssWatchBreathe": "Watch the official trailer for Don’t Forget to Breathe",
+    "ssWatchNika": "Watch the official trailer for Nika",
+    "ssAltNika": "Nika, official film trailer"
   },
   "sl": {
     "ssHeading": "Uradna napovednika",
@@ -15,6 +17,8 @@
     "ssAltBreathe": "Tine Ugrin in Klara Kuk v filmu Ne pozabi dihati",
     "ssAltGepack": "Tine Ugrin in igralska zasedba filma Gepack v avtomobilu",
     "ssWatchGepack": "Oglej si uradni napovednik filma Gepack",
-    "ssWatchBreathe": "Oglej si uradni napovednik filma Ne pozabi dihati"
+    "ssWatchBreathe": "Oglej si uradni napovednik filma Ne pozabi dihati",
+    "ssWatchNika": "Oglej si uradni napovednik filma Nika",
+    "ssAltNika": "Uradni napovednik filma Nika"
   }
 }

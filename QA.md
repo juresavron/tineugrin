@@ -40,3 +40,15 @@ The existing build validation passes for all 12 pages: balanced markup, one prim
 - Verified both Contact pages use the email from the supplied CV.
 - Reviewed the three updated page types on desktop and at 320 px English / 390 px Slovenian. No horizontal overflow was observed.
 - Screen, theatre and upcoming groups retain readable rows and semantic table headers. Future projects are separated from completed work.
+
+## Supplied reference layout — 1 November 2026
+
+- Confirmed the seven-section homepage order and compact footer match the supplied composition.
+- Reviewed desktop hero/intro, warm About/casting split, video arrangement and contact form.
+- Checked all 14 routes at English 320 px and Slovenian 390 px; content width equals available width.
+- Verified mobile section navigation stays on the homepage and releases its inert/scroll lock.
+- Verified Slovenian portrait navigation updates the author and original JPEG together.
+- Opened the Nika player: its official Nora Production Group title and 1:44 duration are visible. Closing removes the iframe.
+- Verified empty-form submission focuses the required name field without sending a message.
+- Verified navigation and native POST form remain available without scripts.
+- Enabled Netlify form detection and saved the email notification to Tine’s supplied contact address. No test enquiry was sent.

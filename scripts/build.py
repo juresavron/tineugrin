@@ -1,4 +1,4 @@
-"""Build a real static page for each portfolio destination in both languages."""
+"""Build the reference-led homepage and keep existing standalone routes working."""
 from pathlib import Path
 from html import escape
 import json
@@ -15,6 +15,7 @@ pages = {
     'screen': ('video', 'screen-heading', {'en': 'Video', 'sl': 'Video'}),
     'portraits': ('gallery', 'portraits-heading', {'en': 'Gallery', 'sl': 'Galerija'}),
     'contact': ('contact', 'contact-heading', {'en': 'Contact', 'sl': 'Kontakt'}),
+    'thanks': ('thank-you', 'thanks-heading', {'en': 'Thank you', 'sl': 'Hvala'}),
 }
 descriptions = {
     'home': {
@@ -30,8 +31,8 @@ descriptions = {
         'sl': 'Izbrane filmske, televizijske in gledališke vloge, prihajajoči projekti ter celoten igralski CV Tineta Ugrina za leto 2026.',
     },
     'screen': {
-        'en': 'Watch official trailers for Gepack and Don’t Forget to Breathe, featuring Tine Ugrin.',
-        'sl': 'Uradna napovednika filmov Gepack in Ne pozabi dihati s Tinetom Ugrinom.',
+        'en': 'Watch official trailers for Gepack, Don’t Forget to Breathe and Nika, featuring Tine Ugrin.',
+        'sl': 'Uradni napovedniki filmov Gepack, Ne pozabi dihati in Nika s Tinetom Ugrinom.',
     },
     'portraits': {
         'en': 'Portraits and downloadable headshots of actor Tine Ugrin. Photography by Jakob Kastelec and Arin Rapuš Jerman.',
@@ -41,6 +42,7 @@ descriptions = {
         'en': 'Contact actor Tine Ugrin directly for casting and professional enquiries.',
         'sl': 'Neposredni kontakt igralca Tineta Ugrina za casting in sodelovanja.',
     },
+    'thanks': {'en': 'Thank you for your message to Tine Ugrin.', 'sl': 'Hvala za vaše sporočilo Tinetu Ugrinu.'},
 }
 
 
@@ -52,48 +54,46 @@ def path_for(section, language):
 def main():
     source = (root / 'src/index.html').read_text()
     components = {path.stem: path.read_text().strip() for path in (root / 'components').glob('*.html')}
-    for name in ('site-header', 'credits-rail', 'screen-section'):
-        marker = '<!-- component:' + name + ' -->'
-        assert source.count(marker) == 1, 'Missing or repeated component: ' + name
-        source = source.replace(marker, components[name])
-    main_start = source.index('  <main id="main">')
-    main_end = source.index('  </main>', main_start) + len('  </main>')
-    sections = {}
-    for match in re.finditer(r'<section\b[^>]*\bid="([^"]+)"[^>]*>.*?</section>', source[main_start:main_end], re.S):
-        sections[match.group(1)] = match.group(0)
-    assert sections.keys() == pages.keys(), sections.keys()
+    page_components = {
+        'home': ['hero', 'intro', 'about', 'credits-rail', 'gallery', 'screen-section', 'contact'],
+        'about': ['about'], 'credits': ['credits-rail'], 'screen': ['screen-section'],
+        'portraits': ['gallery'], 'contact': ['contact'], 'thanks': ['thank-you'],
+    }
     runtime_keys = set(re.findall(r"\bt\('([^']+)'\)", (dist / 'assets/site.js').read_text()))
     runtime_copy = {language: {key: copy[language][key] for key in sorted(runtime_keys)} for language in ('en', 'sl')}
     (dist / 'assets/copy.js').write_text('window.TINE_COPY = ' + json.dumps(runtime_copy, ensure_ascii=False, separators=(',', ':')) + ';\n')
 
     for section, (slug, heading, names) in pages.items():
-        body = sections[section]
+        body = '\n'.join(components[name] for name in page_components[section])
         if section != 'home':
-            body, count = re.subn(r'<h2(\s+id="' + heading + r'"[^>]*)>(.*?)</h2>', r'<h1\1>\2</h1>', body, count=1, flags=re.S)
-            assert count == 1, heading
-        page = source[:main_start] + '  <main id="main" class="page-main">\n    ' + body + '\n  </main>' + source[main_end:]
+            body = re.sub(r'<(/?)h([2-6])(\b[^>]*)>', lambda m: '<' + m.group(1) + 'h' + str(int(m.group(2)) - 1) + m.group(3) + '>', body)
+        assert 'id="' + heading + '"' in body, heading
+        page = source.replace('<!-- page-content -->', body)
         page = page.replace('<body>', f'<body class="page-{section}' + (' page-content' if section != 'home' else '') + f'" data-page="{section}">')
-        if section != 'home':
-            page = re.sub(r'  <link rel="preload" href="/assets/hero.webp"[^>]+>\n', '', page)
         for name, included in (
-            ('page-footer', section != 'home'),
-            ('photo-credits-dialog', section != 'home'),
-            ('film-dialog', section == 'screen'),
-            ('portrait-dialog', section == 'portraits'),
+            ('site-header', True), ('page-footer', True), ('photo-credits-dialog', True),
+            ('film-dialog', section in ('home', 'screen')),
+            ('portrait-dialog', section in ('home', 'portraits')),
         ):
             marker = '<!-- component:' + name + ' -->'
             assert page.count(marker) == 1, 'Missing or repeated component: ' + name
             page = page.replace(marker, components[name] if included else '')
+        if section != 'home':
+            page = re.sub(r'  <link rel="preload" href="/assets/hero.webp"[^>]+>\n', '', page)
+        if section == 'thanks':
+            page = page.replace('<meta name="viewport"', '<meta name="robots" content="noindex,follow">\n  <meta name="viewport"')
 
         for language in ('en', 'sl'):
             rendered = translate(page, language)
             path = path_for(section, language)
-            for destination in pages:
-                rendered = rendered.replace(f'href="#{destination}"', f'href="{path_for(destination, language)}"')
-            rendered = rendered.replace('href="#work"', f'href="{path_for("credits", language)}"')
+            if section != 'home':
+                for destination in pages:
+                    rendered = rendered.replace(f'href="#{destination}"', f'href="{path_for(destination, language)}"')
             if language == 'sl':
                 rendered = rendered.replace('href="/"', 'href="/sl/"')
-            if section != 'home':
+                rendered = rendered.replace('action="/thank-you/"', 'action="/sl/thank-you/"')
+                rendered = rendered.replace('value="en" data-form-language', 'value="sl" data-form-language')
+            if section not in ('home', 'thanks'):
                 rendered = rendered.replace(f'href="{path}" data-i18n="nav', f'href="{path}" aria-current="page" data-i18n="nav')
             title = 'Tine Ugrin — ' + names[language] if section == 'home' else names[language] + ' — Tine Ugrin'
             description = escape(descriptions[section][language], quote=True)
@@ -112,6 +112,8 @@ def main():
 
     entries = []
     for section in pages:
+        if section == 'thanks':
+            continue
         for language in ('en', 'sl'):
             alternates = ''.join(f'<xhtml:link rel="alternate" hreflang="{lang}" href="{origin}{path_for(section,lang)}" />' for lang in ('en', 'sl'))
             entries.append(f'  <url><loc>{origin}{path_for(section,language)}</loc>{alternates}</url>')
